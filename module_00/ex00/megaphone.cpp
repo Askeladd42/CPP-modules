@@ -6,19 +6,20 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:10:07 by plam              #+#    #+#             */
-/*   Updated: 2022/05/04 22:49:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/04 22:53:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
+#include <cctype>
 
 char	*capitalize(char *str)
 {
 	for (size_t i = 0; i < strlen(str); i++)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
+			str[i] = toupper(str[i]);
 	}
 	return (str);
 }
