@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/05 15:07:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/05 16:19:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 
 class PhoneBook
 {
-private:
-	/* data */
+	Contact	table[8];
 public:
 	PhoneBook(/* args */);
 	~PhoneBook();
 };
 
-PhoneBook::PhoneBook(/* args */)
+PhoneBook::PhoneBook()
 {
 }
 
@@ -33,8 +32,7 @@ PhoneBook::~PhoneBook()
 
 class Contact
 {
-private:
-	/* data */
+	std::string	name;
 public:
 	Contact(/* args */);
 	~Contact();
