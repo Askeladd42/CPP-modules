@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/05 17:37:12 by plam             ###   ########.fr        #
+#    Updated: 2022/05/05 17:40:10 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = PhoneBook
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
 
-HEADER = PhoneBook.hpp Contact.hpp
-SRC_FILES = PhoneBook.cpp Contact.cpp
+HEADER = Contact.hpp PhoneBook.hpp
+SRC_FILES = Contact.cpp PhoneBook.cpp 
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
