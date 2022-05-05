@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/05 14:30:47 by plam             ###   ########.fr        #
+#    Updated: 2022/05/05 15:23:06 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = PhoneBook
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98

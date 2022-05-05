@@ -6,29 +6,28 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/05 15:20:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/05 15:22:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void	AddContact(class Phonebook)
-{
-	std::string contact;
-
-	std::cout << "Enter the new contact's name : ";
-	getline(std::cin, contact);
-}
+//void	AddContact(class Phonebook)
+//{
+//	std::string contact;
+//
+//	std::cout << "Enter the new contact's name : ";
+//	getline(std::cin, contact);
+//}
 
 int		main()
 {
 	std::string	cmd;
-	class		Phonebook;
+	//class		Phonebook;
 
 	while (cmd != "EXIT")
 	{
-		std::cout << "Enter a command for the Phonebook 
-						(put EXIT to quit the phonebook): ";
+		std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
 		std::cin >> cmd;
 		std::cout << "You entered the command " << cmd << '\n';
 		//if (cmd == "ADD")
