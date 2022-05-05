@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/03 15:31:13 by plam             ###   ########.fr       */
+/*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
+/*   Updated: 2022/05/05 11:14:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class PhoneBook
-{
-public:
-	PhoneBook(/* args */);
-	~PhoneBook();
-};
+#include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(/* args */)
+int	main()
 {
-}
+	std::string	cmd;
 
-PhoneBook::~PhoneBook()
-{
-}
-
-class Contact
-{
-public:
-	Contact(/* args */);
-	~Contact();
-};
-
-Contact::Contact(/* args */)
-{
-}
-
-Contact::~Contact()
-{
+	std::cout << "Enter a command for the Phonebook :";
+	std::cin >> cmd;
+	std::cout << "You entered the command " << cmd;
 }
