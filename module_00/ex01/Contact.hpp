@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:21:19 by plam              #+#    #+#             */
-/*   Updated: 2022/05/05 17:21:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/05 17:41:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class Contact
 {
 private:
-	/* data */
+	std::string	DarkestSecret;
 public:
 	Contact(/* args */);
 	~Contact();
