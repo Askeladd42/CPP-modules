@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:10:07 by plam              #+#    #+#             */
-/*   Updated: 2022/05/04 22:53:32 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/05 15:03:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*capitalize(char *str)
 	for (size_t i = 0; i < strlen(str); i++)
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] = toupper(str[i]);
+			toupper(str[i]) >> str[i];
 	}
 	return (str);
 }
