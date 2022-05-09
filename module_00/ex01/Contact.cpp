@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 00:17:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 00:17:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Contact::Contact(void){
 
 Contact::~Contact(void){
 	std::cout << "Contact deleted from the phonebook." << std::endl;
+	return;
 }
 
 int	GetPhoneNumber(Contact cont)
