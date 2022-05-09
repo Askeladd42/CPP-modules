@@ -6,9 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/05 17:22:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/09 20:05:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_H
+# define PHONEBOOK_H
 
 #include <Contact.hpp>
 #include <iostream>
@@ -29,3 +32,5 @@ PhoneBook::PhoneBook(/* args */)
 PhoneBook::~PhoneBook()
 {
 }
+
+#endif
