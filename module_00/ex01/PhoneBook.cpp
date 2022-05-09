@@ -6,11 +6,21 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/05 17:42:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 00:11:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook(void){
+	std::cout << "PhoneBook created." << std::endl;
+	return;
+}
+
+PhoneBook::~PhoneBook(void){
+	std::cout << "PhoneBook destroyed." << std::endl;
+	return;
+}
 
 //void	AddContact(class Phonebook)
 //{
