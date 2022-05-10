@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:21:19 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 14:54:32 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 15:40:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <iomanip>
+# include <iostream>
 # include <string>
 
 class Contact
