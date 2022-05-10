@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 00:50:57 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 15:02:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 Contact::Contact(void){
 	std::cout << "Contact added to the phonebook." << std::endl;
-	this->GetFirstName();
-	this->GetLastName();
-	this->GetNickname();
-	this->GetPhoneNumber();
-	this->GetDarkestSecret();
+	this->SetPhoneNumber(number);
+	this->SetLastName();
+	this->SetNickname();
+	this->SetPhoneNumber();
+	this->SetDarkestSecret();
 	return;
 }
 
@@ -28,24 +28,37 @@ Contact::~Contact(void){
 	return;
 }
 
-int	GetPhoneNumber(void)
+void	SetPhoneNumber(std::string number)
 {
 	std::cout << "Put the contact's phone number : ";
 	std::cin >> Contact::PhoneNumber;
-	return (0);
+	return;
 }
 
-int	GetFirstName(Contact cont)
+void	SetFirstName(std::string first)
 {
-	
+	std::cout << "Put the contact's first name : ";
+	std::cin >> Contact::FirstName;
+	return;
 }
 
-int	GetLastName(Contact cont)
+void	SetLastName(std::string last)
 {
-
+	std::cout << "Put the contact's last name : ";
+	std::cin >> Contact::LastName;
+	return;
 }
 
-int	GetNickname(Contact cont)
+void	SetNickname(std::string nick)
 {
-	
+	std::cout << "Put the contact's nickname : ";
+	std::cin >> Contact::Nickname;
+	return;	
+}
+
+void	SetDarkestSecret(std::string darkest)
+{
+	std::cout << "Put the contact's darkest secret : ";
+	std::cin >> Contact::_darkestSecret;
+	return;
 }
