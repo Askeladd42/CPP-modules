@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 15:53:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 16:31:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,35 +24,35 @@ Contact::~Contact(void){
 	return;
 }
 
-void	Contact::SetPhoneNumber(std::string number)
+void	Contact::SetPhoneNumber(void)
 {
 	std::cout << "Put the contact's phone number : ";
 	std::cin >> Contact::PhoneNumber;
 	return;
 }
 
-void	Contact::SetFirstName(std::string first)
+void	Contact::SetFirstName(void)
 {
 	std::cout << "Put the contact's first name : ";
 	std::cin >> Contact::FirstName;
 	return;
 }
 
-void	Contact::SetLastName(std::string last)
+void	Contact::SetLastName(void)
 {
 	std::cout << "Put the contact's last name : ";
 	std::cin >> Contact::LastName;
 	return;
 }
 
-void	Contact::SetNickname(std::string nick)
+void	Contact::SetNickname(void)
 {
 	std::cout << "Put the contact's nickname : ";
 	std::cin >> Contact::Nickname;
 	return;	
 }
 
-void	Contact::SetDarkestSecret(std::string darkest)
+void	Contact::SetDarkestSecret(void)
 {
 	std::cin >> Contact::_darkestSecret;
 	return;

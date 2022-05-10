@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:21:19 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 15:40:52 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 16:32:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,22 @@ public:
 	~Contact(void);
 	
 	std::string	PhoneNumber;
-	void		SetPhoneNumber(std::string number);
+	void		SetPhoneNumber(void);
 	std::string	GetPhoneNumber(void) const;
 	
 	std::string	FirstName;
-	void		SetFirstName(std::string first);
+	void		SetFirstName(void);
 	std::string	GetFirstName(void) const;
 	
 	std::string	LastName;
-	void		SetLastName(std::string last);
+	void		SetLastName(void);
 	std::string	GetLastName(void) const;
 	
 	std::string	Nickname;
-	void		SetNickname(std::string nick);
+	void		SetNickname(void);
 	std::string	GetNickname(void) const;
 
-	void		SetDarkestSecret(std::string darkest);
+	void		SetDarkestSecret(void);
 };
 
 #endif

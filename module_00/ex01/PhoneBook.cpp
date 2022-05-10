@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 15:50:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 16:55:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,58 @@ PhoneBook::~PhoneBook(void){
 	return;
 }
 
-/*void	PhoneBook::AddContact(class Phonebook)
+void	PhoneBook::ShowAllContacts(void)
+{
+
+}
+
+void	PhoneBook::ShowContact(int index)
+{
+	std::cout << this->_book[index].GetPhoneNumber();
+	std::cout << this->_book[index].GetFirstName();
+	std::cout << this->_book[index].GetLastName();
+	std::cout << this->_book[index].GetNickname();
+}
+
+void	PhoneBook::AddContact(int index)
 {
 	Contact	cont;
 
-	cont->SetPHoneNumber();
-	cont->SetFirstName();
-	cont->SetDarkestSecret();
+	cont.SetPhoneNumber();
+	cont.SetFirstName();
+	cont.SetLastName();
+	cont.SetNickname();
+	cont.SetDarkestSecret();
+	this->_book[index] = cont;
+	std::cout << "New contact " << this->_book[index]->FirstName << " added to the phonebook."
+				<< std::endl;
+}
 
+/*void	PhoneBook::SearchContact(void)
+{
+	int	index = 0;
+
+	this->ShowAllContacts();
+	std::cout << "Put the contact's index you are looking for : "
+	std::cin >> index;
 }
 */
 
-int		main()
+int		main(void)
 {
 	std::string	cmd;
-	//class		Phonebook;
+	PhoneBook	book;
+	std::string	buff;
+	int			index = 0;
 
 	while (cmd != "EXIT")
 	{
 		std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
 		std::cin >> cmd;
 		std::cout << "You entered the command " << cmd << '\n';
-		//if (cmd == "ADD")
-		//	AddContact(PhoneBook);
+		if (cmd == "ADD")
+			book.AddContact(index % 8);
 		//if (cmd == "SEARCH")
-		//	SearchContact(PhoneBook);
+		//	SearchContact();
 	}
 }
