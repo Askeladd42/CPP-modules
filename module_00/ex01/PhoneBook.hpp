@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 00:15:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 15:05:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@
 class PhoneBook
 {
 private:
-	/* data */
+	Contact	book[8];
 public:
 	PhoneBook(void);
 	~PhoneBook();
+
+	void	AddContact(void);
 };
 
 #endif
