@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 00:11:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 15:39:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ PhoneBook::PhoneBook(void){
 }
 
 PhoneBook::~PhoneBook(void){
-	std::cout << "PhoneBook destroyed." << std::endl;
+	std::cout << "PhoneBook destroyed. All contacts in it are lost !" << std::endl;
 	return;
 }
 
 //void	AddContact(class Phonebook)
 //{
-//	std::string contact;
+//	Contact	cont;
 //
 //	std::cout << "Enter the new contact's name : ";
 //	getline(std::cin, contact);

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 15:02:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/10 15:24:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 Contact::Contact(void){
 	std::cout << "Contact added to the phonebook." << std::endl;
-	this->SetPhoneNumber(number);
-	this->SetLastName();
-	this->SetNickname();
-	this->SetPhoneNumber();
-	this->SetDarkestSecret();
 	return;
 }
 
@@ -61,4 +56,21 @@ void	SetDarkestSecret(std::string darkest)
 	std::cout << "Put the contact's darkest secret : ";
 	std::cin >> Contact::_darkestSecret;
 	return;
+}
+
+std::string	GetPhoneNumber(void) const {
+	return (this->PhoneNumber);
+}
+
+std::string	GetFirstName(void) const {
+	return (this->FirstName);
+}
+std::string	GetLastName(void) const {
+	return (this->LastName);
+}
+std::string	GetNickname(void) const {
+	return (this->Nickname);
+}
+std::string	_getDarkestSecret(void) const {
+	return (this->_darkestSecret);
 }
