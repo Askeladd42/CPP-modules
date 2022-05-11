@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 16:31:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/11 16:16:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	Contact::SetNickname(void)
 
 void	Contact::SetDarkestSecret(void)
 {
+	std::cout << "Put the contact's darkest secret : ";
 	std::cin >> Contact::_darkestSecret;
 	return;
 }

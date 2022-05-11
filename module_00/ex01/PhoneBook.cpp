@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 16:59:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/11 16:10:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,14 @@ void	PhoneBook::ShowContact(int index)
 	std::cout << this->_book[index].GetNickname();
 }
 
-void	PhoneBook::AddContact(int index)
+void	PhoneBook::AddContact(Contact cont)
 {
-	Contact	cont;
-
 	cont.SetPhoneNumber();
 	cont.SetFirstName();
 	cont.SetLastName();
 	cont.SetNickname();
 	cont.SetDarkestSecret();
-	this->_book[index] = cont;
-	std::cout << "New contact " << this->_book[index].FirstName << " added to the phonebook."
+	std::cout << "New contact " << cont.FirstName << " added to the phonebook."
 				<< std::endl;
 }
 
@@ -73,7 +70,7 @@ int		main(void)
 		std::cout << "You entered the command " << cmd << '\n';
 		if (cmd == "ADD")
 		{
-			book.AddContact(index % 8);
+			book.AddContact(book._book[index % 8]);
 			index++;
 		}
 		//if (cmd == "SEARCH")
