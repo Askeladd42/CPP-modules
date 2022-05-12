@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/11 16:10:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/12 16:37:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,36 @@ void	PhoneBook::ShowAllContacts(void)
 
 void	PhoneBook::ShowContact(int index)
 {
-	std::cout << this->_book[index].GetPhoneNumber();
-	std::cout << this->_book[index].GetFirstName();
-	std::cout << this->_book[index].GetLastName();
-	std::cout << this->_book[index].GetNickname();
+	std::cout << this->_book[index].GetPhoneNumber() << std::endl;
+	std::cout << this->_book[index].GetFirstName() << std::endl;
+	std::cout << this->_book[index].GetLastName() << std::endl;
+	std::cout << this->_book[index].GetNickname() << std::endl;
 }
 
-void	PhoneBook::AddContact(Contact cont)
+void	PhoneBook::AddContact(Contact *cont)
 {
-	cont.SetPhoneNumber();
-	cont.SetFirstName();
-	cont.SetLastName();
-	cont.SetNickname();
-	cont.SetDarkestSecret();
-	std::cout << "New contact " << cont.FirstName << " added to the phonebook."
+	cont->SetPhoneNumber();
+	cont->SetFirstName();
+	cont->SetLastName();
+	cont->SetNickname();
+	cont->SetDarkestSecret();
+	std::cout << "New contact " << cont->FirstName << " added to the phonebook."
 				<< std::endl;
 }
 
-/*void	PhoneBook::SearchContact(void)
+void	PhoneBook::SearchContact(void)
 {
-	int	index = 0;
+	int	i = 0;
 
 	this->ShowAllContacts();
-	std::cout << "Put the contact's index you are looking for : "
-	std::cin >> index;
+	std::cout << "Put the contact's index you are looking for : ";
+	std::cin >> i;
+	if (i < 1 || i > 8)
+		std::cout << "Wrong index number sent. Please enter a correct index number."
+				<< std::endl;
+	else
+		this->ShowContact(i - 1);
 }
-*/
 
 int		main(void)
 {
@@ -67,13 +71,12 @@ int		main(void)
 	{
 		std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
 		std::cin >> cmd;
-		std::cout << "You entered the command " << cmd << '\n';
 		if (cmd == "ADD")
 		{
-			book.AddContact(book._book[index % 8]);
+			book.AddContact(&book._book[(index % 8)]);
 			index++;
 		}
-		//if (cmd == "SEARCH")
-		//	SearchContact();
+		if (cmd == "SEARCH")
+			book.SearchContact();
 	}
 }
