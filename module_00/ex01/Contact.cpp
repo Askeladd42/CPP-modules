@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:19:52 by plam              #+#    #+#             */
-/*   Updated: 2022/05/12 16:46:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/12 16:51:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Contact::~Contact(void){
 void	Contact::SetPhoneNumber(void)
 {
 	std::cout << "Put the contact's phone number : ";
-	std::cin >> Contact::PhoneNumber;
+	std::getline(std::cin, Contact::PhoneNumber);
 	return;
 }
 

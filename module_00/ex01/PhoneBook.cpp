@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/12 16:37:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/12 17:22:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	PhoneBook::SearchContact(void)
 	this->ShowAllContacts();
 	std::cout << "Put the contact's index you are looking for : ";
 	std::cin >> i;
-	if (i < 1 || i > 8)
+	if (i < 1 || i > 8 || i == '?' || i == '!')
 		std::cout << "Wrong index number sent. Please enter a correct index number."
 				<< std::endl;
 	else
@@ -70,9 +70,12 @@ int		main(void)
 	while (cmd != "EXIT")
 	{
 		std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
-		std::cin >> cmd;
+		std::getline(std::cin, cmd);
 		if (cmd == "ADD")
 		{
+			if (index >= 8)
+				std::cout << "Phonebook list is full, we will erase the oldest contact in" 
+					<< " the list to add the newer." << std::endl;
 			book.AddContact(&book._book[(index % 8)]);
 			index++;
 		}
