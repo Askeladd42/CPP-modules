@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/12 17:43:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/12 17:48:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void	PhoneBook::SearchContact(void)
 {
 	int	i = 0;
 
-	this->ShowAllContacts();
 	std::cout << "Put the contact's index you are looking for : ";
 	std::cin >> i;
 	if (i < 1 || i > 8 || i == '?' || i == '!')
@@ -91,6 +90,12 @@ int		main(void)
 			index++;
 		}
 		if (cmd == "SEARCH")
+		{
+			if (index > 7)
+				book.ShowAllContacts(7);
+			else
+				book.ShowAllContacts(index);
 			book.SearchContact();
+		}
 	}
 }
