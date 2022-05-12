@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/12 17:48:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/12 17:49:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	PhoneBook::ShowAllContacts(int ContactNbr)
 	std::cout << "|" << std::setw(10) << "first name";
 	std::cout << "|" << std::setw(10) << "last name";
 	std::cout << "|" << std::setw(10) << "nickname" << "|" << std::endl;
-	
 	std::cout << "|" << std::setw(10) << i + 1;
 	std::cout << "|" << std::setw(10) << this->_book[i].FirstName;
 	std::cout << "|" << std::setw(10) << this->_book[i].LastName;
@@ -95,6 +94,7 @@ int		main(void)
 				book.ShowAllContacts(7);
 			else
 				book.ShowAllContacts(index);
+			std::cout << std::endl;
 			book.SearchContact();
 		}
 	}
