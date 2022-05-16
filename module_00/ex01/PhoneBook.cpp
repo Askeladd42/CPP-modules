@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/12 17:51:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/16 15:43:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	PhoneBook::SearchContact(void)
 
 	std::cout << "Put the contact's index you are looking for : ";
 	std::cin >> i;
-	if (i < 1 || i > 8 || i == '?' || i == '!')
+	if (!(i >= 1 && i <= 8))
 		std::cout << "Wrong index number sent. Please enter a correct index number."
 				<< std::endl;
 	else
