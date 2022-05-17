@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/16 15:43:15 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 01:16:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ void	PhoneBook::ShowAllContacts(int ContactNbr)
 
 void	PhoneBook::ShowContact(int index)
 {
-	std::cout << this->_book[index].GetPhoneNumber() << std::endl;
-	std::cout << this->_book[index].GetFirstName() << std::endl;
-	std::cout << this->_book[index].GetLastName() << std::endl;
-	std::cout << this->_book[index].GetNickname() << std::endl;
+	std::cout << "Phone number : " << this->_book[index].GetPhoneNumber() << std::endl;
+	std::cout << "First name : " << this->_book[index].GetFirstName() << std::endl;
+	std::cout << "Last name : " << this->_book[index].GetLastName() << std::endl;
+	std::cout << "Nickname : " << this->_book[index].GetNickname() << std::endl;
 }
 
 void	PhoneBook::AddContact(Contact *cont)
@@ -82,7 +82,8 @@ int		main(void)
 
 	while (cmd != "EXIT")
 	{
-		std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
+		if (cmd != "ADD" && cmd != "SEARCH")
+			std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
 		std::getline(std::cin, cmd);
 		if (cmd == "ADD")
 		{
@@ -91,6 +92,7 @@ int		main(void)
 					<< " the list to add the newer." << std::endl;
 			book.AddContact(&book._book[(index % 8)]);
 			index++;
+			std::cout << "(Press Enter to continue.)";
 		}
 		if (cmd == "SEARCH")
 		{
