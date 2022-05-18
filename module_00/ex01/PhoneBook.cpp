@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 14:43:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 14:58:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,13 @@ PhoneBook::~PhoneBook(void){
 
 std::string	str_resizing(std::string str)
 {
+	std::string	ret = str;
 	if (str.size() > 10)
-		return str.substr(0, 10);
-	else
-		return (str);
+	{
+		ret = str.substr(0, 10);
+		ret[9] = '.';
+	}
+	return (ret);
 }
 
 void	PhoneBook::ShowAllContacts(int ContactNbr)
