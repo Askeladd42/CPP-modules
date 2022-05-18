@@ -6,8 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:17:21 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 15:17:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 15:44:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+void randomChump(std::string name)
+{
+	Zombie	zed;
+
+	zed._name = name;
+	return;
+}

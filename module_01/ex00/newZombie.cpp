@@ -6,8 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:14:51 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 15:16:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 15:49:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie* newZombie(std::string name)
+{
+	Zombie	zed;
+
+	zed._name = name;
+	return(zed);
+}

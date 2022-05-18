@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:13:34 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 15:22:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 15:44:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Zombie
 {
 private:
-	std::string	name;
+	std::string	_name;
 public:
 	Zombie();
 	~Zombie();
