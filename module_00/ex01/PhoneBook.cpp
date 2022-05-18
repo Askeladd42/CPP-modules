@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 12:40:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 14:43:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,14 @@ PhoneBook::~PhoneBook(void){
 	return;
 }
 
+std::string	str_resizing(std::string str)
+{
+	if (str.size() > 10)
+		return str.substr(0, 10);
+	else
+		return (str);
+}
+
 void	PhoneBook::ShowAllContacts(int ContactNbr)
 {
 	int	i = 0;
@@ -33,9 +41,9 @@ void	PhoneBook::ShowAllContacts(int ContactNbr)
 	while (i < ContactNbr)
 	{
 		std::cout << "|" << std::setw(10) << i + 1;
-		std::cout << "|" << std::setw(10) << this->_book[i].FirstName;
-		std::cout << "|" << std::setw(10) << this->_book[i].LastName;
-		std::cout << "|" << std::setw(10) << this->_book[i].Nickname << "|" << std::endl;
+		std::cout << "|" << std::setw(10) << str_resizing(this->_book[i].FirstName);
+		std::cout << "|" << std::setw(10) << str_resizing(this->_book[i].LastName);
+		std::cout << "|" << std::setw(10) << str_resizing(this->_book[i].Nickname) << "|" << std::endl;
 		i++;
 	}
 	std::cout << std::endl;
@@ -62,10 +70,12 @@ void	PhoneBook::AddContact(Contact *cont)
 
 void	PhoneBook::SearchContact(void)
 {
-	int	i = 0;
+	long		i = 0;
+	std::string	cmd;
 
 	std::cout << "Put the contact's index you are looking for : ";
-	std::cin >> i;
+	std::getline(std::cin, cmd);
+	i = std::strtol(cmd.data(), NULL, 10);
 	if (!(i >= 1 && i <= 8))
 		std::cout << "Wrong index number sent. Please enter a correct index number."
 				<< std::endl;
@@ -92,7 +102,7 @@ int		main(void)
 					<< " the list to add the newer." << std::endl;
 			book.AddContact(&book._book[(index % 8)]);
 			index++;
-			std::cout << "(Press Enter to continue.)";
+			std::cout << std::endl << "(Press Enter to continue.)";
 		}
 		if (cmd == "SEARCH")
 		{
@@ -101,6 +111,7 @@ int		main(void)
 			else
 				book.ShowAllContacts(index);
 			book.SearchContact();
+			std::cout << std::endl << "(Press Enter to continue.)";
 		}
 	}
 }
