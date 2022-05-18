@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 01:16:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 12:40:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void){
-	std::cout << "PhoneBook created." << std::endl;
+	std::cout << "Phonebook created." << std::endl;
 	return;
 }
 
