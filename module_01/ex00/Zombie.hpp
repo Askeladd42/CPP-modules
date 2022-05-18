@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:13:34 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 15:44:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/18 16:14:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Zombie
 private:
 	std::string	_name;
 public:
-	Zombie();
-	~Zombie();
+	void	newZombie(std::string name);
+	void	randomChump(std::string name);
 	void	announce(void);
 };
 
