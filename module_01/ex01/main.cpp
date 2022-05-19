@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:11:47 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 15:10:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/19 16:36:00 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 int	main(void)
 {
-	Zombie	*Alpha = newZombie("Albert");
-	Alpha->announce();
-	randomChump("Barry");
-	delete(Alpha);
+	int	N = 20;
+	Zombie*	horde[N];
+
+	for (int i = 0; i < N; i++)
+		horde[i]->announce();
+	delete [] horde;
 	return 0;
 }
