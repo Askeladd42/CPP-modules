@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:47:02 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 16:33:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/19 17:27:31 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 Zombie*	zombieHorde(int N, std::string name)
 {
+	Zombie	horde[N];
 	for (int i = 0; i < N; i++)
-	Zombie*	horde[N];
+		horde[i].add_name(name);
+	return horde;
 }

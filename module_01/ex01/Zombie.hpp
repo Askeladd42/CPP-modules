@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:13:34 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 16:37:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/19 17:24:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	~Zombie(void);
 	
 	void	announce(void);
+	void	add_name(std::string name);
 };
 
 Zombie*	newZombie(std::string name);
