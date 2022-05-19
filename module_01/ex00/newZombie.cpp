@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:14:51 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 16:19:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/19 14:56:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 Zombie* newZombie(std::string name)
 {
-	Zombie	*zed = new Zombie();
-
-	zed._name = name;
+	Zombie	*zed = new Zombie(name);
 	return(zed);
 }
