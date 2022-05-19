@@ -6,13 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:12:44 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 16:41:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/19 17:17:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void) : _name(name) { }
+Zombie::Zombie(void)
+{
+	std::cout << "Zombie " << this->_name << " created" << std::endl;
+}
 
 Zombie::~Zombie(void)
 {
