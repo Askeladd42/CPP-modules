@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/18 15:18:16 by plam             ###   ########.fr        #
+#    Updated: 2022/05/19 15:11:07 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
+NAME = Zombie
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
