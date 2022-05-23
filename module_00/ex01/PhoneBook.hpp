@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 14:37:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/23 14:29:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef __PHONEBOOK_H__
+# define __PHONEBOOK_H__
 
 # include "Contact.hpp"
 # include <iomanip>

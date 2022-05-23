@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:21:19 by plam              #+#    #+#             */
-/*   Updated: 2022/05/10 16:32:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/23 14:28:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef __CONTACT_HPP__
+# define __CONTACT_HPP__
 
 # include <iostream>
 # include <string>
