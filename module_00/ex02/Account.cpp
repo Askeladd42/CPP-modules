@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:32:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/23 15:02:31 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/25 12:54:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ static int	Account::getNbWithdrawals( void ) {
 }
 static void	Account::displayAccountsInfos( void ) {
 	_displayTimestamp();
-	std::cout << "Account: " << _accountIndex << " Amount : " << _amount << std::endl;
+	std::cout << "Account: " << this->_accountIndex << " Amount : " << this->_amount << std::endl;
 }
