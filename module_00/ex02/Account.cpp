@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:32:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/25 13:58:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/26 00:51:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,34 @@
 #include "Account.hpp"
 
 /*
-** Static functions
+** "Static" functions
 */
 
-static int	Account::getNbAccounts( void ) {
+int	Account::getNbAccounts( void ) {
 	return _nbAccounts;
 }
 
-static int	Account::getTotalAmount( void ) {
+int	Account::getTotalAmount( void ) {
 	return _totalAmount;
 }
-static int	Account::getNbDeposits( void ) {
+int	Account::getNbDeposits( void ) {
 	return _totalNbDeposits;
 }
 
-static int	Account::getNbWithdrawals( void ) {
+int	Account::getNbWithdrawals( void ) {
 	return _totalNbWithdrawals;
 }
-static void	Account::displayAccountsInfos( void ) {
+void	Account::displayAccountsInfos( void ) {
 	_displayTimestamp();
-	std::cout << "Account: " << _accountIndex << " Amount : " << _amount << std::endl;
+	std::cout << "Accounts number : " << _nbAccounts << "; Total amount : " << _totalAmount << "; Total deposits done : ";
+	std::cout << _totalNbDeposits << "; Total withdraws done : " << _totalNbWithdrawals << std::endl;
 }
 
 
 void	Account::makeDeposit( int deposit )
 {
-	this->_amount += deposit;
+	if (deposit >= 0)
+		this->_amount += deposit;
 }
 
 bool	Account::makeWithdrawal( int withdrawal )
