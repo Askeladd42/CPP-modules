@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:43 by plam              #+#    #+#             */
-/*   Updated: 2022/05/23 14:29:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/25 13:05:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 
 	Contact	_book[8];
 	void	ShowAllContacts(int ContactNbr);
-	void	ShowContact(int index);
+	void	ShowContact(int index) const;
 	void	AddContact(Contact *cont);
 	void	SearchContact(void);
 

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/18 14:58:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/25 13:04:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	PhoneBook::ShowAllContacts(int ContactNbr)
 	std::cout << std::endl;
 }
 
-void	PhoneBook::ShowContact(int index)
+void	PhoneBook::ShowContact(int index) const
 {
 	std::cout << "Phone number : " << this->_book[index].GetPhoneNumber() << std::endl;
 	std::cout << "First name : " << this->_book[index].GetFirstName() << std::endl;
