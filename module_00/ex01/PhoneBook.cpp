@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:04:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/25 13:04:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/25 13:31:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ void	PhoneBook::SearchContact(void)
 
 	std::cout << "Put the contact's index you are looking for : ";
 	std::getline(std::cin, cmd);
+	if (std::cin.eof())
+		exit(0);
 	i = std::strtol(cmd.data(), NULL, 10);
 	if (!(i >= 1 && i <= 8))
 		std::cout << "Wrong index number sent. Please enter a correct index number."
@@ -98,6 +100,8 @@ int		main(void)
 		if (cmd != "ADD" && cmd != "SEARCH")
 			std::cout << "Enter a command for the Phonebook (put EXIT to quit the phonebook): ";
 		std::getline(std::cin, cmd);
+		if (std::cin.eof())
+			exit(0);
 		if (cmd == "ADD")
 		{
 			if (index >= 8)
