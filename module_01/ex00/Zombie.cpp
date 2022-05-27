@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:12:44 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 16:42:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/27 17:29:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Zombie::~Zombie(void)
 	std::cout << this->_name << " got obliterated !" << std::endl;
 }
 
-void	Zombie::announce()
+void	Zombie::announce( void )
 {
 	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 	return;
