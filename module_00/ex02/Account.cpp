@@ -6,12 +6,53 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:32:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/26 00:51:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/27 15:42:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Account.hpp"
+
+/*
+** Initialized variables of class Account :
+*/
+
+int	Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int	Account::_totalNbDeposits = 0;
+int	Account::_totalNbWithdrawals = 0;
+
+/*
+** Private function(s) (for now only one)
+*/
+
+void	Account::_displayTimestamp( void ) {
+	time_t	rawtime;
+	struct	tm * timeinfo;
+	char	buff[24];
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	strftime (buff, 24, "%Y-%m-%d_%H:%M:%S", timeinfo);
+	std::cout << "[" << buff << "] ";
+}
+
+/*
+** Usual functions (constructor, destructor, ...)
+*/
+
+Account::Account( void ) { }
+
+
+Account::Account( int initial_deposit ) : _amount(initial_deposit) {
+	_displayTimestamp();
+
+}
+
+Account::~Account( void ) {
+	_displayTimestamp();
+
+}
 
 /*
 ** "Static" functions

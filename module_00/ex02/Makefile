@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/23 14:27:25 by plam             ###   ########.fr        #
+#    Updated: 2022/05/27 15:38:16 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = AccountChecker
+NAME = globalBankersUnited
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
