@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 17:06:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/27 17:17:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/30 12:45:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,16 @@
 class HumanA
 {
 private:
-	/* data */
+	std::string	_name;
+	Weapon		_weapon;
+	
 public:
-	HumanA(/* args */);
-	~HumanA();
+	HumanA( void ));
+	~HumanA( void );
+	
+	void	attack( void );
 };
 
-HumanA::HumanA(/* args */)
-{
-}
-
-HumanA::~HumanA()
-{
-}
 
 
 #endif
