@@ -6,18 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 17:11:32 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 14:34:01 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/30 15:11:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
-#include "Weapon.hpp"
 
-HumanA::HumanA( std::string name ) : _name(name) {
-	std::cout << _name << " has arrived !" << std::endl;
+HumanA::HumanA( std::string name, Weapon& weapon ) : _name(name), _weapon(weapon) {	
+	std::cout << _name << " has arrived, armed !" << std::endl;
 }
 
-void	HumanA::attack( void ){
+void	HumanA::attack( void ) {
 	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
 }
 

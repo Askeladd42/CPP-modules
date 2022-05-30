@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/30 13:03:46 by plam             ###   ########.fr        #
+#    Updated: 2022/05/30 15:10:03 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = zombieSurvivors
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
 
-HEADER = Zombie.hpp
-SRC_FILES = main.cpp Zombie.cpp zombieHorde.cpp 
+HEADER = Weapon.hpp
+SRC_FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 

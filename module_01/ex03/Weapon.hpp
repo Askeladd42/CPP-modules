@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:59:40 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 14:47:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/30 14:56:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Weapon
 {
 private:
 	std::string _type;
-	
+
 public:
 	Weapon( std::string type );
 	~Weapon( void );
