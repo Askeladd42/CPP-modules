@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:59:40 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 13:02:54 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/30 14:47:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ private:
 	std::string _type;
 	
 public:
-	Weapon( void );
+	Weapon( std::string type );
 	~Weapon( void );
-	static std::string& getType( void ) const;
-	static void 		setType(std::string newType);
+	std::string	getType( void ) const;
+	void	setType(std::string newType);
 };
 
 #endif
