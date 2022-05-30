@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/19 17:30:52 by plam             ###   ########.fr        #
+#    Updated: 2022/05/30 13:03:46 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombieHorde
+NAME = zombieSurvivors
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
