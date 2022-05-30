@@ -6,16 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:17:44 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 15:19:39 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/31 00:27:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.hpp"
 
-Replace::Replace(/* args */)
-{
-}
-
-Replace::~Replace()
-{
+void	replaceLine(std::string s1, std::string s2) {
+	
 }

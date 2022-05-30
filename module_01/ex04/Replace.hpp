@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:16:33 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 15:19:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/31 00:26:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 
 # include <iostream>
 # include <string>
-
-class Replace
-{
-private:
-	/* data */
-public:
-	Replace(/* args */);
-	~Replace();
-};
+# include <fstream>
 
 #endif
