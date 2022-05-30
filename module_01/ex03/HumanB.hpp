@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 17:06:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 12:45:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/30 14:29:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ private:
 	Weapon		_weapon;
 	
 public:
-	HumanB( void );
+	HumanB( std::string name );
 	~HumanB( void );
 
 	void	attack( void );
 };
+
+#endif
