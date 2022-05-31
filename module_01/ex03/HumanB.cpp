@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 17:15:51 by plam              #+#    #+#             */
-/*   Updated: 2022/05/30 15:11:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/31 14:22:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ HumanB::~HumanB( void ) {
 	std::cout << _name << " is eaten by the horde !" << std::endl;
 }
 
-void	HumanB::attack( void ){
-	if (this->_weapon)
+void	HumanB::attack( void ) {
+	if (this->_weapon->getType() != "")
 		std::cout << _name << " attacks with their "<< _weapon->getType() << std::endl;
-	std::cout << _name << " attacks with their bare hands !" << std::endl;	
+	else
+		std::cout << _name << " attacks with their bare hands !" << std::endl;	
 }
 
 void	HumanB::setWeapon(Weapon& weapon) {
 	_weapon = &weapon;
+	std::cout << _name << " found a " << weapon.getType() << std::endl;
 }
