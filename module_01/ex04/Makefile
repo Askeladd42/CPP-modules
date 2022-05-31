@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/31 00:25:50 by plam             ###   ########.fr        #
+#    Updated: 2022/05/31 14:50:44 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = sedTest
+NAME = replacer
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98

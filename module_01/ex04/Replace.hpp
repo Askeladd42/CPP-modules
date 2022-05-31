@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:16:33 by plam              #+#    #+#             */
-/*   Updated: 2022/05/31 00:26:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/05/31 15:37:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@
 # include <iostream>
 # include <string>
 # include <fstream>
+
+std::string	replaceStr( std::string filestream, std::string s1, std::string s2 );
+std::string	replaceRename( std::string fileName );
 
 #endif
