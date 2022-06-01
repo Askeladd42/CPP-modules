@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:38:18 by plam              #+#    #+#             */
-/*   Updated: 2022/05/31 17:32:55 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/01 17:14:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,17 @@
 class Harl
 {
 private:
-	/* data */
+
+
+	void	_debug( void );
+	void	_info( void );
+	void	_warning( void );
+	void	_error( void );
+
 public:
+	Harl( void );
+	~Harl( void );
 
-void	debug( void );
-void	info( void );
-void	warning( void );
-void	error( void );
-
+	void	complain( std::string level);
 };
 #endif

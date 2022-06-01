@@ -6,8 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:32 by plam              #+#    #+#             */
-/*   Updated: 2022/05/31 16:37:42 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/01 17:21:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+int	main( int ac, char **av )
+{
+	Harl	harl;
+
+	if (ac == 2)
+		harl.complain( av[1]);
+	return 0;
+}
