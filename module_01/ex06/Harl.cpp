@@ -6,14 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/01 17:43:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 12:23:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl( void ) {
-
+	this->log[0] = "DEBUG";
+	this->log[1] = "INFO";
+	this->log[2] = "WARNING";
+	this->log[3] = "ERROR";
 }
 
 Harl::~Harl( void ) { }
@@ -36,4 +39,33 @@ void	Harl::_error( void ) {
 
 void	Harl::complain( std::string level ) {
 
+	int i;
+	
+	for (i = 0; i < 4; i++)
+	{
+		if (level.compare(this->log[i]) == 0)
+			break;
+	}
+	switch (i)
+	{
+	case 0:
+		std::cout << "[ " << level <<" ]" << std::endl;
+		this->_debug();
+		break;
+	case 1:
+		std::cout << "[ " << level <<" ]" << std::endl;
+		this->_info();
+		break;
+	case 2:
+		std::cout << "[ " << level <<" ]" << std::endl;
+		this->_warning();
+		break;
+	case 3:
+		std::cout << "[ " << level <<" ]" << std::endl;
+		this->_error();
+		break;
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		break;
+	}
 }
