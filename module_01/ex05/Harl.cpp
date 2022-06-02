@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 11:19:28 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 12:05:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ Harl::Harl( void ) {
 	this->log[1] = "INFO";
 	this->log[2] = "WARNING";
 	this->log[3] = "ERROR";
+	std::cout << "Hello sir, how can I help you ?" << std::endl;
 }
 
-Harl::~Harl( void ) { }
+Harl::~Harl( void ) {
+	std::cout << "Goodbye, Mr Harl, hope to see you soon." << std::endl;
+}
 
 void	Harl::_debug( void ) {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
@@ -38,10 +41,29 @@ void	Harl::_error( void ) {
 }
 
 void	Harl::complain( std::string level ) {
-	int	i = 0;
-
 	for (int i = 0; i < 4; i++)
 	{
-		if (level.compare(this->log[i]) == 1)
+		if (level.compare(this->log[i]) == 0)
+		{
+			switch (i)
+			{
+			case 0:
+				this->_debug();
+				break;
+			case 1:
+				this->_info();
+				break;
+			case 2:
+				this->_warning();
+				break;
+			case 3:
+				this->_error();
+				break;
+
+			default:
+				std::cout << "Screeching inaudible noises" << std::endl;
+				break;
+			}
+		}
 	}
 }
