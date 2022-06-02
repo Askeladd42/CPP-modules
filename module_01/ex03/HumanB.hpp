@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 17:06:15 by plam              #+#    #+#             */
-/*   Updated: 2022/05/31 14:24:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 11:30:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	~HumanB( void );
 
 	void	attack( void );
-	void	setWeapon(Weapon& weapon);
+	void	setWeapon(Weapon &weapon);
 };
 
 #endif

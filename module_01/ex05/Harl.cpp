@@ -6,14 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 10:47:24 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 11:19:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl( void ) {
-
+	this->log[0] = "DEBUG";
+	this->log[1] = "INFO";
+	this->log[2] = "WARNING";
+	this->log[3] = "ERROR";
 }
 
 Harl::~Harl( void ) { }
@@ -35,12 +38,10 @@ void	Harl::_error( void ) {
 }
 
 void	Harl::complain( std::string level ) {
-	if (level == "DEBUG")
-		this->_debug();
-	if (level == "INFO")
-		this->_info();
-	if (level == "WARNING")
-		this->_warning();
-	if (level == "ERROR")
-		this->_error();
+	int	i = 0;
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level.compare(this->log[i]) == 1)
+	}
 }

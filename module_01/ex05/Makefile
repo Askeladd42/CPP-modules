@@ -6,14 +6,14 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/01 17:29:27 by plam             ###   ########.fr        #
+#    Updated: 2022/06/02 11:19:22 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Harl
+NAME = harl
 
 CC = c++
-FLAGS = -Wextra -Wall -Werror -std=c++98
+FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
 HEADER = Harl.hpp
 SRC_FILES = main.cpp Harl.cpp 
