@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/01 17:43:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 10:47:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,12 @@ void	Harl::_error( void ) {
 }
 
 void	Harl::complain( std::string level ) {
-
+	if (level == "DEBUG")
+		this->_debug();
+	if (level == "INFO")
+		this->_info();
+	if (level == "WARNING")
+		this->_warning();
+	if (level == "ERROR")
+		this->_error();
 }
