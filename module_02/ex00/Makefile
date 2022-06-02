@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/02 12:33:51 by plam             ###   ########.fr        #
+#    Updated: 2022/06/02 15:21:24 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harlFilter
+NAME = fixed
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
