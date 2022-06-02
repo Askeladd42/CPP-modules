@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:37:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 12:05:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 12:17:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,29 +41,30 @@ void	Harl::_error( void ) {
 }
 
 void	Harl::complain( std::string level ) {
-	for (int i = 0; i < 4; i++)
+
+	int i;
+	
+	for (i = 0; i < 4; i++)
 	{
 		if (level.compare(this->log[i]) == 0)
-		{
-			switch (i)
-			{
-			case 0:
-				this->_debug();
-				break;
-			case 1:
-				this->_info();
-				break;
-			case 2:
-				this->_warning();
-				break;
-			case 3:
-				this->_error();
-				break;
-
-			default:
-				std::cout << "Screeching inaudible noises" << std::endl;
-				break;
-			}
-		}
+			break;
+	}
+	switch (i)
+	{
+	case 0:
+		this->_debug();
+		break;
+	case 1:
+		this->_info();
+		break;
+	case 2:
+		this->_warning();
+		break;
+	case 3:
+		this->_error();
+		break;
+	default:
+		std::cout << "Screeching inaudible noises" << std::endl;
+		break;
 	}
 }
