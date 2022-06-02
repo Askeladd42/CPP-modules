@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:32:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 15:20:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/02 15:54:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 class Fixed
 {
 private:
-	int					n;
-	static int const	rawBits = 8;
+	int					_raw;
+	static int const	_bits = 8;
 
 public:
 	Fixed( void );
-	Fixed( const Fixed&);
+	Fixed( Fixed const &task);
+	Fixed& operator=( Fixed const &task);
 	~Fixed( void );
 
 	int		getRawBits( void ) const;
