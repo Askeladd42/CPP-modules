@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 16:09:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/07 17:02:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 Fixed::Fixed( void ) {
 	this->_raw = 0;
 	std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed( int const nb ) {
+	this->setRawBits( nb );
+}
+
+Fixed::Fixed( float const nb ) {
+	this->_raw = nb;
 }
 
 Fixed::Fixed( Fixed const &task ) {
