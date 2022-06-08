@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 15:43:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 16:41:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,23 @@ Fixed& Fixed::operator=( Fixed const &task ) {
 		this->_raw = task.getRawBits();
 	return *this;
 }
+
+Fixed Fixed::operator+( Fixed const &rhs ) const {
+	return (this->_raw + rhs.getRawBits());
+}
+
+Fixed Fixed::operator-( Fixed const &rhs ) const {
+	return (this->_raw - rhs.getRawBits());
+}
+
+Fixed Fixed::operator*( Fixed const &rhs ) const {
+	return (this->_raw * rhs.getRawBits());
+}
+
+Fixed Fixed::operator/( Fixed const &rhs ) const {
+	return (this->_raw / rhs.getRawBits());
+}
+
 
 int		Fixed::getRawBits( void ) const {
 	return this->_raw;
