@@ -6,14 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:32:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/07 16:53:57 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 13:21:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FIXED_HPP__
 # define __FIXED_HPP__
 
-#include <iostream>
+# include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -25,10 +26,13 @@ public:
 	Fixed( void );
 	Fixed( int const nb );
 	Fixed( float const nb );
-	Fixed( Fixed const &task );
-	Fixed& operator=( Fixed const &task );
 	~Fixed( void );
 
+	Fixed( Fixed const &task );
+	Fixed& operator=( Fixed const &task );
+
+	int		toInt( void ) const;
+	float	toFloat( void ) const;
 	int		getRawBits( void ) const;
 	void	setRawBits(int const raw );
 };
