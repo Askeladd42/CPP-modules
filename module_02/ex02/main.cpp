@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 16:00:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/09 00:34:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main( void ) {
 
 	std::cout << b << std::endl;
 
+	std::cout << Fixed::min( a, b ) << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 
 	return 0;
