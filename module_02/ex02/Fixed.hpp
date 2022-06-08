@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:32:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 16:37:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 23:08:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,25 +30,34 @@ public:
 
 	Fixed( Fixed const &task );
 	Fixed& operator=( Fixed const &task );
-	
-	Fixed& operator>( Fixed const &nb );
-	Fixed& operator<( Fixed const &nb );
-	Fixed& operator>=( Fixed const &nb );
-	Fixed& operator<=( Fixed const &nb );
-	Fixed& operator==( Fixed const &nb );
-	Fixed& operator!=( Fixed const &nb );
 
-	Fixed operator+( Fixed const &rhs ) const;
-	Fixed operator-( Fixed const &rhs ) const;
-	Fixed operator*( Fixed const &rhs ) const;
-	Fixed operator/( Fixed const &rhs ) const;
+	bool				operator>( Fixed const &nb ) const;
+	bool				operator<( Fixed const &nb ) const;
+	bool				operator>=( Fixed const &nb ) const;
+	bool				operator<=( Fixed const &nb ) const;
+	bool				operator==( Fixed const &nb ) const;
+	bool				operator!=( Fixed const &nb ) const;
+	Fixed				operator+( Fixed const &rhs ) const;
+	Fixed				operator-( Fixed const &rhs ) const;
+	Fixed				operator*( Fixed const &rhs ) const;
+	Fixed				operator/( Fixed const &rhs ) const;
 
-	int				toInt( void ) const;
-	float			toFloat( void ) const;
-	int				getRawBits( void ) const;
-	void			setRawBits( int const raw );
+	Fixed				operator++( void );
+	Fixed				operator++( int );
+	Fixed				operator--( void );
+	Fixed				operator--( int );
+
+	int					toInt( void ) const;
+	float				toFloat( void ) const;
+	int					getRawBits( void ) const;
+	void				setRawBits( int const raw );
+
+	static Fixed		&min( Fixed &nb1, Fixed &nb2 );
+	static Fixed		&max( Fixed &nb1, Fixed &nb2 );
+	static Fixed const	&min( Fixed const &nb1, Fixed const &nb2 );
+	static Fixed const	&max( Fixed const &nb1, Fixed const &nb2 );
 };
 
-std::ostream&	operator<<( std::ostream &obj, Fixed const &nb );
+std::ostream&	operator<<( std::ostream &ost, Fixed const &nb );
 
 #endif

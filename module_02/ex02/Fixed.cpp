@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 17:04:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 23:09:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,46 @@ void	Fixed::setRawBits( int const raw ) {
 	this->_raw = raw;
 }
 
+// Comparison Operator functions
+
+bool	Fixed::operator<( Fixed const &nb) const {
+	if (this->_raw < nb._raw)
+		return true;
+	return false;
+}
+
+bool	Fixed::operator>( Fixed const &nb) const {
+	if (this->_raw > nb._raw)
+		return true;
+	return false;
+}
+
+bool	Fixed::operator<=( Fixed const &nb) const {
+	if (this->_raw <= nb._raw)
+		return true;
+	return false;
+}
+
+bool	Fixed::operator>=( Fixed const &nb) const {
+	if (this->_raw >= nb._raw)
+		return true;
+	return false;
+}
+
+bool	Fixed::operator==( Fixed const &nb) const {
+	if (this->_raw == nb._raw)
+		return true;
+	return false;
+}
+
+bool	Fixed::operator!=( Fixed const &nb) const {
+	if (this->_raw != nb._raw)
+		return true;
+	return false;
+}
+
+// Arithmetic Operator functions
+
 Fixed Fixed::operator+( Fixed const &rhs ) const {
 	return (this->_raw + rhs.getRawBits());
 }
@@ -73,6 +113,25 @@ Fixed Fixed::operator*( Fixed const &rhs ) const {
 
 Fixed Fixed::operator/( Fixed const &rhs ) const {
 	return (this->_raw / rhs.getRawBits());
+}
+
+// Incrementation/decrementation operator functions
+
+Fixed Fixed::operator++( void ) {
+	++this->_raw;
+}
+
+Fixed Fixed::operator++( int ) {
+	this->_raw++;
+	return this->_raw;
+}
+
+Fixed Fixed::operator--( void ) {
+	--this->_raw;
+}
+
+Fixed Fixed::operator--( int ) {
+	this->_raw--;
 }
 
 
