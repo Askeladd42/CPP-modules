@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/07 16:25:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 15:37:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	main( void ) {
 	std::cout << "c is " << c << std::endl;
 	std::cout << "d is " << d << std::endl;
 
-	std::cout << "a is " << a << " as integers" << std::endl;
-	std::cout << "b is " << b << " as integers" << std::endl;
-	std::cout << "c is " << c << " as integers" << std::endl;
-	std::cout << "d is " << d << " as integers" << std::endl;
+	std::cout << "a is " << a.toInt() << " as integers" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integers" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integers" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integers" << std::endl;
 
 	return 0;
 }

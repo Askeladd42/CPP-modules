@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 15:03:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 15:43:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,10 @@ Fixed& Fixed::operator=( Fixed const &task ) {
 }
 
 int		Fixed::getRawBits( void ) const {
-	std::cout << "getRawBits member function called" << std::endl;
 	return this->_raw;
 }
 
 void	Fixed::setRawBits( int const raw ) {
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_raw = raw;
 }
 
@@ -66,5 +64,5 @@ std::ostream&	operator<<( std::ostream &ost, Fixed const &nb ) {
 		ost << nb.toInt();
 	else
 		ost << nb.toFloat();
-	return obj;
+	return ost;
 }
