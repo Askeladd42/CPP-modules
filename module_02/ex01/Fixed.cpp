@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/08 13:26:15 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/08 14:53:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Fixed::Fixed( void ) {
 }
 
 int		Fixed::toInt( void ) const {
-	return (int)this->_raw;
+	return this->_raw >> this->_bits;
 }
 
 float	Fixed::toFloat( void ) const {
@@ -35,12 +35,16 @@ Fixed::Fixed( float const nb ) {
 	std::cout << "Float constructor called" << std::endl;
 }
 
+Fixed::~Fixed( void ) {
+	std::cout << "Destructor called" << std::endl;
+}
+
 Fixed::Fixed( Fixed const &task ) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = task;
 }
 
-Fixed& Fixed::operator=( Fixed const &task) {
+Fixed& Fixed::operator=( Fixed const &task ) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &task)
 		this->_raw = task.getRawBits();
@@ -57,6 +61,10 @@ void	Fixed::setRawBits( int const raw ) {
 	this->_raw = raw;
 }
 
-Fixed::~Fixed( void ) {
-	std::cout << "Destructor called" << std::endl;
+std::ostream&	operator<<( std::ostream &obj, Fixed const &nb ) {
+	if ((char)nb.getRawBits() == 0)
+		obj << nb.toInt();
+	else
+		obj << nb.toFloat();
+	return obj;
 }
