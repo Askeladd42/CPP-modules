@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:44:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 19:18:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/10 19:29:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,16 @@ void	ScavTrap::takeDamage(unsigned int amount) {
 }
 
 void	ScavTrap::beRepaired( unsigned int amount ) {
-	if (this->_energyPoints == 0) {
+	if (this->_energyPoints == 0)
 		std::cout << "ScavTrap " << this->_name << " has not enough energy for reparations!" << std::endl;
-		
-	}	
-	else
+	if (this->_hitPoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " is destroyed! It cannot repair itself!" << std::endl;
+	else {
+		this->_hitPoints += amount;
+		this->_energyPoints--;
+		std::cout << "ScavTrap " << this->_name << " regains " << amount 
+			<< " hit points!" << std::endl;
+	}
 }
 
 void	ScavTrap::guardGate( void ) {
