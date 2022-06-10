@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:44:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 15:53:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/10 16:14:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ ScavTrap::~ScavTrap( void ) {
 	std::cout << "Default ScavTrap destructor called" << std::endl;
 }
 
-void ScavTrap::attack(const std::string& target) {
+void	ScavTrap::attack(const std::string& target) {
 	std::cout << "ScavTrap " << this->_name << " attacks " << target 
 	<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 }
 
-void ScavTrap::takeDamage(unsigned int amount) {
+void	ScavTrap::takeDamage(unsigned int amount) {
 	this->_hitPoints -= amount;
 	std::cout << "ScavTrap " << this->_name << " takes " << amount 
 		<< " points of damage!" << std::endl;
@@ -36,7 +36,7 @@ void ScavTrap::takeDamage(unsigned int amount) {
 		std::cout << "ScavTrap " << this->_name << " is destroyed!" << std::endl;
 }
 
-void ScavTrap::beRepaired(unsigned int amount) {
+void	ScavTrap::beRepaired(unsigned int amount) {
 	if (this->_energyPoints > 0) {
 		this->_hitPoints += amount;
 		this->_energyPoints--;
@@ -46,4 +46,8 @@ void ScavTrap::beRepaired(unsigned int amount) {
 	else
 		std::cout << "ScavTrap " << this->_name << " has not enough energy for reparations!" 
 		<< std::endl;
+}
+
+void	ScavTrap::guardGate( void ) {
+	std::cout << "ScavTrap " << this->_name << " has entered in Guard mode!" << std::endl;
 }
