@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/10 14:31:36 by plam             ###   ########.fr        #
+#    Updated: 2022/06/10 19:09:20 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
 HEADER = ClapTrap.hpp ScavTrap.hpp
-SRC_FILES = main.cpp ClapTrap.cpp  ScavTrap.cpp
+SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 

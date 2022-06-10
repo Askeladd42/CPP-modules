@@ -6,12 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:37:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 13:27:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/10 18:30:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __CLAPTRAP_H__
 # define __CLAPTRAP_H__
+
+# include <iostream>
 
 class ClapTrap
 {
@@ -24,6 +26,8 @@ private:
 public:
 	ClapTrap( std::string name );
 	~ClapTrap( void );
+	ClapTrap( ClapTrap const &other );
+	ClapTrap &operator=( ClapTrap const &other );
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
