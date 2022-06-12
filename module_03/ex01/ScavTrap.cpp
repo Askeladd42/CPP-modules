@@ -6,13 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:44:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 19:29:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/12 11:06:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name) {
+	this->_name = name;
 	std::cout << "Default ScavTrap " << this->_name << " constructor called" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -23,7 +24,7 @@ ScavTrap::~ScavTrap( void ) {
 	std::cout <<  "Default ScavTrap " << this->_name << " destructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap( ScavTrap const &other ) : _name(other._name), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
+ScavTrap::ScavTrap( ScavTrap const &other ) : ClapTrap(other) {
 	std::cout << "Copy ScavTrap " << this->_name << " constructor called" << std::endl;
 }
 

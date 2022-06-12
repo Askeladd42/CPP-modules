@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 16:01:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/12 11:02:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main( void ) {
 	Jimmy.attack( "Scavenger" );
 	Jimmy.takeDamage( 25 );
 	Jimmy.beRepaired( 20 );
+	Jimmy.guardGate();
 	Jimmy.takeDamage( 100 );
 
 	return 0;
