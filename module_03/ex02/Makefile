@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/10 19:09:07 by plam             ###   ########.fr        #
+#    Updated: 2022/06/13 16:26:57 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = FragTrap
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+HEADER = ClapTrap.hpp,ScavTrap.hpp,FragTrap.hpp
 SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/

@@ -6,17 +6,19 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/10 16:01:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/13 16:29:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main( void ) {
 	ClapTrap	Timmy("Timmy");
 	ScavTrap	Jimmy("Jimmy");
+	FragTrap	Manny("Manny");
 
 	Timmy.attack( "a pile of bricks" );
 	Timmy.takeDamage(5);
@@ -26,7 +28,14 @@ int	main( void ) {
 	Jimmy.attack( "Scavenger" );
 	Jimmy.takeDamage( 25 );
 	Jimmy.beRepaired( 20 );
+	Jimmy.guardGate();
 	Jimmy.takeDamage( 100 );
+
+	Manny.attack( "Scavenger" );
+	Manny.takeDamage( 25 );
+	Manny.beRepaired( 20 );
+	Manny.highFivesGuys();
+	Manny.takeDamage( 100 );
 
 	return 0;
 }
