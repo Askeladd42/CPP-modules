@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/13 16:29:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/13 16:43:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main( void ) {
 	ClapTrap	Timmy("Timmy");
@@ -37,5 +38,6 @@ int	main( void ) {
 	Manny.highFivesGuys();
 	Manny.takeDamage( 100 );
 
+	std::cout << "By a miracle, Scavenger destroyed itself !" << std::endl; 
 	return 0;
 }
