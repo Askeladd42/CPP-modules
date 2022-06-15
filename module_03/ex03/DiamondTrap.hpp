@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 14:26:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:06:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ public:
 	void	highFivesGuys( void );
 	void	whoAmI( void );
 
+	void	displayStatus( void );
 };
 
 

@@ -21,6 +21,7 @@ int	main( void ) {
 	Timmy.takeDamage(5);
 	Timmy.beRepaired(3);
 	Timmy.takeDamage(8);
+	Timmy.displayStatus();
 
 	return 0;
 }

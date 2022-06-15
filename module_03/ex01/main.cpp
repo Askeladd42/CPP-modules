@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/12 11:02:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:18:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ int	main( void ) {
 	Jimmy.guardGate();
 	Jimmy.takeDamage( 100 );
 
+	Timmy.displayStatus();
+	Jimmy.displayStatus();
+	
 	return 0;
 }

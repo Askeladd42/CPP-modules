@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/13 16:29:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:20:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,9 @@ int	main( void ) {
 	Manny.highFivesGuys();
 	Manny.takeDamage( 100 );
 
+	Timmy.displayStatus();
+	Jimmy.displayStatus();
+	Manny.displayStatus();
+	
 	return 0;
 }
