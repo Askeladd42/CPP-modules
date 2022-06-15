@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:37:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 15:10:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:49:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
 	
-	void	displayStatus( void );
+	void	displayStatus( void ) const;
 };
 
 #endif

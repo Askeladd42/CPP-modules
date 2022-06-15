@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:38:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 15:16:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 15:53:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,9 @@ void ClapTrap::beRepaired( unsigned int amount ) {
 	}
 }
 
-void	ClapTrap::displayStatus( void ) {
-	std::cout << std::endl << this->_name << " status :" << std::endl;
-	std::cout << "HP: " << this->_hitPoints;
-	std::cout << "	EP: " << this->_energyPoints << std::endl;
+void	ClapTrap::displayStatus( void ) const {
+	std::cout << std::endl << _name << " status :" << std::endl;
+	std::cout << "HP: " << _hitPoints;
+	std::cout << "	EP: " << _energyPoints;
+	std::cout << "	Attack Points : " << _attackDamage << std::endl;
 }
