@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:47:46 by plam              #+#    #+#             */
-/*   Updated: 2022/06/13 16:49:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 14:15:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name) {
 	this->_name = name;
 	std::cout << "Default DiamondTrap " << this->_name << " constructor called" << std::endl;
-	this->_hitPoints = 100;
+	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 }
@@ -39,7 +39,7 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 	return *this;
 }
 
-void	DiamondTrap::attack(const std::string& target) {
+void	DiamondTrap::attack( const std::string& target ) {
 	if (this->_energyPoints == 0)
 		std::cout << this->_name << " has no energy to attack!" << std::endl;
 	if (this->_hitPoints <= 0) 
@@ -51,7 +51,7 @@ void	DiamondTrap::attack(const std::string& target) {
 	}
 }
 
-void	DiamondTrap::takeDamage(unsigned int amount) {
+void	DiamondTrap::takeDamage( unsigned int amount ) {
 	this->_hitPoints -= amount;
 	std::cout << "DiamondTrap " << this->_name << " takes " << amount 
 		<< " points of damage!" << std::endl;
@@ -76,9 +76,13 @@ void	DiamondTrap::guardGate( void ) {
 	std::cout << "DiamondTrap " << this->_name << " has entered in Guard mode!" << std::endl;
 }
 
-void	DiamondTrap::highFivesGuys(void) {
+void	DiamondTrap::highFivesGuys( void ) {
 	if (this->_energyPoints > 0) {
 		std::cout << this->_name << " : C'mon guys ! Give me a five !" << std::endl;
 		this->_energyPoints--;
 	}
+}
+
+void	DiamondTrap::whoAmI( void ) {
+	std::cout << "My name is " << this->_name << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 16:58:23 by plam              #+#    #+#             */
-/*   Updated: 2022/06/13 16:22:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 13:51:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ FragTrap	&FragTrap::operator=( FragTrap const &other ) {
 	return *this;
 }
 
-void	FragTrap::attack(const std::string& target) {
+void	FragTrap::attack( const std::string& target ) {
 	if (this->_energyPoints == 0)
 		std::cout << this->_name << " has no energy to attack!" << std::endl;
 	if (this->_hitPoints <= 0) 
@@ -51,7 +51,7 @@ void	FragTrap::attack(const std::string& target) {
 	}
 }
 
-void	FragTrap::takeDamage(unsigned int amount) {
+void	FragTrap::takeDamage( unsigned int amount ) {
 	this->_hitPoints -= amount;
 	std::cout << "FragTrap " << this->_name << " takes " << amount 
 		<< " points of damage!" << std::endl;
@@ -72,7 +72,7 @@ void	FragTrap::beRepaired( unsigned int amount ) {
 	}
 }
 
-void	FragTrap::highFivesGuys(void) {
+void	FragTrap::highFivesGuys( void ) {
 	if (this->_energyPoints > 0) {
 		std::cout << this->_name << " : C'mon guys ! Give me a five !" << std::endl;
 		this->_energyPoints--;

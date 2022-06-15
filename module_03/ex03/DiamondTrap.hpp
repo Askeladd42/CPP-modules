@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/13 16:49:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 14:26:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define  __DIAMONDTRAP_HPP__
 
 # include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-class DiamondTrap : public ClapTrap, public ScavTrap, public FragTrap
+class DiamondTrap : virtual public ClapTrap, virtual public ScavTrap, virtual public FragTrap
 {
 private:
 	std::string		_name;
@@ -27,13 +29,14 @@ public:
 	DiamondTrap( std::string name );
 	~DiamondTrap( void );
 	DiamondTrap( DiamondTrap const &other );
-	DiamondTrap	&operator=(DiamondTrap const &other);
+	DiamondTrap	&operator=( DiamondTrap const &other );
 
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	void	attack( const std::string& target );
+	void	takeDamage( unsigned int amount );
+	void	beRepaired( unsigned int amount );
 	void	guardMode( void );
-	void	highFivesGuys(void);
+	void	highFivesGuys( void );
+	void	whoAmI( void );
 
 };
 
