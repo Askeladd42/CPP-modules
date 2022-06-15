@@ -6,18 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:47:46 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 14:15:24 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/15 16:30:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name) {
-	this->_name = name;
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(std::string(name).append("_clap_name")), _name(name) {
 	std::cout << "Default DiamondTrap " << this->_name << " constructor called" << std::endl;
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	FragTrap::setDefaultHP();
+	ScavTrap::setDefaultEP();
+	FragTrap::setAtkPts();
 }
 
 DiamondTrap::~DiamondTrap( void ) {
@@ -39,15 +38,15 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 	return *this;
 }
 
-void	DiamondTrap::attack( const std::string& target ) {
-	if (this->_energyPoints == 0)
-		std::cout << this->_name << " has no energy to attack!" << std::endl;
-	if (this->_hitPoints <= 0) 
-		std::cout << this->_name << " is destroyed! It cannot attack!" << std::endl;
-	else {
-		this->_energyPoints--;
-		std::cout << "DiamondTrap " << this->_name << " attacks " << target 
-		<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+void	DiamondTrap::attack( const std::string& target ) : ScavTrap.attack(target) {
+	//if (this->_energyPoints == 0)
+	//	std::cout << this->_name << " has no energy to attack!" << std::endl;
+	//if (this->_hitPoints <= 0) 
+	//	std::cout << this->_name << " is destroyed! It cannot attack!" << std::endl;
+	//else {
+	//	this->_energyPoints--;
+	//	std::cout << "DiamondTrap " << this->_name << " attacks " << target 
+	//	<< ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	}
 }
 
