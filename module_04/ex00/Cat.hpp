@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:02:42 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 15:16:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/23 15:44:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ class Cat
 private:
 	/* data */
 public:
-	Cat(/* args */);
-	~Cat();
+	Cat( std::string name );
+	~Cat( void );
+	Cat( Cat const &other );
+	Cat	&operator=( Cat const &other );
 };
 
 #endif

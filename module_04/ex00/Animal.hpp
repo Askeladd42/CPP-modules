@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:12:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 15:16:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/23 15:40:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ class Animal
 protected:
 	std::string type;
 public:
-	Animal(/* args */);
-	~Animal();
+	Animal( std::string name );
+	~Animal( void );
+	Animal( Animal const &other );
+	Animal	&operator=( Animal const &other );
 };
 
 

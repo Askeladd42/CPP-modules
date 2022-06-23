@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 15:16:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/23 15:43:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ class Dog
 {
 private:
 	/* data */
-public:
-	Dog(/* args */);
-	~Dog();
+public: virtual Animal
+	Dog( std::string name );
+	~Dog( void );
+	Dog( Dog const &other );
+	Dog	&operator=( Dog const &other );
 };
 
 #endif
