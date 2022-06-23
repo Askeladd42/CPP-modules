@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:47:46 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 16:30:16 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/23 14:37:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 	return *this;
 }
 
-void	DiamondTrap::attack( const std::string& target ) : ScavTrap.attack(target) {
+void	DiamondTrap::attack( const std::string& target ) {
 	//if (this->_energyPoints == 0)
 	//	std::cout << this->_name << " has no energy to attack!" << std::endl;
 	//if (this->_hitPoints <= 0) 
@@ -83,5 +83,6 @@ void	DiamondTrap::highFivesGuys( void ) {
 }
 
 void	DiamondTrap::whoAmI( void ) {
-	std::cout << "My name is " << this->_name << std::endl;
+	std::cout << "My name is " << this->_name << ", but my ClapTrap name is " << this->_name;
+	<< std::endl;
 }
