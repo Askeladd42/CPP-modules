@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/23 14:59:32 by plam             ###   ########.fr        #
+#    Updated: 2022/06/23 15:12:22 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Animal
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Dog.hpp,Cat.hpp
+HEADER = Animal.hpp,Dog.hpp,Cat.hpp
 SRC_FILES = main.cpp Dog.cpp Cat.hpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/

@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 15:02:42 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 15:16:22 by plam             ###   ########.fr       */
+/*   Created: 2022/06/23 15:12:33 by plam              #+#    #+#             */
+/*   Updated: 2022/06/23 15:15:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef __ANIMAL_HPP__
+# define __ANIMAL_HPP__
 
-#ifndef __CAT_HPP__
-# define __CAT_HPP__
+# include <iostream>
 
-#include "Animal.hpp"
-
-class Cat
+class Animal
 {
-private:
-	/* data */
+protected:
+	std::string type;
 public:
-	Cat(/* args */);
-	~Cat();
+	Animal(/* args */);
+	~Animal();
 };
+
+Animal::Animal( void )
+{
+}
+
+Animal::~Animal()
+{
+}
+
 
 #endif
