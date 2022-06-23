@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:02:42 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 15:44:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/23 16:23:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 #include "Animal.hpp"
 
-class Cat
+class Cat : virtual Animal
 {
 private:
-	/* data */
+	std::string	_type;
 public:
 	Cat( std::string name );
 	~Cat( void );
