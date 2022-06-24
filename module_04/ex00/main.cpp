@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:01:15 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 17:32:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,21 @@ int	main( void ) {
 		j->makeSound();
 		meta->makeSound();
 	}
+	{
+		const Animal*	wild = new Animal();
+		const Dog		Dogmeat;
+		const Cat		Nibbles;
 
+		std::cout << "wild animal has " << wild->getType() << " type and makes ";
+		wild->makeSound();
+		std::cout << " when barking." << std::endl;
+
+		std::cout << "Dogmeat has " << Dogmeat.getType() << " type and makes ";
+		Dogmeat.makeSound();
+		std::cout << " when barking." << std::endl;
+
+		std::cout << "Nibbles has " << Nibbles.getType() << " type and makes ";
+		Nibbles.makeSound();
+		std::cout << " when mewing." << std::endl;
+	}
 }
