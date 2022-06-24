@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 16:53:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 17:34:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Dog : public Animal
 {
 public:
 	Dog( void );
-	~Dog( void );
+	virtual ~Dog( void );
 	Dog( Dog const &other );
 	Dog	&operator=( Dog const &other );
 

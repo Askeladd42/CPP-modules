@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 16:38:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 17:39:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ Dog	&Dog::operator=( Dog const &other ) {
 }
 
 void	Dog::makeSound( void ) const {
-	std::cout << "Wouaf !" << std::endl;
+	std::cout << "Wouaf ! as sound." << std::endl;
 }
