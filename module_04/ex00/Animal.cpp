@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:22:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 15:33:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ std::string	Animal::getType( void ) const {
 	return this->_type;
 }
 
-void	Animal::makeSound( void ) {
+void	Animal::makeSound( void ) const {
 	std::cout << "Basic sound heard." << std::endl;
 }

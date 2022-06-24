@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:24:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 15:33:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	Dog( Dog const &other );
 	Dog	&operator=( Dog const &other );
 
-	virtual void	makeSound( void );
+	virtual void	makeSound( void ) const;
 };
 
 #endif

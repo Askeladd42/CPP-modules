@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:12:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:24:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 15:33:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Animal	&operator=( Animal const &other );
 
 	virtual std::string	getType( void ) const;
-	virtual void		makeSound( void );
+	virtual void		makeSound( void ) const;
 };
 
 
