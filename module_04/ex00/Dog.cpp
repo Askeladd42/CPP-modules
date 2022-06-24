@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:33:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 16:04:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::~Dog( void ) {
 	std::cout << "Dog destructor called." << std::endl;
 }
 
-Dog::Dog( Dog const &other ) {
+Dog::Dog( Dog const &other ) : Animal(other) {
 	std::cout << "Copy Dog constructor called." << std::endl;
 }
 

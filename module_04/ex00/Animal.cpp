@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:33:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 16:07:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Animal::~Animal( void ) {
 
 Animal::Animal( Animal const &other ) {
 	std::cout << "Copy Animal " << this->getType() << " constructor called." << std::endl;
+	*this = other; 
 }
 
 Animal	&Animal::operator=( Animal const &other ) {
