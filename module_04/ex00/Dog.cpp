@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 16:32:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 14:58:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog( void ) {
+Dog::Dog( void ) : _type( "Dog" ) {
 	std::cout << "Dog constructor called." << std::endl; 
 }
 
@@ -20,6 +20,16 @@ Dog::~Dog( void ) {
 	std::cout << "Dog destructor called." << std::endl;
 }
 
+Dog::Dog( Dog const &other ) {
+	std::cout << "Copy Dog constructor called." << std::endl;
+}
+
+Dog	&Dog::operator=( Dog const &other ) {
+	std::cout << "Copy Dog assignment operator called." << std::endl;
+	if (this != &other)
+		this->_type = other._type;
+	return *this;	
+}
 
 void	Dog::makeSound( void ) {
 	std::cout << "Wouaf !" << std::endl;
