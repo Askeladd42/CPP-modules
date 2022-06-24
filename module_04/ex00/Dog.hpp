@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 15:33:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 16:53:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 # include "Animal.hpp"
 
-class Dog : virtual public Animal
+class Dog : public Animal
 {
-protected:
-	std::string	_type;
 public:
 	Dog( void );
 	~Dog( void );

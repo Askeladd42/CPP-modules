@@ -6,13 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 16:33:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 16:41:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal( void ) : _type("Default") {
+Animal::Animal( void ) {
+	_type = "Default";
 	std::cout << "Animal default constructor called." << std::endl;
 }
 

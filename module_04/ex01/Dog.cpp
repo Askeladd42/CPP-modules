@@ -6,13 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 16:24:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 16:38:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog( void ) : _type( "Dog" ) {
+Dog::Dog( void ) {
+	_type = "Dog";
 	std::cout << "Dog default constructor called." << std::endl; 
 }
 
@@ -21,6 +22,7 @@ Dog::~Dog( void ) {
 }
 
 Dog::Dog( Dog const &other ) : Animal(other) {
+	_type = "Dog";
 	std::cout << "Copy Dog constructor called." << std::endl;
 }
 
