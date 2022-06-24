@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:39:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/06/24 18:11:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 Dog::Dog( void ) {
 	_type = "Dog";
 	std::cout << "Dog default constructor called." << std::endl; 
+	_mind = new Brain();
 }
 
 Dog::~Dog( void ) {
 	std::cout << "Dog destructor called." << std::endl;
+	delete _mind;
 }
 
 Dog::Dog( Dog const &other ) : Animal(other) {

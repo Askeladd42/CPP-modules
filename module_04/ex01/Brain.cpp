@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 18:10:19 by plam             ###   ########.fr       */
+/*   Created: 2022/06/24 18:02:27 by plam              #+#    #+#             */
+/*   Updated: 2022/06/24 18:06:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CAT_HPP__
-# define __CAT_HPP__
+#include "Brain.hpp"
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+Brain::Brain( void ) {
+	std::cout << "Brain default constructor called" << std::endl;
+}
 
-class Cat : public Animal
-{
-private:
-	Brain*	_mind;
-public:
-	Cat( void );
-	virtual ~Cat( void );
-	Cat( Cat const &other );
-	Cat	&operator=( Cat const &other );
-
-	virtual void	makeSound( void ) const;
-};
-
-#endif
+Brain::~Brain( void ) {
+	std::cout << "Brain destructor called" <<std::endl;
+}
