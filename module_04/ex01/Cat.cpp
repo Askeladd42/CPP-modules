@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:00:54 by plam              #+#    #+#             */
-/*   Updated: 2022/07/07 12:40:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/07 13:32:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ Cat	&Cat::operator=( Cat const &other ) {
 
 void	Cat::makeSound( void ) const {
 	std::cout << "Miaou ! as sound." << std::endl;
+}
+
+void	Cat::printIdeas( void ) const {
+	int i = 0;
+	while (this->_Brain)
+		std::cout << this->_Brain[i++] << std::endl;
 }

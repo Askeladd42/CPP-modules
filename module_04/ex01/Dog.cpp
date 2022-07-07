@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/07/07 12:39:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/07 13:30:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ Dog	&Dog::operator=( Dog const &other ) {
 
 void	Dog::makeSound( void ) const {
 	std::cout << "Wouaf ! as sound." << std::endl;
+}
+
+void	Dog::printIdeas( void ) const {
+	int i = 0;
+	while (_Brain[i])
+		std::cout << _Brain[i++] << std::endl;
 }

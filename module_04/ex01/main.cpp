@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/07/07 13:17:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/07 13:24:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,14 @@ int	main( void ) {
 		std::cout << "---Deep copy test---" << std::endl;
 		std::cout << "//==========\\\\" << std::endl;
 
-		const Dog	Dogmeat;
-		const Cat	Nibbles;
 		Dog	cloneDog;
 		Cat	cloneCat;
-
+		{
+		const Dog	Dogmeat;
 		cloneDog = Dogmeat;
-		cloneCat=Nibbles;
+		const Cat	Nibbles;
+		cloneCat = Nibbles;
+		}
 		cloneDog->printIdeas();
 		cloneCat->printIdeas();
 	}
