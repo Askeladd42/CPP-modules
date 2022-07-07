@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 18:10:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/07 12:39:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Cat : public Animal
 {
 private:
-	Brain*	_mind;
+	Brain*	_Brain;
 public:
 	Cat( void );
 	virtual ~Cat( void );
