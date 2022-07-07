@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/07/07 12:43:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/07 13:02:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,18 @@
 
 int	main( void ) {
 	{
-		const Animal* meta = new Animal();
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound(); //will output the cat sound!
-		j->makeSound();
-		meta->makeSound();
-	}
-	{
-		std::cout << std::endl << std::endl;
+		const Animal*	SPA[10];
 		
-		const Animal*	wild = new Animal();
-		const Dog		Dogmeat;
-		const Cat		Nibbles;
-
-		std::cout << "wild animal has " << wild->getType() << " type and makes ";
-		wild->makeSound();
-
-		std::cout << "Dogmeat has " << Dogmeat.getType() << " type and makes ";
-		Dogmeat.makeSound();
-
-		std::cout << "Nibbles has " << Nibbles.getType() << " type and makes ";
-		Nibbles.makeSound();
+		for (int i = 0; i < 10; i++)
+		{
+			if (i % 2)
+				SPA[i] = new Dog();
+			else
+				SPA[i] = new Cat();
+			std::cout << "SPA is full !" << std::endl;
+		}
+		for (int i = 0; i < 10; i++)
+			delete SPA[i];
+		return 0;
 	}
 }
