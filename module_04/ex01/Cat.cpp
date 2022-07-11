@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:00:54 by plam              #+#    #+#             */
-/*   Updated: 2022/07/11 15:20:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/11 15:48:00 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 Cat::Cat( void ) {
 	this->_type = "Cat";
 	std::cout << "Cat default constructor called." << std::endl;
-	_Brain = new Brain( "I'm a cat, and I don't care about my master." );
+	_mind = new Brain( "I'm a cat, and I don't care about my master." );
 }
 
 Cat::~Cat( void ) {
 	std::cout << "Cat destructor called." << std::endl;
-	delete _Brain;
+	delete _mind;
 }
 
 Cat::Cat( Cat const &other ) : Animal(other) {

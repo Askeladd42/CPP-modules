@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:02:27 by plam              #+#    #+#             */
-/*   Updated: 2022/07/11 15:31:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/11 15:58:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,13 @@ Brain	&Brain::operator=( Brain const &other ) {
 		for (int i = 0; i < 100; i++)
 			_ideas[i] = other._ideas[i];
 	return *this;
+}
+
+void	Brain::printIdeas( void ) const {
+	for (int i = 0; i < 100; i++)
+		std::cout << this->_ideas[i] << std::endl;
+}
+
+std::string	Brain::getIdeas( void ) const {
+	return this->_ideas[0];
 }
