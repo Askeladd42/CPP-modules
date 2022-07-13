@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/07/07 13:24:01 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/13 19:03:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ int	main( void ) {
 		const Cat	Nibbles;
 		cloneCat = Nibbles;
 		}
-		cloneDog->printIdeas();
-		cloneCat->printIdeas();
+		cloneDog.printIdeas();
+		cloneCat.printIdeas();
 	}
 	return 0;
 }
