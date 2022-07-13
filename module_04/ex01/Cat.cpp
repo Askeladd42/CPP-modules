@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:00:54 by plam              #+#    #+#             */
-/*   Updated: 2022/07/11 15:48:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/13 19:00:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	Cat::makeSound( void ) const {
 }
 
 void	Cat::printIdeas( void ) const {
-	int i = 0;
 	if (this->_mind)
-		std::cout << this->_mind << std::endl;
+		this->_mind->printIdeas();
 }

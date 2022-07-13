@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/07/11 15:20:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/13 19:00:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	Dog::makeSound( void ) const {
 }
 
 void	Dog::printIdeas( void ) const {
-	int i = 0;
 	if (this->_mind)
-		std::cout << this->_mind << std::endl;
+		this->_mind->printIdeas();
 }
