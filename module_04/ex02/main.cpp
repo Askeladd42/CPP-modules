@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 19:03:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/13 19:11:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int	main( void ) {
 
 		Dog	cloneDog;
 		Cat	cloneCat;
-		{
+
 		const Dog	Dogmeat;
 		cloneDog = Dogmeat;
 		const Cat	Nibbles;
 		cloneCat = Nibbles;
-		}
+
 		cloneDog.printIdeas();
 		cloneCat.printIdeas();
 	}
