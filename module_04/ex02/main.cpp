@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 19:11:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/19 15:03:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ int	main( void ) {
 		}
 		for (int i = 0; i < 10; i++)
 		{
+			std::cout << std::endl;
 			SPA[i]->makeSound();
 			SPA[i]->printIdeas();
+			std::cout << std::endl;
 		}
 		for (int i = 0; i < 10; i++)
 			delete SPA[i];
