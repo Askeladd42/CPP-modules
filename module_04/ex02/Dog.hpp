@@ -6,17 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/07/11 14:55:24 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/19 15:14:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __DOG_HPP__
 # define __DOG_HPP__
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 private:
 	Brain*	_mind;
