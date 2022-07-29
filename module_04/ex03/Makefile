@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/07/18 18:29:11 by plam             ###   ########.fr        #
+#    Updated: 2022/07/29 11:54:16 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = Materia
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Materia.hpp
-SRC_FILES = main.cpp Materia.cpp
+HEADER = AMateria.hpp
+SRC_FILES = main.cpp AMateria.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 18:30:19 by plam              #+#    #+#             */
-/*   Updated: 2022/07/18 18:31:40 by plam             ###   ########.fr       */
+/*   Created: 2022/07/18 18:31:20 by plam              #+#    #+#             */
+/*   Updated: 2022/07/29 11:54:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __MATERIA_HPP__
-# define __MATERIA_HPP__
+#include "AMateria.hpp"
 
-class Materia
+Materia::Materia(/* args */)
 {
-private:
-	/* data */
-public:
-	Materia(/* args */);
-	~Materia();
-};
+}
 
-#endif
+Materia::~Materia()
+{
+}
