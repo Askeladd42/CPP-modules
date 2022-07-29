@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 19:12:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/29 19:19:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::~Dog( void ) {
 	delete _mind;
 }
 
-Dog::Dog( Dog const &other ) : Animal(other) {
+Dog::Dog( Dog const &other ) : AAnimal(other) {
 	_type = "Dog";
 	std::cout << "Dog copy constructor called." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:00:54 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 19:00:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/07/29 19:19:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::~Cat( void ) {
 	delete _mind;
 }
 
-Cat::Cat( Cat const &other ) : Animal(other) {
+Cat::Cat( Cat const &other ) : AAnimal(other) {
 	this->_type = "Cat";
 	std::cout << "Cat copy constructor called." << std::endl;
 }
