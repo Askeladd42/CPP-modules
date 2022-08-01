@@ -6,9 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 11:56:42 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/01 16:53:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
 
+ICharacter::ICharacter( std::string name ) { }
+ICharacter::~ICharacter() { }
