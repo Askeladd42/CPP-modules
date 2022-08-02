@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/02 17:21:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/03 01:13:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,22 @@ void	Character::equip(AMateria* m) {
 		std::cout << this->c_name << " equiped the material " << m->getType() << " in the slot " << i << std::endl;
 }
 
-void	Character::unequip(int idx) {
+void	unequip(int idx) {
 	if (idx < 0 || idx > 3) {
 		std::cout << "Characters have only 4 equipment slots ! This index doesn't exist !" << std::endl;
 		return ;
 	}
 	if (this->c_inv[idx] == 0) {
-		std::cout << "This slot is empty." << std::endl;
+		std::cout << "Equipment slot " << idx << " : This slot is empty." << std::endl;
 		return ;
 	}
 	else {
-		std::cout << c_name << "" << std::endl;
+		std::cout << c_name << "dropped a materia in slot " << idx << std::endl;
+		drop(c_inv[idx]);
+		c_inv[idx] = 0;
 	}
 }
-void use(int idx, ICharacter& target);
+
+void use(int idx, ICharacter& target) {
+	// depending of the type of materia, depicts the utility of it
+}
