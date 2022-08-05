@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/03 01:13:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/05 10:04:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,16 @@ void	unequip(int idx) {
 }
 
 void use(int idx, ICharacter& target) {
-	// depending of the type of materia, depicts the utility of it
+	if (idx < 0 || idx > 3) {
+		std::cout << "Characters have only 4 equipment slots ! This slot doesn't exist !" << std::endl;
+		return ;
+	}
+	if (this->c_inv[idx] == 0) {
+		std::cout << "Equipment slot " << idx << " : This slot is empty." << std::endl;
+		return ;
+	}
+	else {
+		std::cout << c_name << "use a " << c_inv[idx]->_type <<" materia in " << target->c_name << std::endl;
+		c_inv[idx]->use(target);
+	}
 }
