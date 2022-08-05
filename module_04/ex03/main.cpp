@@ -6,13 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:29:31 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 12:09:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/05 14:04:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
+#include "Character.hpp"
 #include "IMateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {
