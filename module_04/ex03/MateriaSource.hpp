@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 15:46:13 by plam              #+#    #+#             */
-/*   Updated: 2022/08/05 15:53:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/09 13:03:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-	std::string	slots[4];
+	AMateria*	m_slot[4];
 public:
 	MateriaSource( void );
 	virtual ~MateriaSource( void );
