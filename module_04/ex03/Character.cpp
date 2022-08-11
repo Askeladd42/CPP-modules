@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/05 14:15:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/11 13:40:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,11 @@ void	Character::equip(AMateria* m) {
 	else {
 		this->c_inv[i] = m;
 		std::cout << this->c_name << " equiped the material " << m->getType() << " in the slot " << i << std::endl;
+	}
 }
 
-void	unequip(int idx) {
+
+void	Character::unequip(int idx) {
 	if (idx < 0 || idx > 3) {
 		std::cout << "Characters have only 4 equipment slots ! This index doesn't exist !" << std::endl;
 		return ;
@@ -87,7 +89,7 @@ void	unequip(int idx) {
 	}
 }
 
-void	use(int idx, ICharacter& target) {
+void	Character::use(int idx, ICharacter& target) {
 	if (idx < 0 || idx > 3) {
 		std::cout << "Characters have only 4 equipment slots ! This slot doesn't exist !" << std::endl;
 		return ;
@@ -97,15 +99,15 @@ void	use(int idx, ICharacter& target) {
 		return ;
 	}
 	else {
-		std::cout << c_name << "use a " << c_inv[idx]->_type <<" materia in " << target->c_name << std::endl;
+		std::cout << c_name << "use a " << c_inv[idx]->getType() <<" materia in " << target.getName() << std::endl;
 		c_inv[idx]->use(target);
 	}
 }
 
-void	drop( AMateria* m) {
+void	Character::drop( AMateria* m) {
 	int	i = 0;
 
-	while ( i < 50 c_floor[i] )
+	while ( i < 50 && c_floor[i] )
 		i++;
 	if (i < 50)
 		c_floor[i] = m;
