@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/08/11 13:42:31 by plam             ###   ########.fr        #
+#    Updated: 2022/08/11 13:48:55 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ NAME = Materia
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = ICharacter.hpp,AMateria.hpp,IMateriaSource.hpp,Character.hpp,Ice.hpp\
-		Cure.hpp
-SRC_FILES = main.cpp AMateria.cpp Character.cpp Ice.cpp Cure.cpp
+HEADER = AMateria.hpp,IMateriaSource.hpp,MateriaSource.hpp,Character.hpp,ICharacter.hpp\
+		Ice.hpp,Cure.hpp
+SRC_FILES = main.cpp AMateria.cpp Character.cpp Ice.cpp Cure.cpp MateriaSource.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 

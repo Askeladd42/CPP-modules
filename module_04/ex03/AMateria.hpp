@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:30:19 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:47:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/11 13:49:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __AMATERIA_HPP__
 # define __AMATERIA_HPP__
 
-# include <ICharacter.hpp>
+# include "ICharacter.hpp"
 
 class AMateria
 {
