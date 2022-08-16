@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:30:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/16 15:42:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/16 15:42:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	
 	std::string const &getType() const;
 	virtual AMateria*	clone() const = 0;
-	void		use( ICharacter	&target ) const;
+	virtual void		use( ICharacter	&target ) const;
 };
 
 #endif
