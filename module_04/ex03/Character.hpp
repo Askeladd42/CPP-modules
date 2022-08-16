@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 12:56:39 by plam              #+#    #+#             */
-/*   Updated: 2022/08/02 17:17:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/16 13:58:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class Character : public ICharacter {
 private:
-	Character( void ) { }
+	Character( void ) { };
 	std::string const	c_name;
 	AMateria*			c_inv[4];
 	AMateria*			c_floor[50];
