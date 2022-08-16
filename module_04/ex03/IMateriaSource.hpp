@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:59:53 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 12:04:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/16 14:16:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class IMateriaSource
 {
 	public:
-		virtual ~IMateriaSource() {}
+		virtual ~IMateriaSource() { }
 		virtual void learnMateria(AMateria*) = 0;
 		virtual AMateria* createMateria(std::string const & type) = 0;
 };
