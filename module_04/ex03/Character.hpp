@@ -6,14 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 12:56:39 by plam              #+#    #+#             */
-/*   Updated: 2022/08/16 15:38:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 08:51:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __CHARACTER_HPP__
 # define __CHARACTER_HPP__
 
-# include <string>
 # include <iostream>
 # include "AMateria.hpp"
 # include "ICharacter.hpp"
