@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 16:45:24 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 16:47:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Bureaucrat::Bureaucrat( std::string name, int grade ) {
 		}
 	}
 	catch ( std::exception &e ) {
-		std::cerr << &e << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
