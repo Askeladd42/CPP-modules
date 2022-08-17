@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/11 13:40:09 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 10:19:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	Character::unequip(int idx) {
 		return ;
 	}
 	else {
-		std::cout << c_name << "dropped a materia in slot " << idx << std::endl;
+		std::cout << c_name << " dropped a materia in slot " << idx << std::endl;
 		drop(c_inv[idx]);
 		c_inv[idx] = 0;
 	}
