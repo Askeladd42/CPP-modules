@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 10:22:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:39:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ void	Character::use(int idx, ICharacter& target) {
 		return ;
 	}
 	else {
-		std::cout << c_name << "use a " << c_inv[idx]->getType() <<" materia in " << target.getName() << std::endl;
+		std::cout << c_name << " use a " << c_inv[idx]->getType() <<" materia in " << target.getName() << std::endl;
 		c_inv[idx]->use(target);
 	}
 }

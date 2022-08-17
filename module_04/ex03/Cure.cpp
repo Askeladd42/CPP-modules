@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:39:45 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 11:17:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:42:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ Cure	*Cure::clone() const {
 }
 
 void	Cure::use( ICharacter &target ) {
-	std::cout << "Casting a healing on " << target.getName() << " wounds." << std::endl; 
+	std::cout << target.getName() << " is casting a healing on " << target.getName() << " wounds." << std::endl; 
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:08 by plam              #+#    #+#             */
-/*   Updated: 2022/08/16 14:43:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:36:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define __ICHARACTER_HPP__
 
 # include <iostream>
-# include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {
