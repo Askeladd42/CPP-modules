@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:42:14 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 12:44:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 13:22:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ Ice	*Ice::clone() const {
 }
 
 void	Ice::use( ICharacter &target ) {
-	std::cout << target.getName() << " : * shoots an ice bolt at " << target.getName() << " *"<< std::endl; 
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *"<< std::endl; 
 }

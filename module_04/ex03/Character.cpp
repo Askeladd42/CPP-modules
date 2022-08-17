@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 12:56:56 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 13:25:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	Character::equip(AMateria* m) {
 	}
 	else {
 		this->c_inv[i] = m;
-		std::cout << this->c_name << " equiped the material " << m->getType() << " in the slot " << i << std::endl;
+		std::cout << " equiped the materia " << m->getType() << " in the slot " << i << std::endl;
 	}
 }
 

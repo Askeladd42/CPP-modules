@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:39:45 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 12:44:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 13:22:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ Cure	*Cure::clone() const {
 }
 
 void	Cure::use( ICharacter &target ) {
-	std::cout << target.getName() << " : * heals " << target.getName() << "’s wounds *" << std::endl; 
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl; 
 }
