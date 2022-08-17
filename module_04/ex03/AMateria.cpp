@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:31:20 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 11:23:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 12:31:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ AMateria &AMateria::operator=( AMateria const &other ) {
 
 std::string const	&AMateria::getType() const {
 	return this->_type;
+}
+
+AMateria*	AMateria::clone() const {
+	this->_type = ;
 }
 
 void	AMateria::use( ICharacter &target ) {
