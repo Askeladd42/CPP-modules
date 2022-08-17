@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:42:14 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:32:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:17:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ Ice	*Ice::clone() const {
 	return new Ice(*this);
 }
 
-void	Ice::use( ICharacter &target ) const {
+void	Ice::use( ICharacter &target ) {
 	std::cout << "Launching a freeze beam to " << target.getName() << std::endl; 
 }

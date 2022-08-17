@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 12:56:39 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 10:24:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:21:00 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	Character( Character const &other );
 	Character &operator=( Character const &other );
 
-	std::string const &getName() const;
+	virtual std::string const &getName() const;
 	void	equip( AMateria* m );
 	void	unequip( int idx );
 	void	use( int idx, ICharacter& target );

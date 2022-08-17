@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:34:18 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:29:52 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:14:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Ice	&operator=( Ice const &other );
 
 	virtual Ice*	clone() const;
-	virtual void	use( ICharacter &target ) const;
+	virtual void	use( ICharacter &target );
 };
 
 #endif

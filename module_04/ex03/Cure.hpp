@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:35:34 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:30:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:16:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Cure	&operator=( Cure const &other );
 
 	virtual Cure*	clone() const;
-	virtual void	use( ICharacter &target ) const;
+	virtual void	use( ICharacter &target );
 };
 
 #endif

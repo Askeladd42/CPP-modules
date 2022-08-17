@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:31:20 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:47:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:23:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ std::string const	&AMateria::getType() const {
 	return this->_type;
 }
 
-void	AMateria::use( ICharacter &target ) const {
+void	AMateria::use( ICharacter &target ) {
 	std::cout << "Using a " << this->getType() << " Materia on " << target.getName() << std::endl;
 }

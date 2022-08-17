@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:39:45 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 18:36:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 11:17:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ Cure	*Cure::clone() const {
 	return new Cure(*this);
 }
 
-void	Cure::use( ICharacter &target ) const {
+void	Cure::use( ICharacter &target ) {
 	std::cout << "Casting a healing on " << target.getName() << " wounds." << std::endl; 
 }
