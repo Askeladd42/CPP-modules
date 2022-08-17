@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:29:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 13:19:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 13:28:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int main()
 
 	ICharacter* bob = new Character("bob");
 
-	me->getName();
 	me->use(0, *bob);
 	me->use(1, *bob);
 

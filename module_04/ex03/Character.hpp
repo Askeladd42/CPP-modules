@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 12:56:39 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 11:21:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 13:49:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ private:
 	AMateria*			c_floor[50];
 	void				drop( AMateria* m );
 public:
+	Character( void ) { }
 	Character( std::string name );
 	virtual ~Character();
 	Character( Character const &other );
