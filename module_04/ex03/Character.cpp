@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:56:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 10:19:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/17 10:22:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,19 @@ Character&	Character::operator=( Character const &other ) {
 	return *this;
 }
 
+void	Character::drop( AMateria* m) {
+	int	i = 0;
+
+	while ( i < 50 && c_floor[i] )
+		i++;
+	if (i < 50)
+		c_floor[i] = m;
+	else if (m) {
+		delete m;
+		m = 0;
+	}
+}
+
 std::string const & Character::getName() const {
 	return this->c_name;
 }
@@ -71,7 +84,6 @@ void	Character::equip(AMateria* m) {
 		std::cout << this->c_name << " equiped the material " << m->getType() << " in the slot " << i << std::endl;
 	}
 }
-
 
 void	Character::unequip(int idx) {
 	if (idx < 0 || idx > 3) {
@@ -101,18 +113,5 @@ void	Character::use(int idx, ICharacter& target) {
 	else {
 		std::cout << c_name << "use a " << c_inv[idx]->getType() <<" materia in " << target.getName() << std::endl;
 		c_inv[idx]->use(target);
-	}
-}
-
-void	Character::drop( AMateria* m) {
-	int	i = 0;
-
-	while ( i < 50 && c_floor[i] )
-		i++;
-	if (i < 50)
-		c_floor[i] = m;
-	else if (m) {
-		delete m;
-		m = 0;
 	}
 }
