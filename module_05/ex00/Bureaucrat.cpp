@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 16:47:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 14:12:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ Bureaucrat& Bureaucrat::operator<<( Bureaucrat const &other ) {
 	return *this;
 }
 
-void	Bureaucrat::getName() {
-	std::cout << _name << std::endl;
+std::string	Bureaucrat::getName() {
+	return _name;
 }
 
-void	Bureaucrat::getGrade() {
-	std::cout << _grade << std::endl;
+int	Bureaucrat::getGrade() {
+	return _grade;
 }
 
 void	Bureaucrat::incrGrade() {

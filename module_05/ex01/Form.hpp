@@ -6,14 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 13:01:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 14:06:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FORM_HPP__
 # define __FORM_HPP__
 
-# include "Bureaucrat.hpp"
+# include <iostream>
+
+class Bureaucrat;
 
 class Form {
 	private:
@@ -26,7 +28,7 @@ class Form {
 		~Form();
 		Form( Form const &other );
 		Form	&operator=( Form const &other );
-		Form	&operator<<( Bureaucrat const &other );
+		Form	&operator<<( Form const &other );
 
 		class tooHigh : public std::exception {
 			virtual const char* what() const throw()
@@ -41,11 +43,13 @@ class Form {
 				return "The grade assigned is too low !";
 			}
 		}GradeTooLowException;
-		
-		void	beSigned( Bureaucrat b );
 
-		void	getName();
-		void	getGrade();
+		std::string	getName();
+		bool		getSgn();
+		int			getGradeExc();
+		int			getGradeSgn();
+
+		void	beSigned( Bureaucrat b );
 };
 
 #endif

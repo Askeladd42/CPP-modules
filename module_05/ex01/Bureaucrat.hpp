@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 16:43:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 14:17:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <stdexcept>
+# include "Form.hpp"
+
 
 class Bureaucrat {
 private:
@@ -41,11 +43,14 @@ public:
 		}
 	}GradeTooLowException;
 
-	void	getName();
-	void	getGrade();
+	std::string	getName();
+	int			getGrade();
 
-	void	incrGrade();
-	void	decrGrade();
+	void		incrGrade();
+	void		decrGrade();
+
+	void		signForm( Form f );
+
 };
 
 #endif

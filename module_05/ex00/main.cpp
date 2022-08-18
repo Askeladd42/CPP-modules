@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 16:44:43 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 14:17:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ int	main( void ) {
 	Marcel = new Bureaucrat("Marcel", -15);
 	Tom->incrGrade();
 	Tom->decrGrade();
+	std::cout << Tom->getName() << std::endl;
+	std::cout << Tom->getGrade() << std::endl;
 	return 0;
 }
