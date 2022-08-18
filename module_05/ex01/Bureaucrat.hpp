@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 14:17:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 15:35:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <iostream>
 # include <stdexcept>
-# include "Form.hpp"
 
+class Form;
 
 class Bureaucrat {
 private:

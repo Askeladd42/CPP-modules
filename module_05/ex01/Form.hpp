@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 14:06:28 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 15:29:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 # define __FORM_HPP__
 
 # include <iostream>
-
-class Bureaucrat;
+# include <stdexcept>
+# include "Bureaucrat.hpp"
 
 class Form {
 	private:
-		std::string const	_name;
+		std::string			_name;
 		bool				_signed;
 		int					_gradeExc;
 		int					_gradeSgn;

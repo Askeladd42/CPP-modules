@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 14:37:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 15:32:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,11 @@ int	Form::getGradeSgn() {
 
 void	Form::beSigned( Bureaucrat b ) {
 	if ( this->getSgn() == false ) {
-		if ( this->getGradeSgn() >= b->getGrade())
-			std::cout << b->getName() << " signed " << this->getName()
+		if ( this->getGradeSgn() >= b.getGrade())
+			std::cout << b.getName() << " signed " << this->getName()
 				<< std::endl;
 		else
-			std::cout << b->getName() << " couldn't sign " << this->getName()
+			std::cout << b.getName() << " couldn't sign " << this->getName()
 				<< " because " << std::endl;
 	}
 	else

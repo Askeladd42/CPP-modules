@@ -6,11 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 14:53:15 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 15:30:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int	main( void ) {
 	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
