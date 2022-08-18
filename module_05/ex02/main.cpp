@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 15:30:16 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 15:49:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ int	main( void ) {
 	Tom->decrGrade();
 
 	Form*	Engram = new Form("Engram", 30, 25);
-	Engram->getSgn();
+	std::cout << Engram->getSgn() << std::endl;
 	Engram->beSigned(*Tom);
 	Engram->beSigned(*Jerry);
 	Engram->beSigned(*Marcel);
+	std::cout << Engram->getSgn() << std::endl;
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
 	Form*		Priority = new Form("Priority Task", 1, 1);

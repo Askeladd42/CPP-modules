@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 15:32:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 16:08:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,14 @@ int	Form::getGradeSgn() {
 }
 
 void	Form::beSigned( Bureaucrat b ) {
-	if ( this->getSgn() == false ) {
-		if ( this->getGradeSgn() >= b.getGrade())
-			std::cout << b.getName() << " signed " << this->getName()
-				<< std::endl;
+	try {
+		if (this->getGradeSgn() >= b.getGrade()) {
+			this->_signed = true;
+		}
 		else
-			std::cout << b.getName() << " couldn't sign " << this->getName()
-				<< " because " << std::endl;
+			throw GradeTooLowException;
 	}
-	else
-		std::cout << "The format " << this->getName() << " is already signed !" << std::endl;
+	catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
 }
