@@ -6,17 +6,17 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/08/09 13:26:54 by plam             ###   ########.fr        #
+#    Updated: 2022/08/18 11:42:39 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucracy
+NAME = Format
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Bureaucrat.hpp
-SRC_FILES = main.cpp Bureaucrat.cpp
+HEADER = Bureaucrat.hpp,Form.hpp
+SRC_FILES = main.cpp Bureaucrat.cpp Form.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
