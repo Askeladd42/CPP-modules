@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 16:47:28 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 17:00:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	main( void ) {
 
 	Tom->incrGrade();
 	Tom->decrGrade();
-
 	Form*	Engram = new Form("Engram", 30, 25);
 	std::cout << Engram->getSgn() << std::endl;
 	Tom->signForm(*Engram);
@@ -33,7 +32,7 @@ int	main( void ) {
 
 	std::cout << BigBoss->getName() << std::endl;
 	std::cout << BigBoss->getGrade() << std::endl;
-	//BigBoss->incrGrade();
+	BigBoss->incrGrade();
 
 	Tom->signForm(*Priority);
 	Jerry->signForm(*Priority);

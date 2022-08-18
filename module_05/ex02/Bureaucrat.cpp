@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 16:49:55 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 17:05:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,16 @@ void	Bureaucrat::signForm( Form f ) {
 				<< std::endl;
 			f.beSigned(*this);
 		}
-		else
+		else {
 			std::cout << this->getName() << " couldn't sign " << this->getName()
-				<< " because " << std::endl;
+				<< " because ";
+			try {
+				throw f.GradeTooLowException;
+			}
+			catch (std::exception &e) {
+				std::cout << e.what() << std::endl;
+			}
+		}
 	}
 	else
 		std::cout << "The format " << this->getName() << " is already signed !" << std::endl;
