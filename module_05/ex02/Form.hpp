@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 15:29:39 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 16:41:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class Form {
 		class tooLow : public std::exception {
 			virtual const char* what() const throw()
 			{
-				return "The grade assigned is too low !";
+				return "the bureaucrat's grade is too low !";
 			}
 		}GradeTooLowException;
 

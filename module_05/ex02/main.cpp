@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 15:49:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 16:47:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,22 @@ int	main( void ) {
 
 	Form*	Engram = new Form("Engram", 30, 25);
 	std::cout << Engram->getSgn() << std::endl;
-	Engram->beSigned(*Tom);
-	Engram->beSigned(*Jerry);
-	Engram->beSigned(*Marcel);
+	Tom->signForm(*Engram);
+	Jerry->signForm(*Engram);
+	Marcel->signForm(*Engram);
 	std::cout << Engram->getSgn() << std::endl;
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
-	Form*		Priority = new Form("Priority Task", 1, 1);
+	Form*		Priority = new Form("Prior Task", 1, 1);
 
-	BigBoss->getName();
-	BigBoss->getGrade();
-	BigBoss->incrGrade();
+	std::cout << BigBoss->getName() << std::endl;
+	std::cout << BigBoss->getGrade() << std::endl;
+	//BigBoss->incrGrade();
 
-	Priority->beSigned(*Tom);
-	Priority->beSigned(*Jerry);
-	Priority->beSigned(*Marcel);
-	Priority->beSigned(*BigBoss);
+	Tom->signForm(*Priority);
+	Jerry->signForm(*Priority);
+	Marcel->signForm(*Priority);
+	BigBoss->signForm(*Priority);
+
 	return 0;
 }

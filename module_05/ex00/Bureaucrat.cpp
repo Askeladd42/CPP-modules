@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 14:12:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/18 16:49:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	Bureaucrat::incrGrade() {
 		}
 	}
 	catch ( std::exception &e ) {
-		std::cerr << &e << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
@@ -87,6 +87,6 @@ void	Bureaucrat::decrGrade() {
 		}
 	}
 	catch ( std::exception &e ) {
-		std::cerr << &e << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
