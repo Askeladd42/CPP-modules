@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/18 15:35:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/20 16:03:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ public:
 	Bureaucrat( std::string name, int grade );
 	~Bureaucrat( void );
 	Bureaucrat( Bureaucrat const &other );
-	Bureaucrat	&operator=( Bureaucrat const &other );
-	Bureaucrat	&operator<<( Bureaucrat const &other );
+	Bureaucrat		&operator=( Bureaucrat const &other );
+	std::ostream&	operator<<( std::ostream &ost, Bureaucrat const &f );
 
 	class tooHigh : public std::exception {
 		virtual const char* what() const throw()
