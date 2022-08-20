@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:31:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/20 16:43:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	Bureaucrat::incrGrade() {
 			throw Bureaucrat::GradeTooHighException;
 		else {
 			this->_grade--;
-			std::cout << "Bureaucrat " << _name << "'s grade has been increased !"
+			std::cout << "Bureaucrat " << _name << " got upgraded !"
 				<< std::endl;
 		}
 	}
@@ -80,7 +80,7 @@ void	Bureaucrat::decrGrade() {
 			throw Bureaucrat::GradeTooLowException;
 		else {
 			this->_grade++;
-			std::cout << "Bureaucrat " << _name << "'s grade has been decreased !"
+			std::cout << "Bureaucrat " << _name << " got downgraded !"
 				<< std::endl;
 		}
 	}
