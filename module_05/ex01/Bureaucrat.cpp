@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:01:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/20 16:33:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,11 @@ Bureaucrat& Bureaucrat::operator=( Bureaucrat const &other ) {
 	return *this;
 }
 
-std::ostream&	operator<<( std::ostream &ost, Bureaucrat const &f ) {
-	ofs << f->_name << ", bureaucrat grade " << f->_grade << std::endl;
-	ofs.close();
+std::ostream	&operator<<( std::ostream &ofs, Bureaucrat &b ) {
+	ofs << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+	return ofs;
 }
+
 
 
 std::string	Bureaucrat::getName() {
