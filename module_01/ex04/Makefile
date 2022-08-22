@@ -6,17 +6,17 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/05/31 16:39:53 by plam             ###   ########.fr        #
+#    Updated: 2022/08/22 14:22:09 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Harl
+NAME = Replace
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98
 
-HEADER = Harl.hpp
-SRC_FILES = main.cpp Harl.cpp 
+HEADER = Replace.hpp
+SRC_FILES = main.cpp Replace.cpp 
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
