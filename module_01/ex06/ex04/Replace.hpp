@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 12:56:34 by plam             ###   ########.fr       */
+/*   Created: 2022/05/30 15:16:33 by plam              #+#    #+#             */
+/*   Updated: 2022/05/31 15:37:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef __REPLACE_HPP__
+# define __REPLACE_HPP__
 
-int	main( void ) {
-	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
-	Bureaucrat*	Jerry;
-	Bureaucrat*	Marcel;
+# include <iostream>
+# include <string>
+# include <fstream>
 
-	Jerry = new Bureaucrat("Jerry", 200);
-	Marcel = new Bureaucrat("Marcel", -15);
-	Tom->incrGrade();
-	Tom->decrGrade();
-	std::cout << Tom->getName() << std::endl;
-	std::cout << Tom->getGrade() << std::endl;
-	delete(Tom);
-	delete(Jerry);
-	delete(Marcel);
-	return 0;
-}
+std::string	replaceStr( std::string filestream, std::string s1, std::string s2 );
+std::string	replaceRename( std::string fileName );
+
+#endif

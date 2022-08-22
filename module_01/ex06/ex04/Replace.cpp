@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 12:56:34 by plam             ###   ########.fr       */
+/*   Created: 2022/05/30 15:17:44 by plam              #+#    #+#             */
+/*   Updated: 2022/05/31 16:30:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Replace.hpp"
 
-int	main( void ) {
-	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
-	Bureaucrat*	Jerry;
-	Bureaucrat*	Marcel;
+std::string	replaceStr( std::string dst, std::string s1, std::string s2 ) {
+	size_t	src = dst.find(s1);
+	
+	while (src != std::string::npos) {
+		dst.erase(src, s1.length());
+		dst.insert(src, s2);
+		src = dst.find(s1.c_str(), src + s2.length(), s1.length());
+	}
+	return dst;
+}
 
-	Jerry = new Bureaucrat("Jerry", 200);
-	Marcel = new Bureaucrat("Marcel", -15);
-	Tom->incrGrade();
-	Tom->decrGrade();
-	std::cout << Tom->getName() << std::endl;
-	std::cout << Tom->getGrade() << std::endl;
-	delete(Tom);
-	delete(Jerry);
-	delete(Marcel);
-	return 0;
+std::string	replaceRename( std::string fileName ) {
+	fileName.append(".replace");
+	return fileName;
 }

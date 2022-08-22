@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 12:56:34 by plam             ###   ########.fr       */
+/*   Created: 2022/05/27 16:59:40 by plam              #+#    #+#             */
+/*   Updated: 2022/05/30 14:56:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef __WEAPON_HPP__
+# define __WEAPON_HPP__
 
-int	main( void ) {
-	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
-	Bureaucrat*	Jerry;
-	Bureaucrat*	Marcel;
+# include <iostream>
+# include <string>
 
-	Jerry = new Bureaucrat("Jerry", 200);
-	Marcel = new Bureaucrat("Marcel", -15);
-	Tom->incrGrade();
-	Tom->decrGrade();
-	std::cout << Tom->getName() << std::endl;
-	std::cout << Tom->getGrade() << std::endl;
-	delete(Tom);
-	delete(Jerry);
-	delete(Marcel);
-	return 0;
-}
+class Weapon
+{
+private:
+	std::string _type;
+
+public:
+	Weapon( std::string type );
+	~Weapon( void );
+	std::string	getType( void ) const;
+	void	setType(std::string newType);
+};
+
+#endif

@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 12:56:34 by plam             ###   ########.fr       */
+/*   Created: 2022/05/18 15:13:34 by plam              #+#    #+#             */
+/*   Updated: 2022/05/19 16:32:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int	main( void ) {
-	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
-	Bureaucrat*	Jerry;
-	Bureaucrat*	Marcel;
+# include <iostream>
+# include <string>
 
-	Jerry = new Bureaucrat("Jerry", 200);
-	Marcel = new Bureaucrat("Marcel", -15);
-	Tom->incrGrade();
-	Tom->decrGrade();
-	std::cout << Tom->getName() << std::endl;
-	std::cout << Tom->getGrade() << std::endl;
-	delete(Tom);
-	delete(Jerry);
-	delete(Marcel);
-	return 0;
-}
+class Zombie
+{
+private:
+	std::string	_name;
+
+public:
+	Zombie(std::string name);
+	~Zombie(void);
+	
+	void	announce(void);
+};
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
+
+#endif
