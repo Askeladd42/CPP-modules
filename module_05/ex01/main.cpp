@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 12:57:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/22 16:32:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	main( void ) {
 	Marcel->signForm(*Priority);
 	BigBoss->signForm(*Priority);
 
+	delete(Priority);
 	delete(Tom);
 	delete(Jerry);
 	delete(Marcel);
