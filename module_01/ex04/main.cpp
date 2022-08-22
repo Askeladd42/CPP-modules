@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:18:16 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 15:53:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/22 16:16:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ int	main(int ac, char **av) {
 
 	std::ofstream	ofs(replaceRename(fileName).c_str());
 
-	while (!ofs.eof() && !ofs.fail()) {
+	while (!ifs.eof() && !ifs.fail()) {
 		std::getline(ifs, dst);
 		ofs << replaceStr(dst, toReplace, replacer);
-		if (!ofs.eof() && !ofs.fail())
+		if (!ifs.eof() && !ifs.fail())
 			ofs << std::endl;
 	}
-	ofs.close();
 	ifs.close();
+	ofs.close();
 	return 0;
 }
