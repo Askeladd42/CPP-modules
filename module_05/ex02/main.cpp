@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 17:20:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:23:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	main( void ) {
 	Tom->signForm(Priority);
 	Jerry->signForm(Priority);
 	Marcel->signForm(Priority);
+
+	std::cout << BigBoss;
 	BigBoss->signForm(Priority);
 
 	delete(Priority);
