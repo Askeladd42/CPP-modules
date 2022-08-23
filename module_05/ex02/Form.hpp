@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:17:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:40:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,9 @@ class Form {
 		int					getGradeExc() const;
 		int					getGradeSgn() const;
 
-		void		beSigned( Bureaucrat b );
+		void				beSigned( Bureaucrat b );
+		void				execute( Bureaucrat const &executor ) const;
+
 };
 
 std::ostream&	operator<<( std::ostream &ost, Form &f );

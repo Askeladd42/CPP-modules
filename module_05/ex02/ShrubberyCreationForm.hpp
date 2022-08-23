@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 11:33:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:41:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ private:
 public:
 	ShrubberyCreationForm( std::string target );
 	~ShrubberyCreationForm();
+	ShrubberyCreationForm( ShrubberyCreationForm const &other );
+	ShrubberyCreationForm	&operator=( ShrubberyCreationForm const &other );
+
+	void	execute( Bureaucrat const &executor ) const;
 };
 
 #endif
