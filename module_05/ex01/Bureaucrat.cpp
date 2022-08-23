@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 11:47:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 16:43:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ void	Bureaucrat::decrGrade() {
 void	Bureaucrat::signForm( Form f ) {
 	if ( f.getSgn() == false ) {
 		if ( f.getGradeSgn() >= this->getGrade()) {
+			f.beSigned(*this);
 			std::cout << this->getName() << " signed " << f.getName()
 				<< std::endl;
-			f.beSigned(*this);
 		}
 		else {
 			std::cout << this->getName() << " couldn't sign " << f.getName()
