@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 12:30:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:51:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 class Form {
 	private:
-		std::string			_name;
+		std::string const	_name;
 		bool				_signed;
-		int					_gradeExc;
-		int					_gradeSgn;
+		int const			_gradeExc;
+		int const			_gradeSgn;
 	public:
 		Form( std::string name, int gradeExc, int gradeSgn );
 		~Form();
@@ -43,10 +43,11 @@ class Form {
 			}
 		}GradeTooLowException;
 
-		std::string	getName();
-		bool		getSgn();
-		int			getGradeExc();
-		int			getGradeSgn();
+		std::string const	getName() const;
+		bool				getSgn() const;
+		int const			getGradeExc() const;
+		int const			getGradeSgn() const;
+
 
 		void	beSigned( Bureaucrat b );
 };

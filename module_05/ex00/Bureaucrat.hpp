@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:50:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:48:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class Bureaucrat {
 private:
-	std::string	_name;
-	int			_grade;
+	std::string const	_name;
+	int					_grade;
 public:
 	Bureaucrat( std::string name, int grade );
 	~Bureaucrat( void );
@@ -40,11 +40,11 @@ public:
 		}
 	}GradeTooLowException;
 
-	std::string	getName();
-	int			getGrade();
+	std::string const	getName() const;
+	int					getGrade();
 
-	void		incrGrade();
-	void		decrGrade();
+	void				incrGrade();
+	void				decrGrade();
 };
 
 std::ostream	&operator<<( std::ostream &ost , Bureaucrat &b );
