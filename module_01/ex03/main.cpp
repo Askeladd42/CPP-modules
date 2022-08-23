@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:11:47 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 11:32:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 10:48:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main ( void ) {
 		Weapon	club = Weapon("crude spiked club");
 		
 		HumanB jim("Jim");
-		//jim.attack();		this line shows the case between pointer & reference, here Jim has no weapon at first.
+		jim.attack();		//this line shows the case between pointer & reference, here Jim has no weapon at first.
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
