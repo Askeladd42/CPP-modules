@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 12:11:18 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 12:16:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	main( void ) {
 	std::cout << Engram->getSgn() << std::endl;
 	Tom->signForm(*Engram);
 	Jerry->signForm(*Engram);
-	Marcel->signForm(*Engram);
 	std::cout << Engram->getSgn() << std::endl;
+	Marcel->signForm(*Engram);
 	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
