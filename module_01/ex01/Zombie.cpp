@@ -6,15 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:12:44 by plam              #+#    #+#             */
-/*   Updated: 2022/05/19 17:30:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 10:34:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
-{
-	std::cout << "Zombie " << this->_name << " created" << std::endl;
+Zombie::Zombie(void) {
+	std::cout << "A Zombie has been created !" << std::endl;
 }
 
 Zombie::~Zombie(void)
@@ -28,8 +27,8 @@ void	Zombie::announce()
 	return;
 }
 
-void	Zombie::add_name(std::string name)
-{
+void	Zombie::add_name(std::string name) {
 	this->_name = name;
-	return;
+	std::cout << "This zombie is named ... " << this->_name << std::endl;
+	return ;
 }
