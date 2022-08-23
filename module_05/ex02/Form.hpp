@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 17:50:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:17:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ class Form {
 
 		std::string const	getName() const;
 		bool				getSgn() const;
-		int const			getGradeExc() const;
-		int const			getGradeSgn() const;
+		int					getGradeExc() const;
+		int					getGradeSgn() const;
 
 		void		beSigned( Bureaucrat b );
 };

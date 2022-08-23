@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:13:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:17:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,11 @@ bool	Form::getSgn() const {
 	return _signed;
 }
 
-int const	Form::getGradeExc() const {
+int	Form::getGradeExc() const {
 	return _gradeExc;
 }
 
-int const	Form::getGradeSgn() const {
+int	Form::getGradeSgn() const {
 	return _gradeSgn;
 }
 
