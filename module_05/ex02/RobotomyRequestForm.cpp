@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:57:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:09:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,3 +15,9 @@
 RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form(target, 72, 45) { }
 
 RobotomyRequestForm::~RobotomyRequestForm() { }
+
+RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &other ) : Form(other) { }
+
+RobotomyRequestForm&	RobotomyRequestForm::operator=( RobotomyRequestForm const &other ) {
+	
+}
