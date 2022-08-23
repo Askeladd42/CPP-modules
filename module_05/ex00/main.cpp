@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 16:29:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/22 16:50:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main( void ) {
 	Tom->decrGrade();
 	std::cout << Tom->getName() << std::endl;
 	std::cout << Tom->getGrade() << std::endl;
+	
 	delete(Tom);
 	delete(Jerry);
 	delete(Marcel);
