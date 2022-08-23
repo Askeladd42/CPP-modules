@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:11:47 by plam              #+#    #+#             */
-/*   Updated: 2022/05/23 14:20:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 15:38:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	std::string& stringREF = str;
 
 	std::cout << "string memory address : " << &str << std::endl;
-	std::cout << "stringREF memory address : " << &stringPTR << std::endl;
+	std::cout << "stringPTR memory address : " << &stringPTR << std::endl;
 	std::cout << "stringREF memory address : " << &stringREF << std::endl;
 
 	std::cout << "string content : " << str << std::endl;

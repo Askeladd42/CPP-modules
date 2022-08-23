@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:18:16 by plam              #+#    #+#             */
-/*   Updated: 2022/08/22 16:16:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 15:38:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av) {
 	std::ifstream	ifs(av[1]);					// seems ifstream doesn't work with a string, only with char*
 
 	if (!ifs) {
-		std::cerr << "Error : " << fileName << " : file not found" << std::endl;
+		std::cerr << "Error : " << fileName << " : cannot open the file." << std::endl;
 		return 1;
 	}
 
