@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:16:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:56:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Form {
 		int const			_gradeExc;
 		int const			_gradeSgn;
 	public:
-		Form( std::string name, int gradeExc, int gradeSgn );
+		Form( std::string name, int gradeSgn, int gradeExc );
 		~Form();
 		Form( Form const &other );
 		Form	&operator=( Form const &other );

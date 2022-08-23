@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:16:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 18:56:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form( std::string name, int gradeExc, int gradeSgn ) : _name(name), _gradeExc(gradeExc), _gradeSgn(gradeSgn) {
+Form::Form( std::string name, int gradeSgn, int gradeExc ) : _name(name), _gradeSgn(gradeSgn), _gradeExc(gradeExc) {
 	try {
 		if (gradeExc < 1 || gradeSgn < 1)
 			throw Form::GradeTooHighException;
