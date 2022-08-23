@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 15:34:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 12:30:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Form {
 		~Form();
 		Form( Form const &other );
 		Form	&operator=( Form const &other );
-		Form	&operator<<( Form const &other );
 
 		class tooHigh : public std::exception {
 			virtual const char* what() const throw()
@@ -51,5 +50,7 @@ class Form {
 
 		void	beSigned( Bureaucrat b );
 };
+
+std::ostream&	operator<<( std::ostream &ost, Form &f );
 
 #endif
