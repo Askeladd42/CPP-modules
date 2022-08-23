@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:55:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:24:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,13 @@ class Form {
 				return "the grade assigned is too low !";
 			}
 		}GradeTooLowException;
+
+		class notSgn : public std::exception {
+			virtual const char* what() const throw()
+			{
+				return "the format is not signed !";
+			}
+		}NotSigned;
 
 		std::string const	getName() const;
 		bool				getSgn() const;

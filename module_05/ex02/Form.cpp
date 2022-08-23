@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:54:52 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:32:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,18 @@ void	Form::beSigned( Bureaucrat b ) {
 		}
 		else
 			throw GradeTooLowException;
+	}
+	catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
+}
+
+void	Form::execute( Bureaucrat const &executor) const {
+	try {
+		if (this->getSgn() == true)
+			executor.executeForm(*this);
+		else
+			throw NotSigned;
 	}
 	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
