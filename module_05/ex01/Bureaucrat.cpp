@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:43:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 11:47:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void	Bureaucrat::signForm( Form f ) {
 			f.beSigned(*this);
 		}
 		else {
-			std::cout << this->getName() << " couldn't sign " << this->getName()
+			std::cout << this->getName() << " couldn't sign " << f.getName()
 				<< " because ";
 			try {
 				throw f.GradeTooLowException;
