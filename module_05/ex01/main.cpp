@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 13:08:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 16:31:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main( void ) {
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
 	Form*		Priority = new Form("Prior Task", 1, 1);
 
-	std::cout << Priority;
+	std::cout << *Priority;
 
 	Tom->signForm(*Priority);
 	Jerry->signForm(*Priority);
@@ -47,6 +47,7 @@ int	main( void ) {
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
 	BigBoss->signForm(*Priority);
+	std::cout << *Priority;
 
 	delete(Priority);
 	delete(Tom);
