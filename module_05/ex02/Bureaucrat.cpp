@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 11:47:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:18:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,18 +92,18 @@ void	Bureaucrat::decrGrade() {
 	}
 }
 
-void	Bureaucrat::signForm( Form f ) {
-	if ( f.getSgn() == false ) {
-		if ( f.getGradeSgn() >= this->getGrade()) {
-			std::cout << this->getName() << " signed " << f.getName()
+void	Bureaucrat::signForm( Form *f ) {
+	if ( f->getSgn() == false ) {
+		if ( f->getGradeSgn() >= this->getGrade()) {
+			f->beSigned(*this);
+			std::cout << this->getName() << " signed " << f->getName()
 				<< std::endl;
-			f.beSigned(*this);
 		}
 		else {
-			std::cout << this->getName() << " couldn't sign " << f.getName()
+			std::cout << this->getName() << " couldn't sign " << f->getName()
 				<< " because ";
 			try {
-				throw f.GradeTooLowException;
+				throw f->GradeTooLowException;
 			}
 			catch (std::exception &e) {
 				std::cout << e.what() << std::endl;
@@ -111,5 +111,5 @@ void	Bureaucrat::signForm( Form f ) {
 		}
 	}
 	else
-		std::cout << "The format " << this->getName() << " is already signed !" << std::endl;
+		std::cout << "The format " << f->getName() << " is already signed !" << std::endl;
 }

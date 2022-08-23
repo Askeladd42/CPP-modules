@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:51:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:19:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ public:
 	void		incrGrade();
 	void		decrGrade();
 
-	void		signForm( Form f );
+	void		signForm( Form *f );
 
 };
 
