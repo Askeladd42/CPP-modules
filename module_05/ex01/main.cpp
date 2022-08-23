@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 16:31:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 17:15:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,19 @@ int	main( void ) {
 	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
 	Bureaucrat*	Jerry = new Bureaucrat("Jerry", 20);
 	Bureaucrat*	Marcel = new Bureaucrat("Marcel", 145);
-
-	Tom->incrGrade();
-	Tom->decrGrade();
 	
+	std::cout << *Tom << *Jerry << *Marcel;
+
 	Form*	Engram = new Form("Engram", 30, 25);
 	std::cout << *Engram;
 	
-	Tom->signForm(*Engram);
+	Tom->signForm(Engram);
 	std::cout << *Engram;
 
-	Jerry->signForm(*Engram);
+	Jerry->signForm(Engram);
 	std::cout << *Engram;
 	
-	Marcel->signForm(*Engram);
+	Marcel->signForm(Engram);
 	std::cout << *Engram;
 	
 	delete (Engram);
@@ -40,13 +39,13 @@ int	main( void ) {
 
 	std::cout << *Priority;
 
-	Tom->signForm(*Priority);
-	Jerry->signForm(*Priority);
-	Marcel->signForm(*Priority);
+	Tom->signForm(Priority);
+	Jerry->signForm(Priority);
+	Marcel->signForm(Priority);
 	
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
-	BigBoss->signForm(*Priority);
+	BigBoss->signForm(Priority);
 	std::cout << *Priority;
 
 	delete(Priority);
