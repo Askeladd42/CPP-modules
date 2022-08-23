@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:56:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:57:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Form {
 	private:
 		std::string const	_name;
 		bool				_signed;
-		int const			_gradeExc;
 		int const			_gradeSgn;
+		int const			_gradeExc;
 	public:
 		Form( std::string name, int gradeSgn, int gradeExc );
 		~Form();
@@ -49,7 +49,7 @@ class Form {
 		int					getGradeSgn() const;
 
 
-		void	beSigned( Bureaucrat b );
+		void	beSigned( Bureaucrat &b );
 };
 
 std::ostream&	operator<<( std::ostream &ost, Form &f );

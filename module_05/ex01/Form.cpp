@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:56:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:56:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Form::~Form( void ) {
 	std::cout << "Format " << _name << " destroyed" << std::endl;
 }
 
-Form::Form( Form const &other ) : _name(other._name), _gradeExc(other._gradeExc), _gradeSgn(other._gradeSgn) { }
+Form::Form( Form const &other ) : _name(other._name), _gradeSgn(other._gradeSgn), _gradeExc(other._gradeExc) { }
 
 Form&	Form::operator=( Form const &other ) {
 	if (this != &other)
@@ -68,7 +68,7 @@ int	Form::getGradeSgn() const {
 	return _gradeSgn;
 }
 
-void	Form::beSigned( Bureaucrat b ) {
+void	Form::beSigned( Bureaucrat &b ) {
 	try {
 		if (this->getGradeSgn() >= b.getGrade()) {
 			this->_signed = true;

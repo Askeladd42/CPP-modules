@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 19:32:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:59:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	Form::getGradeSgn() const {
 	return _gradeSgn;
 }
 
-void	Form::beSigned( Bureaucrat b ) {
+void	Form::beSigned( Bureaucrat &b ) {
 	try {
 		if (this->getGradeSgn() >= b.getGrade()) {
 			this->_signed = true;
