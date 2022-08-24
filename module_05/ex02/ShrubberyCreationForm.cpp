@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/08/24 12:27:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/24 15:25:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ ShrubberyCreationForm::~ShrubberyCreationForm() { }
 ShrubberyCreationForm::ShrubberyCreationForm( ShrubberyCreationForm const &other) : Form(other) { }
 
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=( ShrubberyCreationForm const &other ) {
+	
+}
+
+void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	
 }
 

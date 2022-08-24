@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 19:09:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/24 15:20:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,8 @@ RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &other ) : F
 
 RobotomyRequestForm&	RobotomyRequestForm::operator=( RobotomyRequestForm const &other ) {
 	
+}
+
+void	RobotomyRequestForm::execute( Bureaucrat const &executor ) const {
+
 }

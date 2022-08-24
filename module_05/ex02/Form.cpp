@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 19:59:39 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/24 15:14:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	Form::beSigned( Bureaucrat &b ) {
 	}
 }
 
-void	Form::execute( Bureaucrat const &executor) const {
+void	Form::execute( Bureaucrat const &executor ) const {
 	try {
 		if (this->getSgn() == true)
 			executor.executeForm(*this);
