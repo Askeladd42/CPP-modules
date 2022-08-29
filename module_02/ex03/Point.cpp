@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:51:53 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 17:35:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 19:14:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void	Point::setX( Fixed const &otherX ) {
 	this->_x = &otherX;
 }
 
-void	Point::setY( Fixed const &otherY ) : _y(otherY) { }
+void	Point::setY( Fixed const &otherY ) {
+	this->_y = &otherY;
+}
 
 Fixed const	Point::getX() const {
 	return this->_x;
