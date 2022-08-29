@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 16:09:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 13:10:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ Fixed& Fixed::operator=( Fixed const &task) {
 	return *this;
 }
 
+Fixed::~Fixed( void ) {
+	std::cout << "Destructor called" << std::endl;
+}
+
 int		Fixed::getRawBits( void ) const {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->_raw;
@@ -39,6 +43,3 @@ void	Fixed::setRawBits( int const raw ) {
 	this->_raw = raw;
 }
 
-Fixed::~Fixed( void ) {
-	std::cout << "Destructor called" << std::endl;
-}
