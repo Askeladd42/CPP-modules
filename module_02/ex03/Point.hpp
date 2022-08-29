@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:52:35 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 15:58:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 17:27:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ public:
 	Point& operator=( Point const &point );
 	~Point( void );
 
-	Fixed	set_x( Fixed const &otherX );
-	Fixed	set_y( Fixed const &otherY );
+	void	setX( Fixed const &otherX );
+	void	setY( Fixed const &otherY );
 
-	void	get_x();
-	void	get_y();
+	Fixed const	getX();
+	Fixed const	getY();
 };
 
 #endif
