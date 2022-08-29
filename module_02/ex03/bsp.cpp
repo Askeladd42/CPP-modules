@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:54:02 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 19:40:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 19:48:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ long double	range( Point const &a, Point const &b ) {
 
 bool bsp( Point const a, Point const b, Point const c, Point const point) {
 	if (range(point, a) == 0.0 || range(point, b) == 0.0 || range(point, c) == 0.0)
+		return false;
+	if (range(point, a) + range(point, c) == range(a, c) 
+	|| range(point, b) + range(point, c) == range(b, c)
+	|| range(point, a) + range(point, b) == range(a, b))
 		return false;
 	return true;
 }
