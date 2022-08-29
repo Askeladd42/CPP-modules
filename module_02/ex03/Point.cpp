@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:51:53 by plam              #+#    #+#             */
-/*   Updated: 2022/06/09 01:09:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 16:00:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,16 @@ Point::Point( Point const &point ) {
 Point&	Point::operator=( Point const &point ) {
 	if (this != &point)
 	{
-		this->_x = point._x;
-		this->_y = point._y;
+		this->set_x(point._x);
+		this->set_y(point._y);
 	}
 	return *this;
+}
+
+Fixed	Point::set_x( Fixed const &otherX ) {
+	return (otherX);
+}
+
+Fixed	Point::set_y( Fixed const &otherY ) {
+	return (otherY);
 }

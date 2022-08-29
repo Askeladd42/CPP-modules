@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/06/09 00:51:27 by plam             ###   ########.fr        #
+#    Updated: 2022/08/29 15:52:17 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME = BSP
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Fixed.hpp
-SRC_FILES = main.cpp Fixed.cpp 
+HEADER = Fixed.hpp,Point.hpp
+SRC_FILES = main.cpp Fixed.cpp bsp.cpp Point.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
