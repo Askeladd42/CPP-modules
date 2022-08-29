@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/06/09 00:49:15 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 14:00:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 Fixed::Fixed( void ) {
 	this->_raw = 0;
 	//std::cout << "Default constructor called" << std::endl;
-}
-
-int		Fixed::toInt( void ) const {
-	return this->_raw >> this->_bits;
-}
-
-float	Fixed::toFloat( void ) const {
-	return ((double)this->_raw / (double)(1 << this->_bits));
 }
 
 Fixed::Fixed( int const nb ) {
@@ -49,6 +41,14 @@ Fixed& Fixed::operator=( Fixed const &task ) {
 	if (this != &task)
 		this->_raw = task.getRawBits();
 	return *this;
+}
+
+int		Fixed::toInt( void ) const {
+	return this->_raw >> this->_bits;
+}
+
+float	Fixed::toFloat( void ) const {
+	return ((double)this->_raw / (double)(1 << this->_bits));
 }
 
 int		Fixed::getRawBits( void ) const {
