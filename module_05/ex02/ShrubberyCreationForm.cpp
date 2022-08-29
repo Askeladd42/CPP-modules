@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/08/24 15:28:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/25 16:22:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=( ShrubberyCreationForm c
 
 void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
+	if ( executor.getGrade() <= this->getGradeExc() ) {
+	}
 }
 
 /* should add an ascii tree in the generated file :
