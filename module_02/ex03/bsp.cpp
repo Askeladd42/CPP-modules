@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:54:02 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 19:14:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 19:40:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,17 @@
 #include "Point.hpp"
 
 long double	range( Point const &a, Point const &b ) {
-	Fixed	x = a.getX() - b.getX();
-	Fixed	y = a.getY() - b.getY();
+	Fixed	x; 
+	Fixed	y;
+
+	if (a.getX() > b.getX())
+		x = a.getX() - b.getX();
+	else
+		x = b.getX() - a.getX();
+	if (a.getY() > b.getY())
+		y = a.getY() - b.getY();
+	else
+		y = b.getY() - a.getY();
 	float	sqX = (x*x).toFloat();
 	float	sqY = (y*y).toFloat();
 
