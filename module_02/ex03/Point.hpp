@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:52:35 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 17:27:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 17:35:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ public:
 	void	setX( Fixed const &otherX );
 	void	setY( Fixed const &otherY );
 
-	Fixed const	getX();
-	Fixed const	getY();
+	Fixed const	getX() const;
+	Fixed const	getY() const;
 };
 
 #endif
