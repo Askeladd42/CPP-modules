@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:33:21 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 13:11:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 13:12:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Fixed::Fixed( Fixed const &task ) {
 	*this = task;
 }
 
-Fixed& Fixed::operator=( Fixed const &task) {
+Fixed& Fixed::operator=( Fixed const &task ) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &task)
 		this->_raw = task.getRawBits();

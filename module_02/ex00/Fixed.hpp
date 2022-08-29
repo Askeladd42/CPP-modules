@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:32:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/02 15:54:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/29 13:12:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ private:
 
 public:
 	Fixed( void );
-	Fixed( Fixed const &task);
-	Fixed& operator=( Fixed const &task);
+	Fixed( Fixed const &task );
+	Fixed& operator=( Fixed const &task );
 	~Fixed( void );
 
 	int		getRawBits( void ) const;
-	void	setRawBits(int const raw );
+	void	setRawBits( int const raw );
 };
 
 #endif
