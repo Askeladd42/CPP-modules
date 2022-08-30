@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 10:11:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/23 19:48:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,36 @@ int	main( void ) {
 	Bureaucrat*	Jerry = new Bureaucrat("Jerry", 20);
 	Bureaucrat*	Marcel = new Bureaucrat("Marcel", 145);
 
-	Tom->incrGrade();
-	Tom->decrGrade();
+	std::cout << *Tom << *Jerry << *Marcel;
+
 	Form*	Engram = new Form("Engram", 30, 25);
 	std::cout << Engram->getSgn() << std::endl;
+	
 	Tom->signForm(*Engram);
+	std::cout << *Engram;
+
 	Jerry->signForm(*Engram);
+	std::cout << *Engram;
+	
 	Marcel->signForm(*Engram);
-	std::cout << Engram->getSgn() << std::endl;
+	std::cout << *Engram;
+	
+	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
 	Form*		Priority = new Form("Prior Task", 1, 1);
 
-	std::cout << BigBoss->getName() << std::endl;
-	std::cout << BigBoss->getGrade() << std::endl;
-	BigBoss->incrGrade();
+	std::cout << *Priority;
 
 	Tom->signForm(*Priority);
 	Jerry->signForm(*Priority);
 	Marcel->signForm(*Priority);
+	
+	BigBoss->incrGrade();
+	std::cout << *BigBoss;
 	BigBoss->signForm(*Priority);
+	std::cout << *Priority;
+
 
 	delete(Priority);
 	delete(Tom);

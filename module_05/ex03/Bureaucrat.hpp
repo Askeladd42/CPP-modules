@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/20 16:51:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/08/25 16:16:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class Form;
 
 class Bureaucrat {
 private:
-	std::string	_name;
-	int			_grade;
+	std::string const	_name;
+	int					_grade;
 public:
 	Bureaucrat( std::string name, int grade );
 	~Bureaucrat( void );
@@ -42,13 +42,14 @@ public:
 		}
 	}GradeTooLowException;
 
-	std::string	getName();
-	int			getGrade();
+	std::string const	getName() const;
+	int					getGrade();
 
-	void		incrGrade();
-	void		decrGrade();
+	void				incrGrade();
+	void				decrGrade();
 
-	void		signForm( Form f );
+	void				signForm( Form &form );
+	void				executeForm( Form const &form ) const;
 
 };
 
