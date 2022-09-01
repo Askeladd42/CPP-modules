@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:48:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/01 12:44:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __SHRUBBERYCREATIONFORM_HPP__
 
 # include "Form.hpp"
+# include <fstream>
 
 class ShrubberyCreationForm : public Form {
 public:
