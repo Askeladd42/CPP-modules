@@ -6,12 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 19:48:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/01 14:21:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int	main( void ) {
 	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
@@ -35,7 +38,7 @@ int	main( void ) {
 	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
-	Form*		Priority = new Form("Prior Task", 1, 1);
+	ShrubberyCreationForm*	Shrub = new ShrubberyCreationForm("Shrub");
 
 	std::cout << *Priority;
 
