@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/08/30 17:02:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/01 12:45:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,17 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=( ShrubberyCreationForm c
 
 void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
-	if ( executor.getGrade() <= this->getGradeExc() ) {
-		std::ofstream	ofs(this->getName().c_str());
-/* should add an ascii tree in the generated file :
-		ofs <<      ccee88oo		      ccee88oo			      ccee88oo			      ccee88oo << std::endl;
-		ofs <<   C8O8O8Q8PoOb o8oo	   C8O8O8Q8PoOb o8oo	   C8O8O8Q8PoOb o8oo	   C8O8O8Q8PoOb o8oo << std::endl;
-		ofs <<  dOB69QO8PdUOpugoO9b	  dOB69QO8PdUOpugoO9bD	  dOB69QO8PdUOpugoO9bD	  dOB69QO8PdUOpugoO9bD << std::endl;
-		ofs << CgggbU8OU qOp qOdoUOdcb CgggbU8OU qOp qOdoUOdcb CgggbU8OU qOp qOdoUOdcb CgggbU8OU qOp qOdoUOdcb << std::endl;
-		ofs <<     6OuU  /p u gcoUodpP     6OuU  /p u gcoUodpP     6OuU  /p u gcoUodpP     6OuU  /p u gcoUodpP << std::endl;
-		ofs <<       \\\//  /douUP	       \\\//  /douUP	       \\\//  /douUP	       \\\//  /douUP << std::endl;
-		ofs <<         \\\////		         \\\////		         \\\////		         \\\//// << std::endl;
-		ofs <<          |||/\		          |||/\			          |||/\			          |||/\ << std::endl;
-		ofs <<          |||\/		          |||\/			          |||\/			          |||\/ << std::endl;
-		ofs <<          |||||		          |||||			          |||||			          ||||| << std::endl;
-		ofs <<    .....//||||\....	    .....//||||\....	    .....//||||\....	    .....//||||\.... << std::endl;
-		ofs.close();
-*/
-	}
+	std::ofstream	ofs((this->getName() + "_shrubbery").c_str());
+	ofs << "               ,@@@@@@@, " << std::endl;
+	ofs << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
+	ofs << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\88/8o" << std::endl;
+	ofs << "   ,%&\%&&%&&%,@@@\@@@/@@@88\88888/88'"<< std::endl;
+	ofs << "   %&&%&%&/%&&%@@\@@/ /@@@88888\88888'" << std::endl;
+	ofs << "   %&&%/ %&%%&&@@\ V /@@' `88\8 `/88'" << std::endl;
+	ofs << "   `&%\ ` /%&'    |.|        \ '|8'" << std::endl;
+	ofs << "       |o|        | |         | |" << std::endl;
+	ofs << "       |.|        | |         | |" << std::endl;
+	ofs << " \\/ ._\//_/__/  ,\_//__\\/.  \_//__/_" << std::endl;
+	ofs.close();
 }
 
