@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:37:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 18:08:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	RobotomyRequestForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
 	std::cout << "* Drill noises *" << std::endl;
 	
+	std::srand(std::time(0) + std::rand() % 1000);
 	int	randNb = std::rand() % 2;
 	
 	if (randNb == 0)

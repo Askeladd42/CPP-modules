@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 15:16:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:54:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,11 @@ void	Form::execute( Bureaucrat const &executor ) const {
 	try {
 		if (this->getSgn() == true)
 			executor.executeForm(*this);
-		else
+		else {
+			std::cerr << executor.getName() << " can't execute the format "
+			<< this->getName() << " because ";
 			throw NotSigned;
+		}
 	}
 	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;

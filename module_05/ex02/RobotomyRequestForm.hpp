@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:13:31 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:46:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 18:08:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __ROBOTOMYREQUESTFORM_HPP__
 
 # include <cstdlib>
+# include <ctime>
 # include "Form.hpp"
 
 class RobotomyRequestForm : public Form{

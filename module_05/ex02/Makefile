@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/09/03 17:27:12 by plam             ###   ########.fr        #
+#    Updated: 2022/09/03 17:57:09 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,5 +40,6 @@ clean:
 fclean: 	clean
 					@rm -f $(NAME)
 					@rm -f $()
+					@rm -f Garden_shrubbery
 
 re:			fclean all

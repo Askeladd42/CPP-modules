@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:19:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:50:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main( void ) {
 	
 	Tommy->execute(*Jerry);
 	Dent->execute(*Marcel);
-	Garden->execute(*Tom);
+	Garden->execute(*Marcel);
 	Garden->execute(*BigBoss);
 
 	delete(Tommy);
