@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:51:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 21:23:56 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 21:30:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,16 @@ Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 	catch ( std::exception &e ) {
 		std::cerr << e.what() << std::endl;
 	}
+}
+
+Form*	Intern::_shrub( std::string target ) {
+	return new ShrubberyCreationForm(target);
+}
+
+Form*	Intern::_robot( std::string target ) {
+	return new RobotomyRequestForm(target);
+}
+
+Form*	Intern::_pres( std::string target ) {
+	return new PresidentialPardonForm(target);
 }
