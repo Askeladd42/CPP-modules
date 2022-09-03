@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:36:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:37:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	RobotomyRequestForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
 	std::cout << "* Drill noises *" << std::endl;
 	
-	int	randNb = rand() % 2;
+	int	randNb = std::rand() % 2;
 	
 	if (randNb == 0)
 		std::cout << "The operation of "<< this->getName() << " has failed."<< std::endl;
