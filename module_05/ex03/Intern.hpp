@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:52:18 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 18:21:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 20:24:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,18 @@
 # include "Form.hpp"
 
 class Intern {
+	private:
+	static const	formTab	t_formats[3];
+	static Form*	_shrub( std::string target );
+	static Form*	_robot( std::string target );
+	static Form*	_pres( std::string target );
+
 	public:
 		Intern();
 		~Intern();
-	
+		Intern(Intern const &other);
+		Intern	&operator=(Intern const &other);
+
 	class fNonExs : public std::exception {
 		virtual const char* what() const throw()
 		{
