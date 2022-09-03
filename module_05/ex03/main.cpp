@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/01 14:21:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 14:57:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,19 @@ int	main( void ) {
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
 	ShrubberyCreationForm*	Shrub = new ShrubberyCreationForm("Shrub");
 
-	std::cout << *Priority;
+	std::cout << *Shrub;
 
-	Tom->signForm(*Priority);
-	Jerry->signForm(*Priority);
-	Marcel->signForm(*Priority);
+	Tom->signForm(*Shrub);
+	Jerry->signForm(*Shrub);
+	Marcel->signForm(*Shrub);
 	
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
-	BigBoss->signForm(*Priority);
-	std::cout << *Priority;
+	BigBoss->signForm(*Shrub);
+	std::cout << *Shrub;
 
 
-	delete(Priority);
+	delete(Shrub);
 	delete(Tom);
 	delete(Jerry);
 	delete(Marcel);

@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/08/24 15:14:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 15:16:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form( std::string name, int gradeSgn, int gradeExc) : _name(name), _gradeExc(gradeExc), _gradeSgn(gradeSgn) {
+Form::Form( std::string name, int gradeSgn, int gradeExc) : _name(name), _gradeSgn(gradeSgn), _gradeExc(gradeExc) {
 	try {
 		if (gradeExc < 1 || gradeSgn < 1)
 			throw Form::GradeTooHighException;
@@ -32,7 +32,7 @@ Form::~Form( void ) {
 	std::cout << "Format " << _name << " destroyed" << std::endl;
 }
 
-Form::Form( Form const &other ) : _name(other._name), _gradeExc(_gradeExc), _gradeSgn(_gradeSgn) { }
+Form::Form( Form const &other ) : _name(other._name), _gradeSgn(other._gradeSgn) , _gradeExc(other._gradeExc) { }
 
 Form&	Form::operator=( Form const &other ) {
 	if (this != &other)
