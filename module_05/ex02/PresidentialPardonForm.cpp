@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:19:22 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 16:58:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:36:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ PresidentialPardonForm::~PresidentialPardonForm() { }
 PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &other ) : Form(other) { }
 
 PresidentialPardonForm&	PresidentialPardonForm::operator=( PresidentialPardonForm const &other ) {
-	
+	if (this != &other)
+		std::cout << "You can't assign this concrete class !" << std::endl;
+	return (*this);
 }
 
 void	PresidentialPardonForm::execute( Bureaucrat const &executor ) const {

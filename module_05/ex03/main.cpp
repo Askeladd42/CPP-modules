@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:06:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:19:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,31 +38,31 @@ int	main( void ) {
 	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
-	Form*	Shrub = new ShrubberyCreationForm("Shrub");
+	Form*	Garden = new ShrubberyCreationForm("Garden");
 	Form*	Tommy = new RobotomyRequestForm("Tommy");
 	Form*	Dent = new PresidentialPardonForm("Arthur Dent");
 	
-	std::cout << *Shrub;
+	std::cout << *Garden;
 	std::cout << *Tommy;
 	std::cout << *Dent;
 
 	Tom->signForm(*Tommy);
 	Jerry->signForm(*Dent);
-	Marcel->signForm(*Shrub);
+	Marcel->signForm(*Garden);
 	
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
-	BigBoss->signForm(*Shrub);
-	std::cout << *Shrub;
+	BigBoss->signForm(*Garden);
+	std::cout << *Garden;
 	
 	Tommy->execute(*Jerry);
 	Dent->execute(*Marcel);
-	Shrub->execute(*Tom);
-	Shrub->execute(*BigBoss);
+	Garden->execute(*Tom);
+	Garden->execute(*BigBoss);
 
 	delete(Tommy);
 	delete(Dent);
-	delete(Shrub);
+	delete(Garden);
 	delete(Tom);
 	delete(Jerry);
 	delete(Marcel);

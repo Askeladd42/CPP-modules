@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 16:58:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:36:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ RobotomyRequestForm::~RobotomyRequestForm() { }
 RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &other ) : Form(other) { }
 
 RobotomyRequestForm&	RobotomyRequestForm::operator=( RobotomyRequestForm const &other ) {
-	
+	if (this != &other)
+		std::cout << "You can't assign this concrete class !" << std::endl;
+	return (*this);
 }
 
 void	RobotomyRequestForm::execute( Bureaucrat const &executor ) const {
