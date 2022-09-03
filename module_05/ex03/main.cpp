@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 16:47:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 17:06:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ int	main( void ) {
 	BigBoss->signForm(*Shrub);
 	std::cout << *Shrub;
 	
-	Jerry->executeForm(*Tommy);
-	Marcel->executeForm(*Dent);
-	Tom->executeForm(*Shrub);
-	BigBoss->executeForm(*Shrub);
+	Tommy->execute(*Jerry);
+	Dent->execute(*Marcel);
+	Shrub->execute(*Tom);
+	Shrub->execute(*BigBoss);
 
 	delete(Tommy);
 	delete(Dent);

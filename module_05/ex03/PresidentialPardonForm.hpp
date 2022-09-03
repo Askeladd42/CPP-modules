@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:17:52 by plam              #+#    #+#             */
-/*   Updated: 2022/08/24 15:10:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 16:58:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class PresidentialPardonForm : public Form {
 public:
-	PresidentialPardonForm( std::string const target );
+	PresidentialPardonForm( std::string target );
 	virtual ~PresidentialPardonForm();
 	PresidentialPardonForm( PresidentialPardonForm const &other );
 	PresidentialPardonForm	&operator=( PresidentialPardonForm const &other );
