@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/01 12:45:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 16:46:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( std::string target ) : Form(target, 145, 137) { }
+ShrubberyCreationForm::ShrubberyCreationForm( std::string const target ) : Form(target, 145, 137) { }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() { }
 

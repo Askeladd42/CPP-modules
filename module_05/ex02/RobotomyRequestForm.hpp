@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:13:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 18:48:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 16:46:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class RobotomyRequestForm : public Form{
 public:
-	RobotomyRequestForm( std::string target );
+	RobotomyRequestForm( std::string const target );
 	virtual ~RobotomyRequestForm();
 	RobotomyRequestForm( RobotomyRequestForm const &other );
 	RobotomyRequestForm	&operator=( RobotomyRequestForm const &other );
