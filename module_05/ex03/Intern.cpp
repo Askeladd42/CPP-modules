@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:51:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 18:34:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 21:23:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,33 @@ Intern::~Intern() {
 	std::cout << "An intern is fired from his post." << std::endl;
 }
 
+Intern::Intern(Intern const &other) {
+	*this = other;
+}
+
+Intern	&Intern::operator=(Intern const &other) {
+	if (this != &other)
+		std::cout << "Nothing to copy." << std::endl;
+	return *this;
+}
+
+const Intern::s_form	Intern::formTab[3] = {
+	{"shrubbery creation", &Intern::_shrub},
+	{"robotomy request", &Intern::_robot},
+	{"presidential pardon", &Intern::_pres}
+};
+
 Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 	try {
 		for (int i = 0; i < 3; i++) {
-			if (/* i matches with the compare with one of the format table element name */)
+			if (this->formTab[i].f_name == fName) {
 				std::cout << "Intern creates " << fName << std::endl;
+				return (this->formTab[i].call(fTarget));
+			}
 			else {
 				std::cerr << "Can't create the " << fName << " format : ";
 				throw FormatNonExistent;
+				return 0;
 			}
 		}
 	}
