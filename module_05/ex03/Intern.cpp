@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:51:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 21:30:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 21:51:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ Intern	&Intern::operator=(Intern const &other) {
 }
 
 const Intern::s_form	Intern::formTab[3] = {
-	{"shrubbery creation", &Intern::_shrub},
-	{"robotomy request", &Intern::_robot},
-	{"presidential pardon", &Intern::_pres}
+	{"shrubbery creation", &Intern::f_shrub},
+	{"robotomy request", &Intern::f_robot},
+	{"presidential pardon", &Intern::f_pres}
 };
 
 Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 	try {
 		for (int i = 0; i < 3; i++) {
-			if (this->formTab[i].f_name == fName) {
+			if (this->formTab[i].f_name.compare(fName) == 0) {
 				std::cout << "Intern creates " << fName << std::endl;
 				return (this->formTab[i].call(fTarget));
 			}
@@ -55,14 +55,14 @@ Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 	}
 }
 
-Form*	Intern::_shrub( std::string target ) {
+Form*	Intern::f_shrub( std::string target ) {
 	return new ShrubberyCreationForm(target);
 }
 
-Form*	Intern::_robot( std::string target ) {
+Form*	Intern::f_robot( std::string target ) {
 	return new RobotomyRequestForm(target);
 }
 
-Form*	Intern::_pres( std::string target ) {
+Form*	Intern::f_pres( std::string target ) {
 	return new PresidentialPardonForm(target);
 }

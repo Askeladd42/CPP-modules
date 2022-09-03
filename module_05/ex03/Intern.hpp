@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:52:18 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 21:28:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/03 21:40:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ private:
 	};
 
 	static const s_form	formTab[3];
-	static Form*		_shrub( std::string target );
-	static Form*		_robot( std::string target );
-	static Form*		_pres( std::string target );
+	static Form*		f_shrub( std::string target );
+	static Form*		f_robot( std::string target );
+	static Form*		f_pres( std::string target );
 
 public:
 	Intern();
