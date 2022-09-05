@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/09/03 17:57:09 by plam             ###   ########.fr        #
+#    Updated: 2022/09/05 12:16:04 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Format
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-SRC_FILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp 
+SRC_FILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp Intern.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
