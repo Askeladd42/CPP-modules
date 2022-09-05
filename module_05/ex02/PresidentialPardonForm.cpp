@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:19:22 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:36:16 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:53:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ PresidentialPardonForm&	PresidentialPardonForm::operator=( PresidentialPardonFor
 
 void	PresidentialPardonForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
-	std::cout << this->getName() << " has been forgiven by Zaphod Beeblebrox." << std::endl;
+	if (this->getGradeExc() > executor.getGrade())
+		std::cout << this->getName() << " has been forgiven by Zaphod Beeblebrox." << std::endl;
 }

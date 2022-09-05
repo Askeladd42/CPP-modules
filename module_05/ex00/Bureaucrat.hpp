@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:36 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 17:48:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:51:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ public:
 	}GradeTooLowException;
 
 	std::string const	getName() const;
-	int					getGrade();
+	int					getGrade() const;
 
 	void				incrGrade();
 	void				decrGrade();

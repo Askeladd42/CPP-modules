@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 17:57:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:51:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ std::string const	Bureaucrat::getName() const{
 	return _name;
 }
 
-int	Bureaucrat::getGrade() {
+int	Bureaucrat::getGrade() const {
 	return _grade;
 }
 
