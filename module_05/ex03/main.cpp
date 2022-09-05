@@ -6,12 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:50:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 13:41:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -38,10 +39,16 @@ int	main( void ) {
 	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
-	Form*	Garden = new ShrubberyCreationForm("Garden");
-	Form*	Tommy = new RobotomyRequestForm("Tommy");
-	Form*	Dent = new PresidentialPardonForm("Arthur Dent");
+	Form*	Garden;
+	Form*	Tommy;
+	Form*	Dent;
 	
+	Intern*	Gary = new Intern();
+
+	Gary->makeForm("shrubbery creation", "Garden");
+	Gary->makeForm("robotomy request", "Tommy");
+	Gary->makeForm("presidential pardon", "Dent");
+
 	std::cout << *Garden;
 	std::cout << *Tommy;
 	std::cout << *Dent;
