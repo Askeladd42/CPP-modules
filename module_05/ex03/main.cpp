@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 13:44:09 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 13:45:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ int	main( void ) {
 	delete (Engram);
 
 	Bureaucrat*	BigBoss = new Bureaucrat("Big Boss", 1);
-	Intern*	Gary = new Intern();
+	Intern*	Garry = new Intern();
 	Form*	Garden;
 	Form*	Tommy;
 	Form*	Dent;
 
-	Garden = Gary->makeForm("shrubbery creation", "Garden");
-	Tommy = Gary->makeForm("robotomy request", "Tommy");
-	Dent = Gary->makeForm("presidential pardon", "Dent");
+	Garden = Garry->makeForm("shrubbery creation", "Garden");
+	Tommy = Garry->makeForm("robotomy request", "Tommy");
+	Dent = Garry->makeForm("presidential pardon", "Dent");
 
 	std::cout << *Garden;
 	std::cout << *Tommy;
@@ -69,6 +69,7 @@ int	main( void ) {
 	delete(Tommy);
 	delete(Dent);
 	delete(Garden);
+	delete(Garry);
 	delete(Tom);
 	delete(Jerry);
 	delete(Marcel);
