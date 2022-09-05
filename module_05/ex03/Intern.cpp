@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:51:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 21:51:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 12:21:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 			else {
 				std::cerr << "Can't create the " << fName << " format : ";
 				throw FormatNonExistent;
-				return 0;
 			}
 		}
 	}
 	catch ( std::exception &e ) {
 		std::cerr << e.what() << std::endl;
+		return 0;
 	}
 }
 
