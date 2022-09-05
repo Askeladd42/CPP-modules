@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:43:27 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 12:45:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 16:44:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Converter.hpp"
+#include "convert.hpp"
 
 int	main(int ac, char **av) {
 	if (ac == 2) {
-		
+		return 0;
 	}
 }

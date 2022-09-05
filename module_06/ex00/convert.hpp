@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 13:54:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 16:45:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@
 class convert
 {
 private:
-	/* data */
+	std::string	toConvert;
 public:
 	convert( std::string elm );
 	~convert();
+	convert( convert const &other );
+	convert	&operator=( convert const &other );
 };
 
-
+#endif
