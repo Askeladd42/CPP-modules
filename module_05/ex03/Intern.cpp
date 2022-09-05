@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:51:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 12:21:57 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 14:01:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,18 @@ const Intern::s_form	Intern::formTab[3] = {
 Form*	Intern::makeForm(std::string fName, std::string fTarget) {
 	try {
 		for (int i = 0; i < 3; i++) {
-			if (this->formTab[i].f_name.compare(fName) == 0) {
+			if (this->formTab[i].f_name == fName) {
 				std::cout << "Intern creates " << fName << std::endl;
 				return (this->formTab[i].call(fTarget));
 			}
-			else {
-				std::cerr << "Can't create the " << fName << " format : ";
-				throw FormatNonExistent;
-			}
 		}
+		std::cerr << "Can't create the " << fName << " format : ";
+		throw FormatNonExistent;
 	}
 	catch ( std::exception &e ) {
 		std::cerr << e.what() << std::endl;
-		return 0;
 	}
+	return 0;
 }
 
 Form*	Intern::f_shrub( std::string target ) {
