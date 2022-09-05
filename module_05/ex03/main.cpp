@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 14:06:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:21:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ int	main( void ) {
 	std::cout << *Garden;
 	
 	Tommy->execute(*Jerry);
-	Dent->execute(*Marcel);
 	Garden->execute(*Marcel);
-	Garden->execute(*BigBoss);
+	Dent->execute(*Marcel);
+	Dent->execute(*BigBoss);
 
 	delete(Tommy);
 	delete(Dent);

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2022/08/25 16:16:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:33:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,11 @@ void	Bureaucrat::signForm( Form &form ) {
 
 void	Bureaucrat::executeForm( Form const &form ) const {
 	try {
-		if (form.getGradeExc() < this->_grade)
+		if (form.getGradeExc() < this->_grade) {
+			std::cerr << this->getName() << " can't execute the format " << form.getName()
+			<< " because ";
 			throw GradeTooLowException;
+		}
 		else
 			std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	}

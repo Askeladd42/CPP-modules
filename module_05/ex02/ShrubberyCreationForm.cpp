@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:47:18 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/05 15:37:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	ofs << "       |.|        | |         | |" << std::endl;
 	ofs << " \\\\/ ._\\\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
 	ofs.close();
+	std::cout << (this->getName() + "_shrubbery").c_str() << " has been succesfully planted !" << std::endl;
 }
 
