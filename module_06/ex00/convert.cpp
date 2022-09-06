@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/08/29 12:48:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 17:36:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@ convert::convert( std::string elm ) {
 
 }
 
-convert::~convert() {
+convert::~convert() { }
 
+convert::convert( convert const &other ) {
+	*this = other;
+}
+
+convert&	convert::operator=(convert const &other ) {
+	if (this != &other) {
+		/* to complete */
+	}
+	return *this;
 }
