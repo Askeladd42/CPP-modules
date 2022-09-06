@@ -6,13 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:14:05 by plam              #+#    #+#             */
-/*   Updated: 2022/09/06 15:28:39 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 16:44:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form(target, 72, 45) { }
+RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form("robotomy request", 72, 45) {
+	this->setTarget(target);
+}
 
 RobotomyRequestForm::~RobotomyRequestForm() { }
 
