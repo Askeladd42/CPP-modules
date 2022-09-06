@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 16:45:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 17:39:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ public:
 	~convert();
 	convert( convert const &other );
 	convert	&operator=( convert const &other );
+
+	char const		getChar() const;
+	int const		getInt() const;
+	float const		getFloat() const;
+	double const	getDouble() const;
 };
 
 #endif
