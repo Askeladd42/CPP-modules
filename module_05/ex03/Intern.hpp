@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 12:52:18 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 21:40:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 16:03:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Intern {
 private:
 	struct	s_form {
 		std::string	f_name;
-		Form*	(*call)(std::string fTarget);	//using callbacks for format recognition
+		Form*		(*call)(std::string fTarget);	//using callbacks for format recognition
 	};
 
 	static const s_form	formTab[3];

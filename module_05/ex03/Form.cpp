@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:47 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:54:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 15:42:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form( std::string name, int gradeSgn, int gradeExc) : _name(name), _gradeSgn(gradeSgn), _gradeExc(gradeExc) {
+Form::Form( std::string name, int gradeSgn, int gradeExc) : _name(name), _target(""), _gradeSgn(gradeSgn), _gradeExc(gradeExc) {
 	try {
 		if (gradeExc < 1 || gradeSgn < 1)
 			throw Form::GradeTooHighException;
@@ -51,6 +51,13 @@ std::ostream	&operator<<( std::ostream &ofs, Form &f ) {
 	return ofs;
 }
 
+void				Form::setTarget( std::string target ) {
+	this->_target = target;
+}
+
+std::string const	Form::getTarget() const {
+	return _target;
+}
 
 std::string const	Form::getName() const {
 	return _name;

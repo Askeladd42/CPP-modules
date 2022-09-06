@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 15:21:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 15:55:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ int	main( void ) {
 
 	Garden = Garry.makeForm("shrubbery creation", "Garden");
 	Tommy = Garry.makeForm("robotomy request", "Tommy");
-	Dent = Garry.makeForm("presidential pardon", "Dent");
+	Dent = Garry.makeForm("presidential pardon", "Arthur Dent");
+	
+	Form*	Elec = Garry.makeForm("new elections", "President");
 
 	std::cout << *Garden;
 	std::cout << *Tommy;
@@ -55,17 +57,25 @@ int	main( void ) {
 	Tom->signForm(*Tommy);
 	Jerry->signForm(*Dent);
 	Marcel->signForm(*Garden);
+	BigBoss->signForm(*Garden);
 	
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
-	BigBoss->signForm(*Garden);
-	std::cout << *Garden;
+	std::cout << *Garden << *Tommy;
 	
 	Tommy->execute(*Jerry);
+	Tommy->execute(*Tom);
+	BigBoss->signForm(*Tommy);
+	Tommy->execute(*Jerry);
+	Tommy->execute(*Tom);
+
 	Garden->execute(*Marcel);
 	Dent->execute(*Marcel);
+
+	Garden->execute(*BigBoss);
 	Dent->execute(*BigBoss);
 
+	delete(Elec);
 	delete(Tommy);
 	delete(Dent);
 	delete(Garden);

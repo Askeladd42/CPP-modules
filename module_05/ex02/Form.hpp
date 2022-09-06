@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 11:48:25 by plam              #+#    #+#             */
-/*   Updated: 2022/09/03 17:45:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 16:07:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 class Form {
 	private:
 		std::string const	_name;
+		std::string			_target;
 		bool				_signed;
 		int const			_gradeSgn;
 		int const			_gradeExc;
@@ -50,13 +51,16 @@ class Form {
 			}
 		}NotSigned;
 
-		std::string const	getName() const;
-		bool				getSgn() const;
-		int					getGradeExc() const;
-		int					getGradeSgn() const;
+		virtual void				setTarget( std::string target );
 
-		void				beSigned( Bureaucrat &b );
-		virtual void		execute( Bureaucrat const &executor ) const;
+		virtual std::string const	getName() const;
+		virtual std::string const	getTarget() const;
+		virtual bool				getSgn() const;
+		virtual int					getGradeExc() const;
+		virtual int					getGradeSgn() const;
+
+		virtual void				beSigned( Bureaucrat &b );
+		virtual void				execute( Bureaucrat const &executor ) const;
 
 };
 

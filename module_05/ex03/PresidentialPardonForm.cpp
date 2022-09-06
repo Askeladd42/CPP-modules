@@ -6,13 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:19:22 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 15:50:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 16:26:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( std::string target ) : Form(target, 25, 5) { }
+PresidentialPardonForm::PresidentialPardonForm( std::string target ) : Form("presidential pardon", 25, 5) {
+	this->setTarget(target);
+}
 
 PresidentialPardonForm::~PresidentialPardonForm() { }
 
@@ -26,6 +28,6 @@ PresidentialPardonForm&	PresidentialPardonForm::operator=( PresidentialPardonFor
 
 void	PresidentialPardonForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
-	if (this->getGradeExc() > executor.getGrade())
-		std::cout << this->getName() << " has been forgiven by Zaphod Beeblebrox." << std::endl;
+	if (this->getGradeExc() > executor.getGrade() && this->getSgn() == true)
+		std::cout << this->getTarget() << " has been forgiven by Zaphod Beeblebrox." << std::endl;
 }

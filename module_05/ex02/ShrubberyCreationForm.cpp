@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 15:54:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 14:38:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=( ShrubberyCreationForm c
 
 void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
-	if (this->getGradeExc() > executor.getGrade()) {
+	if (this->getGradeExc() > executor.getGrade() && this->getSgn() == true) {
 		std::ofstream	ofs((this->getName() + "_shrubbery").c_str());
 		ofs << "               ,@@@@@@@, " << std::endl;
 		ofs << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;

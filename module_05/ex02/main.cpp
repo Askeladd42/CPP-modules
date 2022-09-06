@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/09/05 13:41:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 15:15:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,23 @@ int	main( void ) {
 	Tom->signForm(*Tommy);
 	Jerry->signForm(*Dent);
 	Marcel->signForm(*Garden);
+	BigBoss->signForm(*Garden);
 	
 	BigBoss->incrGrade();
 	std::cout << *BigBoss;
-	BigBoss->signForm(*Garden);
-	std::cout << *Garden;
+	std::cout << *Garden << *Tommy;
 	
 	Tommy->execute(*Jerry);
-	Dent->execute(*Marcel);
+	Tommy->execute(*Tom);
+	BigBoss->signForm(*Tommy);
+	Tommy->execute(*Jerry);
+	Tommy->execute(*Tom);
+
 	Garden->execute(*Marcel);
+	Dent->execute(*Marcel);
+
 	Garden->execute(*BigBoss);
+	Dent->execute(*BigBoss);
 
 	delete(Tommy);
 	delete(Dent);
@@ -67,6 +74,8 @@ int	main( void ) {
 	delete(Jerry);
 	delete(Marcel);
 	delete(BigBoss);
+
+	return 0;
 
 	return 0;
 }
