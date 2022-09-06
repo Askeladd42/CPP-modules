@@ -6,13 +6,15 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:20:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/06 14:38:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/06 16:26:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( std::string const target ) : Form(target, 145, 137) { }
+ShrubberyCreationForm::ShrubberyCreationForm( std::string const target ) : Form("shrubbery creation", 145, 137) {
+	this->setTarget(target);
+}
 
 ShrubberyCreationForm::~ShrubberyCreationForm() { }
 
@@ -27,7 +29,7 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=( ShrubberyCreationForm c
 void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 	Form::execute(executor);
 	if (this->getGradeExc() > executor.getGrade() && this->getSgn() == true) {
-		std::ofstream	ofs((this->getName() + "_shrubbery").c_str());
+		std::ofstream	ofs((this->getTarget() + "_shrubbery").c_str());
 		ofs << "               ,@@@@@@@, " << std::endl;
 		ofs << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
 		ofs << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o" << std::endl;
@@ -39,6 +41,6 @@ void	ShrubberyCreationForm::execute( Bureaucrat const &executor ) const {
 		ofs << "       |.|        | |         | |" << std::endl;
 		ofs << " \\\\/ ._\\\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
 		ofs.close();
-		std::cout << (this->getName() + "_shrubbery").c_str() << " has been succesfully planted !" << std::endl;
+		std::cout << (this->getTarget() + "_shrubbery").c_str() << " has been succesfully planted !" << std::endl;
 	}
 }
