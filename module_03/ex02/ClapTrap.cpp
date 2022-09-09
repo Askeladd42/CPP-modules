@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:38:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 15:53:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/09 13:50:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,18 @@ ClapTrap	&ClapTrap::operator=( ClapTrap const &other ) {
 		this->_attackDamage = other._attackDamage;
 	}
 	return *this;
+}
+
+void	ClapTrap::setHP( int HP ) {
+	this->_hitPoints = HP;
+}
+
+void	ClapTrap::setEP( unsigned int EP ) {
+	this->_energyPoints = EP;
+}
+
+void	ClapTrap::setAP( unsigned int AP ) {
+	this->_attackDamage = AP;
 }
 
 void ClapTrap::attack( const std::string& target ) {

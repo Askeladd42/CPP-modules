@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:44:08 by plam              #+#    #+#             */
-/*   Updated: 2022/06/12 11:06:07 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/09 13:54:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 ScavTrap::ScavTrap( std::string name ) : ClapTrap(name) {
 	this->_name = name;
 	std::cout << "Default ScavTrap " << this->_name << " constructor called" << std::endl;
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->setHP(100);
+	this->setEP(50);
+	this->setAP(20);
 }
 
 ScavTrap::~ScavTrap( void ) {
@@ -32,17 +32,17 @@ ScavTrap	&ScavTrap::operator=( ScavTrap const &other ) {
 	std::cout << "Copy ScavTrap " << this->_name << " assignment operator called" << std::endl;
 	if (this != &other) {
 		this->_name = other._name;
-		this->_hitPoints = other._hitPoints;
-		this->_energyPoints = other._energyPoints;
-		this->_attackDamage = other._attackDamage;
+		this->setHP(other._hitPoints);
+		this->setEP(other._energyPoints);
+		this->setAP(other._attackDamage);
 	}
 	return *this;
 }
 
-void	ScavTrap::attack(const std::string& target) {
+void	ScavTrap::attack( const std::string& target ) {
 	if (this->_energyPoints == 0)
 		std::cout << this->_name << " has no energy to attack!" << std::endl;
-	if (this->_hitPoints <= 0) 
+	if (this->_hitPoints <= 0)
 		std::cout << this->_name << " is destroyed! It cannot attack!" << std::endl;
 	else {
 		this->_energyPoints--;
@@ -51,7 +51,7 @@ void	ScavTrap::attack(const std::string& target) {
 	}
 }
 
-void	ScavTrap::takeDamage(unsigned int amount) {
+void	ScavTrap::takeDamage( unsigned int amount ) {
 	this->_hitPoints -= amount;
 	std::cout << "ScavTrap " << this->_name << " takes " << amount 
 		<< " points of damage!" << std::endl;

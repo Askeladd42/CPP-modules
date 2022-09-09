@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 14:29:43 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 14:04:52 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/09 18:22:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
-private:
-	std::string		_name;
-	int				_hitPoints;
-	unsigned int	_energyPoints;
-	unsigned int	_attackDamage;
-
 public:
 	ScavTrap( std::string name );
-	~ScavTrap( void );
+	virtual ~ScavTrap( void );
 	ScavTrap( ScavTrap const &other );
 	ScavTrap	&operator=(ScavTrap const &other);
 

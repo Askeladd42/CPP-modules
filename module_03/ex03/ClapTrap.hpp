@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:37:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 15:49:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/09 13:51:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ public:
 	~ClapTrap( void );
 	ClapTrap( ClapTrap const &other );
 	ClapTrap &operator=( ClapTrap const &other );
+
+	void	setHP( int HP );
+	void	setEP( unsigned int EP );
+	void	setAP( unsigned int AP );
 
 	void	attack( const std::string& target );
 	void	takeDamage( unsigned int amount );
