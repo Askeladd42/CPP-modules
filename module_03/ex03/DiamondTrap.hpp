@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/15 15:06:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 13:47:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,11 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap : virtual public ClapTrap, virtual public ScavTrap, virtual public FragTrap
+class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
 {
 private:
-	std::string		_name;
-	int				_hitPoints;
-	unsigned int	_energyPoints;
-	unsigned int	_attackDamage;
-	
+	std::string	_name;
+
 public:
 	DiamondTrap( std::string name );
 	~DiamondTrap( void );
