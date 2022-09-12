@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/23 14:55:45 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 17:12:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	main( void ) {
 	Manny.takeDamage( 100 );
 
 	Mark.attack( "Scavenger" );
-	Mark.takeDamage( 30 );
-	Mark.beRepaired( 25 );
+	Mark.FragTrap::takeDamage( 30 );
+	Mark.ScavTrap::beRepaired( 25 );
 	Mark.highFivesGuys();
 	Mark.whoAmI();
 
