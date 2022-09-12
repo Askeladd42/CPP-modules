@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:47:46 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 16:03:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 16:24:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 		this->setAP(other._attackDamage);
 	}
 	return *this;
+}
+
+void	DiamondTrap::attack( std::string &target ) {
+	ScavTrap::attack(target);
 }
 
 void	DiamondTrap::whoAmI( void ) {
