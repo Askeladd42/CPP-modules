@@ -6,17 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:47:46 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 16:24:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 17:02:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(std::string(name).append("_clap_name")), ScavTrap(name), FragTrap(name), _name(name) {
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name.append("_clap_name")), ScavTrap(name), FragTrap(name), _name(name) {
 	std::cout << "Default DiamondTrap " << this->_name << " constructor called" << std::endl;
-	FragTrap::setHP(100);
-	ScavTrap::setEP(50);
-	FragTrap::setAP(30);
+	this->setHP(FragTrap::_hitPoints);
+	this->setEP(ScavTrap::_energyPoints);
+	this->setAP(FragTrap::_attackDamage);
 }
 
 DiamondTrap::~DiamondTrap( void ) {
@@ -30,6 +30,7 @@ DiamondTrap::DiamondTrap( DiamondTrap const &other ) : ClapTrap(other), ScavTrap
 DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 	std::cout << "Copy DiamondTrap " << this->_name << " assignment operator called" << std::endl;
 	if (this != &other) {
+		this->_name = other._name;
 		this->setHP(other._hitPoints);
 		this->setEP(other._energyPoints);
 		this->setAP(other._attackDamage);
@@ -37,7 +38,7 @@ DiamondTrap	&DiamondTrap::operator=( DiamondTrap const &other ) {
 	return *this;
 }
 
-void	DiamondTrap::attack( std::string &target ) {
+void	DiamondTrap::attack( std::string const &target ) {
 	ScavTrap::attack(target);
 }
 

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 17:01:17 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 15:50:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 16:32:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ public:
 	FragTrap( FragTrap const &other );
 	FragTrap	&operator=( FragTrap const &other );
 
-	virtual void	attack( const std::string& target );
-	void			takeDamage( unsigned int amount );
-	void			beRepaired( unsigned int amount );
-
-	void			highFivesGuys( void );
+	void	attack( const std::string& target );
+	void	takeDamage( unsigned int amount );
+	void	beRepaired( unsigned int amount );
+	
+	void	highFivesGuys( void );
 
 };
 

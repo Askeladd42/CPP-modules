@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 16:21:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 16:37:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	DiamondTrap( DiamondTrap const &other );
 	DiamondTrap	&operator=( DiamondTrap const &other );
 
-	void	attack( std::string &target );
+	void	attack( std::string const &target );
 	void	whoAmI( void );
 };
 

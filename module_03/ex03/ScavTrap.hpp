@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 14:29:43 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 16:25:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/12 16:37:43 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	ScavTrap( ScavTrap const &other );
 	ScavTrap	&operator=(ScavTrap const &other);
 
-	virtual void	attack( const std::string& target );
+	virtual void	attack( std::string const &target );
 	void			takeDamage( unsigned int amount );
 	void			beRepaired( unsigned int amount );
 
