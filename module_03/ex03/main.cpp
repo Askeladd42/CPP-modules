@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/12 17:12:55 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 14:30:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ int	main( void ) {
 	ScavTrap	Jimmy("Jimmy");
 	FragTrap	Manny("Manny");
 	DiamondTrap Mark("Mark");
+
+	Timmy.displayStatus();
+	Jimmy.displayStatus();
+	Manny.displayStatus();
+	Mark.displayStatus();
 
 	Timmy.attack( "a pile of bricks" );
 	Timmy.takeDamage(5);
@@ -45,6 +50,12 @@ int	main( void ) {
 	Mark.highFivesGuys();
 	Mark.whoAmI();
 
-	std::cout << "By a miracle, Scavenger destroyed itself !" << std::endl; 
+	std::cout << "By a miracle, Scavenger destroyed itself !" << std::endl;
+
+	Timmy.displayStatus();
+	Jimmy.displayStatus();
+	Manny.displayStatus();
+	Mark.displayStatus();
+ 
 	return 0;
 }
