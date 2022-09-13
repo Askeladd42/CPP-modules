@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/09 18:11:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 17:34:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int	main( void ) {
 	Timmy->displayStatus();
 	Jimmy->displayStatus();
 
+	delete(Timmy);
+	delete(Jimmy);
 	return 0;
 }
