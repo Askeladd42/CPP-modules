@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/13 15:02:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 15:05:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <cmath>
 # include <limits>
 
-class convert
+class Convert
 {
 private:
 	std::string		_toConvert;
@@ -42,10 +42,10 @@ private:
 	double const	getDouble() const;
 
 public:
-	convert( std::string elm );
-	~convert();
-	convert( convert const &other );
-	convert	&operator=( convert const &other );
+	Convert( std::string elm );
+	~Convert();
+	Convert( Convert const &other );
+	Convert	&operator=( Convert const &other );
 
 	void			getConvert();
 };

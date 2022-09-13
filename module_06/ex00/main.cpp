@@ -6,15 +6,19 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:43:27 by plam              #+#    #+#             */
-/*   Updated: 2022/09/06 17:43:37 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 15:11:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "convert.hpp"
+#include "Convert.hpp"
 
 int	main(int ac, char **av) {
 	if (ac == 2) {
-	convert( av[1] );
-		return 0;
+		std::string	toConv = av[1];
+		Convert	*Conv = new Convert( toConv );
+
+		Conv->getConvert();
+		delete(Conv);
 	}
+	return 0;
 }
