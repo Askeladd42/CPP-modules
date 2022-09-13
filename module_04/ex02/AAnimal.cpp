@@ -33,6 +33,10 @@ AAnimal	&AAnimal::operator=( AAnimal const &other ) {
 	return *this;
 }
 
+void	AAnimal::setType( std::string newType ) {
+	this->_type = newType;
+}
+
 std::string	AAnimal::getType( void ) const {
 	return this->_type;
 }

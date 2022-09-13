@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:12:33 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:33:57 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 17:36:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@
 class Animal
 {
 protected:
-	std::string _type;
+	std::string	_type;
 public:
 	Animal( void );
 	virtual ~Animal( void );
 	Animal( Animal const &other );
 	Animal	&operator=( Animal const &other );
 
+	virtual void		setType( std::string newType );
 	virtual std::string	getType( void ) const;
 	virtual void		makeSound( void ) const;
 };

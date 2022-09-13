@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 18:57:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/13 17:37:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ Animal	&Animal::operator=( Animal const &other ) {
 	if (this != &other)
 		this->_type = other._type;
 	return *this;
+}
+
+void	Animal::setType( std::string newType ) {
+	this->_type = newType;
 }
 
 std::string	Animal::getType( void ) const {
