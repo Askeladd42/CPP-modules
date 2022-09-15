@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:39:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog( void ) {
-	_type = "Dog";
+	type = "Dog";
 	std::cout << "Dog default constructor called." << std::endl; 
 }
 
@@ -22,14 +22,14 @@ Dog::~Dog( void ) {
 }
 
 Dog::Dog( Dog const &other ) : Animal(other) {
-	_type = "Dog";
+	type = "Dog";
 	std::cout << "Copy Dog constructor called." << std::endl;
 }
 
 Dog	&Dog::operator=( Dog const &other ) {
 	std::cout << "Copy Dog assignment operator called." << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+		this->type = other.type;
 	return *this;	
 }
 

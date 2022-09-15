@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:12:33 by plam              #+#    #+#             */
-/*   Updated: 2022/09/13 17:38:42 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Animal
 {
 protected:
-	std::string _type;
+	std::string type;
 public:
 	Animal( void );
 	virtual ~Animal( void );

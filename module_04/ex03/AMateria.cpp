@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:31:20 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 12:45:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 AMateria::AMateria( void ) { }
 
-AMateria::AMateria( std::string const &type ): _type(type) { }
+AMateria::AMateria( std::string const &type ): type(type) { }
 
 AMateria::~AMateria( void ) { }
 
@@ -30,7 +30,7 @@ AMateria &AMateria::operator=( AMateria const &other ) {
 }
 
 std::string const	&AMateria::getType() const {
-	return this->_type;
+	return this->type;
 }
 
 void	AMateria::use( ICharacter &target ) {

@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:00:54 by plam              #+#    #+#             */
-/*   Updated: 2022/07/29 19:19:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat( void ) {
-	this->_type = "Cat";
+	this->type = "Cat";
 	std::cout << "Cat default constructor called." << std::endl;
 	_mind = new Brain( "I'm a cat, and I don't care about my master." );
 }
@@ -24,14 +24,14 @@ Cat::~Cat( void ) {
 }
 
 Cat::Cat( Cat const &other ) : AAnimal(other) {
-	this->_type = "Cat";
+	this->type = "Cat";
 	std::cout << "Cat copy constructor called." << std::endl;
 }
 
 Cat	&Cat::operator=( Cat const &other ) {
 	std::cout << "Cat copy assignment operator called." << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+		this->type = other.type;
 	return *this;
 }
 

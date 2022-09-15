@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:15:07 by plam              #+#    #+#             */
-/*   Updated: 2022/09/13 17:37:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal( void ) {
-	_type = "Default";
+	type = "Default";
 	std::cout << "Animal default constructor called." << std::endl;
 }
 
@@ -27,18 +27,18 @@ Animal::Animal( Animal const &other ) {
 }
 
 Animal	&Animal::operator=( Animal const &other ) {
-	std::cout << "Copy Animal" << this->_type << " assignment operator called." << std::endl;
+	std::cout << "Copy Animal" << this->type << " assignment operator called." << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+		this->type = other.type;
 	return *this;
 }
 
 void	Animal::setType( std::string newType ) {
-	this->_type = newType;
+	this->type = newType;
 }
 
 std::string	Animal::getType( void ) const {
-	return this->_type;
+	return this->type;
 }
 
 void	Animal::makeSound( void ) const {

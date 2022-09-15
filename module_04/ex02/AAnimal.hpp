@@ -18,7 +18,7 @@
 class AAnimal
 {
 protected:
-	std::string _type;
+	std::string type;
 public:
 	AAnimal( void );
 	virtual ~AAnimal( void );

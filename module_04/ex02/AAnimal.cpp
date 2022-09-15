@@ -13,7 +13,7 @@
 #include "AAnimal.hpp"
 
 AAnimal::AAnimal( void ) {
-	_type = "Default";
+	type = "Default";
 	std::cout << "AAnimal default constructor called." << std::endl;
 }
 
@@ -27,18 +27,18 @@ AAnimal::AAnimal( AAnimal const &other ) {
 }
 
 AAnimal	&AAnimal::operator=( AAnimal const &other ) {
-	std::cout << "Copy AAnimal" << this->_type << " assignment operator called." << std::endl;
+	std::cout << "Copy AAnimal" << this->type << " assignment operator called." << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+		this->type = other.type;
 	return *this;
 }
 
 void	AAnimal::setType( std::string newType ) {
-	this->_type = newType;
+	this->type = newType;
 }
 
 std::string	AAnimal::getType( void ) const {
-	return this->_type;
+	return this->type;
 }
 
 void	AAnimal::makeSound( void ) const {

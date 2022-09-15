@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:13 by plam              #+#    #+#             */
-/*   Updated: 2022/07/13 19:12:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog( void ) {
-	_type = "Dog";
+	type = "Dog";
 	std::cout << "Dog default constructor called." << std::endl; 
 	_mind = new Brain( "I'm a dog, and I love my master !" );
 }
@@ -24,14 +24,14 @@ Dog::~Dog( void ) {
 }
 
 Dog::Dog( Dog const &other ) : Animal(other) {
-	_type = "Dog";
+	type = "Dog";
 	std::cout << "Dog copy constructor called." << std::endl;
 }
 
 Dog	&Dog::operator=( Dog const &other ) {
 	std::cout << "Dog copy assignment operator called." << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+		this->type = other.type;
 	return *this;	
 }
 
