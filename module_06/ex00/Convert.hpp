@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 14:34:18 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 15:08:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ private:
 	void			setDouble( std::string s );
 	void			setTypes();
 
-	char const		getChar() const;
-	int const		getInt() const;
-	float const		getFloat() const;
-	double const	getDouble() const;
+	void			getChar( double n) const;
+	void			getInt( double n) const;
+	void			getFloat( double n) const;
+	void			getDouble(double n) const;
 
 public:
 	Convert( std::string elm );
@@ -48,7 +48,7 @@ public:
 	Convert( Convert const &other );
 	Convert	&operator=( Convert const &other );
 
-	void			getConvert();
+	void			getConvert( double n );
 };
 
 #endif

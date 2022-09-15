@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 14:34:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 15:17:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ Convert::Convert( Convert const &other ) {
 Convert&	Convert::operator=(Convert const &other ) {
 	if (this != &other) {
 		this->_toConvert = other._toConvert;
-		this->
+		this->_isChar = other._isChar;
+		this->_isInt = other._isInt;
+		this->_isFloat = other._isFloat;
+		this->_isDouble = other._isDouble;
+		this->_float = this->_float;
+		this->_double = this->_double;
 	}
 	return *this;
 }
@@ -42,7 +47,14 @@ void	Convert::setChar( std::string s ) {
 }
 
 void	Convert::setInt( std::string s ) {
+	char		*pos;
+	long int	tmp;
 
+	tmp = std::strtol(s.c_str(), &pos, 10);
+	if (*pos == '\0' 
+	&& tmp >= std::numeric_limits<int>::min()
+	&& tmp <= std::numeric_limits<int>::max())
+		this->_isInt = true;
 }
 
 void	Convert::setFloat( std::string s ) {
@@ -60,25 +72,47 @@ void	Convert::setTypes() {
 	this->setDouble(this->_toConvert);
 }
 
-char const		Convert::getChar() const {
+void	Convert::getChar( double n ) const {
+	std::cout << "char: ";
+	if (this->_isChar == true
+	&& n >= std::numeric_limits<char>::min()
+	&& n <= std::numeric_limits<char>::max())
+		std::cout << static_cast<char>(n) << std::endl;
+	std::cout << "impossible" << std::endl;
 
 }
 
-int const		Convert::getInt() const {
+void	Convert::getInt( double n ) const {
+	std::cout << "int: ";
+	if (this->_isInt == true
+	&& n >= std::numeric_limits<int>::min()
+	&& n <= std::numeric_limits<int>::max())
+		std::cout << static_cast<int>(n) << std::endl;
+	std::cout << "impossible" << std::endl;
+}
+
+void	Convert::getFloat( double n ) const {
+	std::cout << "float: ";
+	if (this->_isFloat == true
+	&& n >= std::numeric_limits<float>::min()
+	&& n <= std::numeric_limits<float>::max())
+		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n) << std::endl;
+	std::cout << "impossible" << std::endl;
+}
+
+void	Convert::getDouble( double n ) const {
+	std::cout << "double: ";
+	if (this->_isDouble == true
+	&& n >= std::numeric_limits<double>::min()
+	&& n <= std::numeric_limits<double>::max())
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
+	std::cout << "impossible" << std::endl;
 
 }
 
-float const		Convert::getFloat() const {
-
-}
-
-double const	Convert::getDouble() const {
-	
-}
-
-void			Convert::getConvert() {
-	this->getChar();
-	this->getInt();
-	this->getFloat();
-	this->getDouble();
+void	Convert::getConvert( double n ) {
+	this->getChar(n);
+	this->getInt(n);
+	this->getFloat(n);
+	this->getDouble(n);
 }
