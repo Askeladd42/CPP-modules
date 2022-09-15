@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:01:27 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:34:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:56:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Cat( Cat const &other );
 	Cat	&operator=( Cat const &other );
 
-	virtual void	makeSound( void ) const;
+	void	makeSound( void ) const;
 };
 
 #endif
