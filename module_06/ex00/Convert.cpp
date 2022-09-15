@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 15:53:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 17:05:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,10 +90,14 @@ void	Convert::getChar( double n ) const {
 	std::cout << "char: ";
 	if (this->_isChar == true
 	&& n >= std::numeric_limits<char>::min()
-	&& n <= std::numeric_limits<char>::max())
-		std::cout << static_cast<char>(n) << std::endl;
-	std::cout << "impossible" << std::endl;
-
+	&& n <= std::numeric_limits<char>::max()) {
+		if (isprint(n))
+			std::cout << static_cast<char>(n) << std::endl;
+		else
+			std::cout << "Non printable" << std::endl;
+	}
+	else
+		std::cout << "impossible" << std::endl;
 }
 
 void	Convert::getInt( double n ) const {
