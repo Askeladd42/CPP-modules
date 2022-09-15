@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/06/24 17:38:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/15 11:40:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int	main( void ) {
 		i->makeSound(); //will output the cat sound!
 		j->makeSound();
 		meta->makeSound();
+
+		delete(meta);
+		delete(i);
+		delete(j);
 	}
 	{
 		std::cout << std::endl << std::endl;
@@ -41,5 +45,7 @@ int	main( void ) {
 
 		std::cout << "Nibbles has " << Nibbles.getType() << " type and makes ";
 		Nibbles.makeSound();
+
+		delete(wild);
 	}
 }
