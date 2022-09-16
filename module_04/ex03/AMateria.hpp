@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:30:19 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 15:44:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class AMateria {
 protected:
-	std::string const	type;
+	std::string	type;
 public:
 	AMateria( void );
 	AMateria( std::string const &type );

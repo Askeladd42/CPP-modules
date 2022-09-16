@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 16:42:14 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 14:15:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 15:42:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Ice::~Ice( void ) { }
 Ice::Ice( Ice const &other ) : AMateria(other) { }
 
 Ice	&Ice::operator=( Ice const &other ) {
-	if (this == &other)
-		return *this;
+	if (this != &other)
+		this->type = other.type;
 	return *this;
 }
 

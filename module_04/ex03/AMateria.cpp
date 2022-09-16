@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:31:20 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 11:13:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 15:42:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ AMateria::AMateria( AMateria const &other ) {
 }
 
 AMateria &AMateria::operator=( AMateria const &other ) {
-	if (this == &other)
-		return *this;
+	if (this != &other)
+		this->type = other.type;
 	return *this;
 }
 

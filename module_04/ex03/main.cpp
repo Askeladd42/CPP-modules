@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:29:31 by plam              #+#    #+#             */
-/*   Updated: 2022/08/17 13:55:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 15:05:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 
 	ICharacter* me = new Character("me");
 
-	AMateria* tmp;
+	AMateria*	tmp;
 	tmp = src->createMateria("ice");
 	std::cout << tmp->getType() << std::endl;
 	me->equip(tmp);
