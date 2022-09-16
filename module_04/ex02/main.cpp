@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 13:56:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 14:14:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int	main( void ) {
 	{
-		const AAnimal*	SPA[10];
+		const AAnimal*	SPA[5];
 		
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			if (i % 2)
 				SPA[i] = new Dog();
@@ -26,14 +26,14 @@ int	main( void ) {
 				SPA[i] = new Cat();
 			std::cout << "SPA is full !" << std::endl;
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			std::cout << std::endl;
 			SPA[i]->makeSound();
 			SPA[i]->printIdeas();
 			std::cout << std::endl;
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 5; i++)
 			delete SPA[i];
 		std::cout << "SPA was raided by PETA, doing usual PETA idiocies ..." << std::endl;
 	}
