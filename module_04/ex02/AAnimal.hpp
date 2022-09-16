@@ -25,10 +25,9 @@ public:
 	AAnimal( AAnimal const &other );
 	AAnimal	&operator=( AAnimal const &other );
 
-	void				setType( std::string newType );
-	virtual std::string	getType( void ) const;
-	virtual void		makeSound( void ) const;
-	virtual void		printIdeas( void ) const=0;	//fully virtual funcion
+	std::string			getType( void ) const;
+	virtual void		makeSound( void ) const = 0;	//fully virtual funcion
+	virtual void		printIdeas( void ) const = 0;	//fully virtual funcion
 };
 
 

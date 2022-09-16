@@ -33,14 +33,6 @@ AAnimal	&AAnimal::operator=( AAnimal const &other ) {
 	return *this;
 }
 
-void	AAnimal::setType( std::string newType ) {
-	this->type = newType;
-}
-
 std::string	AAnimal::getType( void ) const {
 	return this->type;
-}
-
-void	AAnimal::makeSound( void ) const {
-	std::cout << "Basic sound heard." << std::endl;
 }
