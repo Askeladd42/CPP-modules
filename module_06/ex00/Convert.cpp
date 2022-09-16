@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 09:52:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 16:27:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,26 @@ Convert&	Convert::operator=(Convert const &other ) {
 		this->_isInt = other._isInt;
 		this->_isFloat = other._isFloat;
 		this->_isDouble = other._isDouble;
-		this->_float = this->_float;
-		this->_double = this->_double;
+		this->_float = other._float;
+		this->_double = other._double;
 	}
 	return *this;
 }
 
 void	Convert::setChar( std::string s ) {
-
+	char	tmp;
+	
+	tmp = s.c_str()[0];
+	if (s.size() == 1
+	&& tmp >= std::numeric_limits<char>::min()
+	&& tmp <= std::numeric_limits<char>::max())
 }
 
 void	Convert::setInt( std::string s ) {
 	char		*pos;
 	long int	tmp;
 
-	tmp = std::strtol(s.c_str(), &pos, 10);
+	tmp = strtol(s.c_str(), &pos, 10);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<int>::min()
 	&& tmp <= std::numeric_limits<int>::max())
@@ -61,7 +66,7 @@ void	Convert::setFloat( std::string s ) {
 	char		*pos;
 	float		tmp;
 
-	tmp = std::strtof(s.c_str(), &pos);
+	tmp = strtof(s.c_str(), &pos);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<float>::min()
 	&& tmp <= std::numeric_limits<float>::max())
@@ -72,7 +77,7 @@ void	Convert::setDouble( std::string s ) {
 	char		*pos;
 	long double	tmp;
 
-	tmp = std::strtod(s.c_str(), &pos);
+	tmp = strtod(s.c_str(), &pos);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<double>::min()
 	&& tmp <= std::numeric_limits<double>::max())
