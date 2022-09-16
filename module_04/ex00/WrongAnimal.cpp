@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:58:45 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 00:00:09 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 09:59:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ WrongAnimal &WrongAnimal::operator=( WrongAnimal const &other ) {
 		type = other.type;
 	return *this;
 }
+void	WrongAnimal::setType( std::string newType ) {
+	this->type = newType;
+}
 
+std::string	WrongAnimal::getType( void ) const {
+	return this->type;
+}
 void	WrongAnimal::makeSound( void ) const {
 	std::cout << "Weird basic sound heard." << std::endl;
 }

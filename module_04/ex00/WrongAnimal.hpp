@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:59:09 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 23:59:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 09:58:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ public:
 	WrongAnimal( WrongAnimal const &other );
 	WrongAnimal &operator=(WrongAnimal const &other );
 
+	virtual void		setType( std::string newType );
+	virtual std::string	getType( void ) const;
 	virtual void		makeSound( void ) const;
 };
 

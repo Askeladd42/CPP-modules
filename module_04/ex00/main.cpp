@@ -6,13 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 11:40:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 09:57:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int	main( void ) {
 	{
@@ -35,7 +36,7 @@ int	main( void ) {
 		
 		const Animal*	wild = new Animal();
 		const Dog		Dogmeat;
-		const Cat		Nibbles;
+		const WrongCat	Nibbles;
 
 		std::cout << "wild animal has " << wild->getType() << " type and makes ";
 		wild->makeSound();
