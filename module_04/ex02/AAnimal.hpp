@@ -28,7 +28,7 @@ public:
 	void				setType( std::string newType );
 	virtual std::string	getType( void ) const;
 	virtual void		makeSound( void ) const;
-	virtual void		printIdeas( void ) const { };
+	virtual void		printIdeas( void ) const=0;	//fully virtual funcion
 };
 
 
