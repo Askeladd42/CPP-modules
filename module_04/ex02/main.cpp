@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 14:41:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 15:03:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main( void ) {
 			SPA[i]->printIdeas();
 			std::cout << std::endl;
 		}
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 6; i++)
 			delete SPA[i];
 		std::cout << "SPA was raided by PETA, doing usual PETA idiocies ..." << std::endl;
 	}
