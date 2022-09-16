@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 17:05:36 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 09:52:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ void	Convert::setInt( std::string s ) {
 
 void	Convert::setFloat( std::string s ) {
 	char		*pos;
-	long float	tmp;
+	float		tmp;
 
-	tmp = std::strtof(s.c_str(), &pos, 16);
+	tmp = std::strtof(s.c_str(), &pos);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<float>::min()
 	&& tmp <= std::numeric_limits<float>::max())
@@ -72,7 +72,7 @@ void	Convert::setDouble( std::string s ) {
 	char		*pos;
 	long double	tmp;
 
-	tmp = std::strtod(s.c_str(), &pos, 16);
+	tmp = std::strtod(s.c_str(), &pos);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<double>::min()
 	&& tmp <= std::numeric_limits<double>::max())
