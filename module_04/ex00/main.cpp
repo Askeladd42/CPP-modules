@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:31:38 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 09:57:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/16 12:16:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main( void ) {
 	{
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
-		const Animal* i = new Cat();
+		const WrongAnimal* i = new WrongCat();
 
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
@@ -36,7 +36,7 @@ int	main( void ) {
 		
 		const Animal*	wild = new Animal();
 		const Dog		Dogmeat;
-		const WrongCat	Nibbles;
+		const Cat		Nibbles;
 
 		std::cout << "wild animal has " << wild->getType() << " type and makes ";
 		wild->makeSound();
