@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/19 12:46:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/19 13:59:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,9 +134,9 @@ void	Convert::getDouble( double n ) const {
 
 }
 
-void	Convert::getConvert( double n ) {
-	this->getChar(n);
-	this->getInt(n);
-	this->getFloat(n);
-	this->getDouble(n);
+void	Convert::getConvert() {
+	this->getChar(this->_double);
+	this->getInt(this->_double);
+	this->getFloat(this->_double);
+	this->getDouble(this->_double);
 }

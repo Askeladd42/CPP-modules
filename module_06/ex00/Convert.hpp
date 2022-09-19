@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/15 15:08:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/19 13:59:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ public:
 	Convert( Convert const &other );
 	Convert	&operator=( Convert const &other );
 
-	void			getConvert( double n );
+	void			getConvert();
 };
 
 #endif
