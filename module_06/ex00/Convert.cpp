@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/16 16:27:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/19 12:46:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	Convert::setChar( std::string s ) {
 	if (s.size() == 1
 	&& tmp >= std::numeric_limits<char>::min()
 	&& tmp <= std::numeric_limits<char>::max())
+		this->_isChar = true;
 }
 
 void	Convert::setInt( std::string s ) {
