@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/20 15:27:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/20 17:17:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ private:
 	void			setDouble( std::string s );
 	void			setTypes();
 
-	void			getChar( double n) const;
+	void			getChar() const;
 	void			getInt( double n) const;
 	void			getFloat( double n) const;
 	void			getDouble(double n) const;

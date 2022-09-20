@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/20 15:56:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/20 17:27:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,13 +99,13 @@ void	Convert::setTypes() {
 	this->setDouble(this->_toConvert);
 }
 
-void	Convert::getChar( double n ) const {
+void	Convert::getChar() const {
 	std::cout << "char: ";
 	if (this->_isEmpty == false
-	&& n >= std::numeric_limits<char>::min()
-	&& n <= std::numeric_limits<char>::max()) {
-		if (isprint(n))
-			std::cout << static_cast<char>(n) << std::endl;
+	&& this->_char >= std::numeric_limits<char>::min()
+	&& this->_char <= std::numeric_limits<char>::max()) {
+		if (isprint(this->_char))
+			std::cout << this->_char << std::endl;
 		else
 			std::cout << "Non printable" << std::endl;
 	}
@@ -145,7 +145,7 @@ void	Convert::getDouble( double n ) const {
 }
 
 void	Convert::getConvert() {
-	this->getChar(this->_double);
+	this->getChar();
 	this->getInt(this->_double);
 	this->getFloat(this->_double);
 	this->getDouble(this->_double);
