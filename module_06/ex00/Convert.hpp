@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:46:04 by plam              #+#    #+#             */
-/*   Updated: 2022/09/19 13:59:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/20 15:27:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ class Convert
 private:
 	std::string		_toConvert;
 
+	bool			_isEmpty;
 	bool			_isChar;
 	bool			_isInt;
 	bool			_isFloat;
 	bool			_isDouble;
 
-	float			_float;
+	char			_char;
 	double			_double;
 
 	void			setChar( std::string s );
