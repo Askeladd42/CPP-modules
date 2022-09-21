@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/21 15:31:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/21 16:12:00 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,12 +133,10 @@ void	Convert::getFloat( double n ) const {
 	&& n <= std::numeric_limits<float>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n)
 		<< 'f' << std::endl;
-	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "inf") {
-		std::cout << this->_toConvert;
-		if (this->_toConvert == "nan")
-			std::cout << 'f';
-		std::cout << std::endl;
-	}
+	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf")
+		std::cout << this->_toConvert << 'f' << std::endl;
+	else if (this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
+		std::cout << this->_toConvert << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 }
