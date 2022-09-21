@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/21 13:34:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/21 15:31:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ void	Convert::setInt( std::string s ) {
 	char		*pos;
 	long int	tmp;
 
-	tmp = strtol(s.c_str(), &pos, 10);
+	if (s.at(0) == '-')
+		tmp = strtol(s.c_str(), &pos, 11);
+	else
+		tmp = strtol(s.c_str(), &pos, 10);
 	if (*pos == '\0' 
 	&& tmp >= std::numeric_limits<int>::min()
 	&& tmp <= std::numeric_limits<int>::max()){
@@ -128,9 +131,14 @@ void	Convert::getFloat( double n ) const {
 	if (this->_isFloat == true
 	&& n >= std::numeric_limits<float>::min()
 	&& n <= std::numeric_limits<float>::max())
-		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n) << std::endl;
-	else if (this->_toConvert == "nan")
-		std::cout << "nanf" << std::endl;
+		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n)
+		<< 'f' << std::endl;
+	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "inf") {
+		std::cout << this->_toConvert;
+		if (this->_toConvert == "nan")
+			std::cout << 'f';
+		std::cout << std::endl;
+	}
 	else
 		std::cout << "impossible" << std::endl;
 }
@@ -141,8 +149,8 @@ void	Convert::getDouble( double n ) const {
 	&& n >= std::numeric_limits<double>::min()
 	&& n <= std::numeric_limits<double>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
-	else if (this->_toConvert == "nan")
-		std::cout << "nan" << std::endl;
+	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "inf")
+		std::cout << this->_toConvert << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 
