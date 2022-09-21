@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/09/20 15:47:16 by plam             ###   ########.fr        #
+#    Updated: 2022/09/21 12:54:38 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Convert
+NAME = convert
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3

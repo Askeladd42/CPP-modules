@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/20 17:27:16 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/21 13:34:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,10 +104,10 @@ void	Convert::getChar() const {
 	if (this->_isEmpty == false
 	&& this->_char >= std::numeric_limits<char>::min()
 	&& this->_char <= std::numeric_limits<char>::max()) {
-		if (isprint(this->_char))
+		if (isprint(this->_char) && this->_char != '0')
 			std::cout << this->_char << std::endl;
 		else
-			std::cout << "Non printable" << std::endl;
+			std::cout << "Non displayable" << std::endl;
 	}
 	else
 		std::cout << "impossible" << std::endl;
@@ -129,6 +129,8 @@ void	Convert::getFloat( double n ) const {
 	&& n >= std::numeric_limits<float>::min()
 	&& n <= std::numeric_limits<float>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n) << std::endl;
+	else if (this->_toConvert == "nan")
+		std::cout << "nanf" << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 }
@@ -139,6 +141,8 @@ void	Convert::getDouble( double n ) const {
 	&& n >= std::numeric_limits<double>::min()
 	&& n <= std::numeric_limits<double>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
+	else if (this->_toConvert == "nan")
+		std::cout << "nan" << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 
