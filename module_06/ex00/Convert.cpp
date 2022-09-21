@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/21 16:12:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/21 16:45:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ Convert&	Convert::operator=(Convert const &other ) {
 void	Convert::setChar( std::string s ) {
 	char	tmp;
 	
-	tmp = s.c_str()[0];
-	if (s.size() == 1
+	tmp = s.at(0);
+	if (s.size() == 1 && !isdigit(tmp)
 	&& tmp >= std::numeric_limits<char>::min()
 	&& tmp <= std::numeric_limits<char>::max()) {
 		this->_isChar = true;
 		this->_isEmpty = false;
-		this->_char = s.c_str()[0];
+		this->_char = static_cast<char>(tmp);
 	}
 }
 
@@ -76,7 +76,7 @@ void	Convert::setFloat( std::string s ) {
 	float		tmp;
 
 	tmp = strtof(s.c_str(), &pos);
-	if (*pos == '\0' 
+	if (*pos == 'f' && std::strlen(pos) == 1 
 	&& tmp >= std::numeric_limits<float>::min()
 	&& tmp <= std::numeric_limits<float>::max())
 		this->_isFloat = true;
@@ -147,7 +147,7 @@ void	Convert::getDouble( double n ) const {
 	&& n >= std::numeric_limits<double>::min()
 	&& n <= std::numeric_limits<double>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
-	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "inf")
+	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf")
 		std::cout << this->_toConvert << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
