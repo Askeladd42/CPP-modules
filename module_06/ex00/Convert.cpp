@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/23 13:52:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/23 14:14:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,11 @@ void	Convert::setChar( std::string s ) {
 }
 
 void	Convert::setInt( std::string s ) {
-	char		*pos;
+	char		*endPtr;
 	long int	tmp;
 
-	if (s.at(0) == '-')
-		tmp = strtol(s.c_str(), &pos, 11);
-	else
-		tmp = strtol(s.c_str(), &pos, 10);
-	if (*pos == '\0' 
+	tmp = strtol(s.c_str(), &endPtr, 10);
+	if (*endPtr == '\0' 
 	&& tmp >= std::numeric_limits<int>::min()
 	&& tmp <= std::numeric_limits<int>::max()){
 		this->_isInt = true;
@@ -71,21 +68,21 @@ void	Convert::setInt( std::string s ) {
 }
 
 void	Convert::setFloat( std::string s ) {
-	char		*pos;
+	char		*endPtr;
 	float		tmp;
 
-	tmp = strtof(s.c_str(), &pos);
-	if (*pos == 'f' && std::strlen(pos) == 1 
+	tmp = strtof(s.c_str(), &endPtr);
+	if (*endPtr == 'f' && std::strlen(endPtr) == 1 
 	&& tmp >= std::numeric_limits<float>::min()
 	&& tmp <= std::numeric_limits<float>::max())
 		this->_isFloat = true;
 }
 
 void	Convert::setDouble( std::string s ) {
-	char		*pos;
+	char		*endPtr;
 
-	this->_double = strtod(s.c_str(), &pos);
-	if (*pos == '\0' && this->_isChar == false && this->_isInt == false
+	this->_double = strtod(s.c_str(), &endPtr);
+	if (*endPtr == '\0' && this->_isChar == false && this->_isInt == false
 	&& this->_double >= std::numeric_limits<double>::min()
 	&& this->_double <= std::numeric_limits<double>::max()) {
 		this->_isDouble = true;
@@ -102,13 +99,13 @@ void	Convert::setTypes() {
 	this->setDouble(this->_toConvert);
 }
 
-void	Convert::getChar() const {
+void	Convert::getChar( double n ) const {
 	std::cout << "char: ";
 	if (this->_isEmpty == false
 	&& this->_char >= std::numeric_limits<char>::min()
 	&& this->_char <= std::numeric_limits<char>::max()) {
-		if (isprint(this->_char) && this->_char != '0')
-			std::cout << this->_char << std::endl;
+		if (isprint(n))
+			std::cout << static_cast<char>(n) << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
 	}
@@ -155,7 +152,7 @@ void	Convert::getDouble( double n ) const {
 }
 
 void	Convert::getConvert() {
-	this->getChar();
+	this->getChar(this->_double);
 	this->getInt(this->_double);
 	this->getFloat(this->_double);
 	this->getDouble(this->_double);
