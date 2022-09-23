@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:43:27 by plam              #+#    #+#             */
-/*   Updated: 2022/09/19 13:59:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/23 15:25:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int	main(int ac, char **av) {
 		std::cerr << "Please put only one argument for the program." << std::endl;
 		return 1;
 	}
-	std::string	toConv = av[1];
-	Convert	*Conv = new Convert( toConv );
+	Convert	*Conv = new Convert( av[1] );
 	Conv->getConvert();
 	delete(Conv);
 	return 0;
