@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/21 16:45:56 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/23 13:05:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,15 @@ void	Convert::setDouble( std::string s ) {
 	long double	tmp;
 
 	tmp = strtod(s.c_str(), &pos);
-	if (*pos == '\0' 
+	if (*pos == '\0' && this->_isChar == false && this->_isInt == false
 	&& tmp >= std::numeric_limits<double>::min()
 	&& tmp <= std::numeric_limits<double>::max()) {
 		this->_isDouble = true;
 		this->_double = tmp;
 	}
+	else if (this->_isChar == false && this->_isInt == false
+	&& this->_isFloat == false && this->_isDouble == false)
+		this->_isEmpty = true;
 }
 
 void	Convert::setTypes() {
