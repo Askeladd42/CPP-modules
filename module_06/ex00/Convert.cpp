@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/23 13:05:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/23 13:52:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,15 @@ Convert&	Convert::operator=(Convert const &other ) {
 }
 
 void	Convert::setChar( std::string s ) {
-	char	tmp;
-	
-	tmp = s.at(0);
-	if (s.size() == 1 && !isdigit(tmp)
-	&& tmp >= std::numeric_limits<char>::min()
-	&& tmp <= std::numeric_limits<char>::max()) {
+	if (s.size() == 1 && !isdigit(s.at(0))
+	&& static_cast<char>(s.at(0)) >= std::numeric_limits<char>::min()
+	&& static_cast<char>(s.at(0)) <= std::numeric_limits<char>::max()) {
 		this->_isChar = true;
 		this->_isEmpty = false;
-		this->_char = static_cast<char>(tmp);
+		this->_char = static_cast<char>(s.at(0));
 	}
+	else if (s.size() == 0)
+		this->_isEmpty = true;
 }
 
 void	Convert::setInt( std::string s ) {
@@ -84,14 +83,12 @@ void	Convert::setFloat( std::string s ) {
 
 void	Convert::setDouble( std::string s ) {
 	char		*pos;
-	long double	tmp;
 
-	tmp = strtod(s.c_str(), &pos);
+	this->_double = strtod(s.c_str(), &pos);
 	if (*pos == '\0' && this->_isChar == false && this->_isInt == false
-	&& tmp >= std::numeric_limits<double>::min()
-	&& tmp <= std::numeric_limits<double>::max()) {
+	&& this->_double >= std::numeric_limits<double>::min()
+	&& this->_double <= std::numeric_limits<double>::max()) {
 		this->_isDouble = true;
-		this->_double = tmp;
 	}
 	else if (this->_isChar == false && this->_isInt == false
 	&& this->_isFloat == false && this->_isDouble == false)
