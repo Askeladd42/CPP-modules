@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:27:24 by plam              #+#    #+#             */
-/*   Updated: 2022/08/23 12:07:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/24 16:29:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 int	main( void ) {
 	Bureaucrat*	Tom = new Bureaucrat("Tom", 75);
-	Bureaucrat*	Jerry;
-	Bureaucrat*	Marcel;
+	Bureaucrat*	Jerry = new Bureaucrat("Jerry", 200);
+	Bureaucrat*	Marcel = new Bureaucrat("Marcel", -15);
 
-	Jerry = new Bureaucrat("Jerry", 200);
-	Marcel = new Bureaucrat("Marcel", -15);
-
-	std::cout << *Tom;
+	std::cout << *Tom << *Jerry << *Marcel;
 
 	Tom->incrGrade();
 	std::cout << *Tom;
