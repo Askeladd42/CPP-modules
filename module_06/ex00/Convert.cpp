@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/23 15:20:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/24 19:16:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,12 @@ void	Convert::setChar( std::string s ) {
 	&& static_cast<char>(s.at(0)) <= std::numeric_limits<char>::max()) {
 		this->_isChar = true;
 		this->_isEmpty = false;
-		this->_char = static_cast<char>(s.at(0));
+		this->_char = s.at(0);
 	}
 	else if (s.size() == 0)
 		this->_isEmpty = true;
+	else
+		this->_char = atoi(s.c_str());
 }
 
 void	Convert::setInt( std::string s ) {
@@ -64,6 +66,7 @@ void	Convert::setInt( std::string s ) {
 	&& tmp >= std::numeric_limits<int>::min()
 	&& tmp <= std::numeric_limits<int>::max()){
 		this->_isInt = true;
+		this->_isEmpty = false;
 	}
 }
 
@@ -72,20 +75,21 @@ void	Convert::setFloat( std::string s ) {
 	float		tmp;
 
 	tmp = strtof(s.c_str(), &endPtr);
-	if (*endPtr == 'f' && std::strlen(endPtr) == 1 
-	&& tmp >= std::numeric_limits<float>::min()
-	&& tmp <= std::numeric_limits<float>::max())
+	if (*endPtr == 'f' && std::strlen(endPtr) == 1) {
 		this->_isFloat = true;
+		this->_isEmpty = false;
+	}
 }
 
 void	Convert::setDouble( std::string s ) {
 	char		*endPtr;
 
 	this->_double = strtod(s.c_str(), &endPtr);
-	if (*endPtr == '\0' && this->_isChar == false && this->_isInt == false
+	if ((*endPtr == '\0') && this->_isChar == false && this->_isInt == false
 	&& this->_double >= std::numeric_limits<double>::min()
 	&& this->_double <= std::numeric_limits<double>::max()) {
 		this->_isDouble = true;
+		this->_isEmpty = false;
 	}
 	else if (this->_isChar == false && this->_isInt == false
 	&& this->_isFloat == false && this->_isDouble == false)
@@ -102,8 +106,8 @@ void	Convert::setTypes() {
 void	Convert::getChar( double n ) const {
 	std::cout << "char: ";
 	if (this->_isEmpty == false
-	&& this->_char >= std::numeric_limits<char>::min()
-	&& this->_char <= std::numeric_limits<char>::max()) {
+	&& n >= std::numeric_limits<char>::min()
+	&& n <= std::numeric_limits<char>::max()) {
 		if (isprint(n))
 			std::cout << static_cast<char>(n) << std::endl;
 		else
@@ -115,7 +119,7 @@ void	Convert::getChar( double n ) const {
 
 void	Convert::getInt( double n ) const {
 	std::cout << "int: ";
-	if (this->_isInt == true
+	if (this->_isEmpty == false
 	&& n >= std::numeric_limits<int>::min()
 	&& n <= std::numeric_limits<int>::max())
 		std::cout << static_cast<int>(n) << std::endl;
@@ -125,7 +129,7 @@ void	Convert::getInt( double n ) const {
 
 void	Convert::getFloat( double n ) const {
 	std::cout << "float: ";
-	if (this->_isFloat == true
+	if (this->_isEmpty == false
 	&& n >= std::numeric_limits<float>::min()
 	&& n <= std::numeric_limits<float>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n)
@@ -140,7 +144,7 @@ void	Convert::getFloat( double n ) const {
 
 void	Convert::getDouble( double n ) const {
 	std::cout << "double: ";
-	if (this->_isDouble == true
+	if (this->_isEmpty == false
 	&& n >= std::numeric_limits<double>::min()
 	&& n <= std::numeric_limits<double>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
@@ -148,7 +152,6 @@ void	Convert::getDouble( double n ) const {
 		std::cout << this->_toConvert << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
-
 }
 
 void	Convert::getConvert() {
