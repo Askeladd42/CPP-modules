@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/24 19:16:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/24 20:12:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	Convert::setDouble( std::string s ) {
 	char		*endPtr;
 
 	this->_double = strtod(s.c_str(), &endPtr);
-	if ((*endPtr == '\0') && this->_isChar == false && this->_isInt == false
+	if (*endPtr == '\0' && this->_isChar == false && this->_isInt == false
 	&& this->_double >= std::numeric_limits<double>::min()
 	&& this->_double <= std::numeric_limits<double>::max()) {
 		this->_isDouble = true;
@@ -148,7 +148,8 @@ void	Convert::getDouble( double n ) const {
 	&& n >= std::numeric_limits<double>::min()
 	&& n <= std::numeric_limits<double>::max())
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
-	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf")
+	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf"
+	|| this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
 		std::cout << this->_toConvert << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
