@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/24 20:12:56 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 10:44:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,8 +146,12 @@ void	Convert::getDouble( double n ) const {
 	std::cout << "double: ";
 	if (this->_isEmpty == false
 	&& n >= std::numeric_limits<double>::min()
-	&& n <= std::numeric_limits<double>::max())
-		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
+	&& n <= std::numeric_limits<double>::max()) {
+		if (this->_toConvert.at(0) == '-')
+			std::cout << '-' << std::fixed << std::setprecision(1) << static_cast<double>(-n) << std::endl;
+		else
+			std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
+	}
 	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf"
 	|| this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
 		std::cout << this->_toConvert << std::endl;
