@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:10:01 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 14:00:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 14:22:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 # include <string>
 # include <cstdint>
 
-class Data
-{
+class Data {
 public:
 	int			raw;
 	std::string	str;
