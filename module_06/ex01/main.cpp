@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 14:32:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 15:18:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Data* deserialize(uintptr_t raw) {
 int	main(void) {
 
 	Data		Data;
-	Data		*newData;
+	Data		*newData; // to see zhy it is undefined
 	uintptr_t	rawData;
 
 	Data.raw = 1000;
