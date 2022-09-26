@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 14:25:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 14:32:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,21 @@ Data* deserialize(uintptr_t raw) {
 int	main(void) {
 
 	Data		Data;
-	uintptr_t	rawData;
 	Data		*newData;
+	uintptr_t	rawData;
 
 	Data.raw = 1000;
 	Data.str = "Wake the fuck up, Samurai !";
 
-	rawData = serialize(&Data);
-	newData = deserialize(rawData);
-
 	std::cout << "Data before serialize :" << std::endl << "- raw : "
 	<< Data.raw << std::endl << "- str : " << Data.str << std::endl;
 
-	std::cout << "Data address : 0x" << &Data << std::endl << "raw Data address : 0x" << rawData << std::endl;
+	std::cout << "Data address : 0x" << &Data << std::endl;
+	
+	rawData = serialize(&Data);
+	std::cout << "raw Data address : 0x" << rawData << std::endl;
+	
+	newData = deserialize(rawData);
 
 	std::cout << "New Data after serialize :" << std::endl << "- raw : "
 	<< newData->raw << std::endl << "- str : " << newData->str << std::endl;
