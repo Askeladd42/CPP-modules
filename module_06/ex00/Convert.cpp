@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 10:44:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 11:58:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,7 @@ void	Convert::setDouble( std::string s ) {
 	char		*endPtr;
 
 	this->_double = strtod(s.c_str(), &endPtr);
-	if (*endPtr == '\0' && this->_isChar == false && this->_isInt == false
-	&& this->_double >= std::numeric_limits<double>::min()
-	&& this->_double <= std::numeric_limits<double>::max()) {
+	if (*endPtr == '\0' && this->_isChar == false && this->_isInt == false) {
 		this->_isDouble = true;
 		this->_isEmpty = false;
 	}
@@ -129,9 +127,7 @@ void	Convert::getInt( double n ) const {
 
 void	Convert::getFloat( double n ) const {
 	std::cout << "float: ";
-	if (this->_isEmpty == false
-	&& n >= std::numeric_limits<float>::min()
-	&& n <= std::numeric_limits<float>::max())
+	if (this->_isEmpty == false)
 		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n)
 		<< 'f' << std::endl;
 	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf")
@@ -144,14 +140,8 @@ void	Convert::getFloat( double n ) const {
 
 void	Convert::getDouble( double n ) const {
 	std::cout << "double: ";
-	if (this->_isEmpty == false
-	&& n >= std::numeric_limits<double>::min()
-	&& n <= std::numeric_limits<double>::max()) {
-		if (this->_toConvert.at(0) == '-')
-			std::cout << '-' << std::fixed << std::setprecision(1) << static_cast<double>(-n) << std::endl;
-		else
-			std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
-	}
+	if (this->_isEmpty == false)
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
 	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf"
 	|| this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
 		std::cout << this->_toConvert << std::endl;
