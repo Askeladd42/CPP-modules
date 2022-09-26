@@ -6,17 +6,17 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/09/16 16:15:49 by plam             ###   ########.fr        #
+#    Updated: 2022/09/26 13:29:46 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = DataReinterpret
 
 CC = c++
 FLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Convert.hpp
-SRC_FILES = main.cpp Convert.cpp
+HEADER = Data.hpp
+SRC_FILES = main.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 

@@ -6,12 +6,18 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 12:09:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/26 13:47:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "serialize.hpp"
+#include "Data.hpp"
 
 int	main(void) {
+
+	Data		Data;
+	uintptr_t	rawData;
+	Data*		newData;
+
+
 	return 0;
 }
