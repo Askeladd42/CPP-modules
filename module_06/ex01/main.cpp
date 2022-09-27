@@ -6,11 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 15:18:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/27 15:46:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
+#include <iostream>
 
 uintptr_t serialize(Data* ptr) {
 	return reinterpret_cast<uintptr_t>(ptr);
@@ -21,19 +22,19 @@ Data* deserialize(uintptr_t raw) {
 
 int	main(void) {
 
-	Data		Data;
-	Data		*newData; // to see zhy it is undefined
+	Data		data;
+	Data*		newData; // to see why it is undefined
 	uintptr_t	rawData;
 
-	Data.raw = 1000;
-	Data.str = "Wake the fuck up, Samurai !";
+	data.raw = 1000;
+	data.str = "Wake the fuck up, Samurai !";
 
 	std::cout << "Data before serialize :" << std::endl << "- raw : "
-	<< Data.raw << std::endl << "- str : " << Data.str << std::endl;
+	<< data.raw << std::endl << "- str : " << data.str << std::endl;
 
-	std::cout << "Data address : 0x" << &Data << std::endl;
+	std::cout << "Data address : 0x" << &data << std::endl;
 	
-	rawData = serialize(&Data);
+	rawData = serialize(&data);
 	std::cout << "raw Data address : 0x" << rawData << std::endl;
 	
 	newData = deserialize(rawData);

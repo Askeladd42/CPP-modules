@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 12:10:01 by plam              #+#    #+#             */
-/*   Updated: 2022/09/27 15:42:58 by plam             ###   ########.fr       */
+/*   Created: 2022/09/27 15:59:52 by plam              #+#    #+#             */
+/*   Updated: 2022/09/27 16:48:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __DATA_H__
-# define __DATA_H__
+#ifndef __BASE_HPP__
+# define __BASE_HPP__
 
-//# include <iostream>
-# include <string>
-# include <stdint.h>
 
-class Data {
-public:
-	int			raw;
-	std::string	str;
-};
 
 #endif
