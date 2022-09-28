@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:32:33 by plam              #+#    #+#             */
-/*   Updated: 2022/09/28 14:51:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/28 16:13:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Base	*generate( void ) {
 	int	rdm;
 
 	srand(time(NULL) + rand() % 1000);
-	rdm = rand % 3;
+	rdm = rand() % 3;
 	if (rdm == 0) {
 		std::cout << "A base created : " << std::endl;
 		return new A;
@@ -57,8 +57,8 @@ void	identify( Base& p ) {
 		C c = dynamic_cast<C&>(p);
 		std::cout << "C base identified by base ref" << std::endl;
 	}
-	catch(std::bad_cast &bc)
+	catch(std::exception &e)
 	{
-		std::cout << "Default base identified by base ref, none A, B or C match with it" << bc.what() << std::endl;
+		std::cout << "Default base identified by base ref : " << e.what() << ", none A, B or C match with it" << std::endl;
 	}
 }
