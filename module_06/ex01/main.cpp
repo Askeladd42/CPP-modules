@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/27 15:46:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/28 12:46:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ int	main(void) {
 	std::cout << "Data before serialize :" << std::endl << "- raw : "
 	<< data.raw << std::endl << "- str : " << data.str << std::endl;
 
-	std::cout << "Data address : 0x" << &data << std::endl;
+	std::cout << "Data address : " << &data << std::endl;
 	
 	rawData = serialize(&data);
 	std::cout << "raw Data address : 0x" << rawData << std::endl;
 	
 	newData = deserialize(rawData);
+
+	std::cout <<  "newData address : " << newData << std::endl;
 
 	std::cout << "New Data after serialize :" << std::endl << "- raw : "
 	<< newData->raw << std::endl << "- str : " << newData->str << std::endl;
