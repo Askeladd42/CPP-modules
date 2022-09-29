@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:40:30 by plam              #+#    #+#             */
-/*   Updated: 2022/09/29 13:16:01 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/29 15:32:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 # include "Base.hpp"
 
-class C : public Base {
-public:
-	virtual ~C();
-};
+class C : public Base { };
 
 #endif

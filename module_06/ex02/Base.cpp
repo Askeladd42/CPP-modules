@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:32:33 by plam              #+#    #+#             */
-/*   Updated: 2022/09/29 13:37:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/29 15:34:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+
+Base::~Base() { };
 
 Base	*generate( void ) {
 	int	rdm;
@@ -50,15 +52,25 @@ void	identify( Base& p ) {
 	{
 		A a = dynamic_cast<A&>(p);
 		std::cout << "A base identified by base ref" << std::endl;
+		return ;
+	}
+	catch (std::exception &e) { }
+	try {
 
 		B b = dynamic_cast<B&>(p);
 		std::cout << "B base identified by base ref" << std::endl;
-
+		return ;
+	}
+	catch(std::exception &e) { }
+	try {
 		C c = dynamic_cast<C&>(p);
 		std::cout << "C base identified by base ref" << std::endl;
+		return ;
+
 	}
 	catch(std::exception &e)
 	{
 		std::cout << "Default base identified by base ref : " << e.what() << ", none A, B or C match with it" << std::endl;
+		return ;
 	}
 }
