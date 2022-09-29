@@ -6,11 +6,10 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:09:03 by plam              #+#    #+#             */
-/*   Updated: 2022/09/28 17:21:09 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/29 13:37:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"

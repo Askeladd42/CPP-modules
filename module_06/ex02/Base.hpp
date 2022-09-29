@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:59:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/28 14:18:45 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/29 13:38:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __BASE_HPP__
 
 # include <iostream>
+# include <string>
 # include <cstdlib>
 # include <exception>
 
