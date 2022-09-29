@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:00:55 by plam              #+#    #+#             */
-/*   Updated: 2022/09/29 16:06:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/29 16:20:43 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@
 # include <iostream>
 # include <limits>
 
-template<typename T> {
+template < typename T > 
+T const &	max( T const & x, T const & y ) {
+	return (x>=y ? x : y );
+};
 
+T const &	min( T const & x, T const & y ) {
+	return (x<=y ? x : y);
 };
 
 #endif
