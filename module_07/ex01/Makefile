@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/09/30 13:36:09 by plam             ###   ########.fr        #
+#    Updated: 2022/09/30 15:09:59 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Iter
 CXX = c++
 CXXFLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = iter.hpp
+HEADER = Iter.hpp
 SRC_FILES = main.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
