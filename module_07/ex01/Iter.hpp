@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:41:07 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 12:44:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 14:27:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 # include <cstdlib>
 
 template < typename T >
-void	iter(void *adr, size_t size) {
-	return ;
+void	iter(T const * array, size_t size, void (*f)(T const &)) {
+	for (size_t i = 0; i < size; i++)
+		f(array[i]);
 }
 
 #endif
