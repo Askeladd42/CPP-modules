@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:44:58 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 15:16:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 15:19:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	main( void ) {
 	float		float_tab[] = { -42.3f, 27.18f, 145421535453435.75454f, -534354354354 };
 	double		double_tab[] = { 21.42, -5431134565, 45533345334.54245346546 };
 
-	::iter(int_tab, 8, abs);
-	::iter(str_tab, 3, abs);
-	::iter(float_tab, 4, abs);
-	::iter(double_tab, 3, abs);
+	iter(int_tab, 8, abs);
+	iter(str_tab, 3, abs);
+	iter(float_tab, 4, abs);
+	iter(double_tab, 3, abs);
 	return 0;
 }
