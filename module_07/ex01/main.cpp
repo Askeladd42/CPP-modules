@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 16:00:55 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 12:42:02 by plam             ###   ########.fr       */
+/*   Created: 2022/09/30 12:44:58 by plam              #+#    #+#             */
+/*   Updated: 2022/09/30 12:45:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __WHATEVER_HPP__
-# define __WHATEVER_HPP__
+# include "iter.hpp"
 
-# include <iostream>
-# include <limits>
-
-template < typename T >
-T const &	max( T const & x, T const & y ) {
-	return (x>=y ? x : y );
-};
-template < typename T >
-T const &	min( T const & x, T const & y ) {
-	return (x<=y ? x : y);
-};
-
-template < typename T >
-void	swap( T const & x , T const & y ) {
-	
+int	main( void ) {
+	return 0;
 }
-
-#endif
