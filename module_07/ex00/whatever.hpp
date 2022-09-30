@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:00:55 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 12:42:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 13:01:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ T const &	min( T const & x, T const & y ) {
 };
 
 template < typename T >
-void	swap( T const & x , T const & y ) {
-	
+void	swap( T &x , T &y ) {
+	T tmp = x;
+	x = y;
+	y = tmp;
 }
 
 #endif
