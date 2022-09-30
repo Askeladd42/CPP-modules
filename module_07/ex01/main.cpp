@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:44:58 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 16:40:32 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 16:50:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ int	main( void ) {
 	iter(float_tab, 4, printCont);
 	std::cout << "double_tab :" << std::endl;
 	iter(double_tab, 3, printCont);
-	
+
+	std::cout << "int_tab tripled:" << std::endl;
+	iter(int_tab, 8, printTriple);
+	std::cout << "float_tab tripled:" << std::endl;
+	iter(float_tab, 8, printTriple);
+	std::cout << "double_tab tripled:" << std::endl;
+	iter(double_tab, 8, printTriple);
+
 	return 0;
 }

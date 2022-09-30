@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:41:07 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 16:37:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 16:51:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	iter(T const * array, size_t size, void (*f)(T const &)) {
 template< typename T >
 void	printCont( T const &tab ) {
 	std::cout << tab << std::endl;
+}
+
+template< typename T >
+void	printTriple( T const &tab ) {
+	std::cout << tab * 3 << std::endl;
 }
 
 #endif
