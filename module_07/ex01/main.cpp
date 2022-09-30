@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:44:58 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 15:56:35 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 16:40:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,14 @@ int	main( void ) {
 	float		float_tab[] = { -42.3f, 27.18f, 145421535453435.75454f, -53435435.3 };
 	double		double_tab[] = { 21.42, -5431134565, 45533345334.54245346546 };
 
-	iter(int_tab, 8, abs);
-	iter(str_tab, 3, abs);
-	iter(float_tab, 4, fabs);
-	iter(double_tab, 3, fabs);
+	std::cout << "int_tab :" << std::endl;
+	iter(int_tab, 8, printCont);
+	std::cout << "str_tab :" << std::endl;
+	iter(str_tab, 3, printCont);
+	std::cout << "float_tab :" << std::endl;
+	iter(float_tab, 4, printCont);
+	std::cout << "double_tab :" << std::endl;
+	iter(double_tab, 3, printCont);
+	
 	return 0;
 }

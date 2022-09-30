@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:41:07 by plam              #+#    #+#             */
-/*   Updated: 2022/09/30 15:54:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/09/30 16:37:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,9 @@ void	iter(T const * array, size_t size, void (*f)(T const &)) {
 		f(array[i]);
 }
 
-std::ostream&	operator<<( std::ostream &ofs, int const *array ) {
-	for (size_t i = 0; array[i] != '\0'; i++)
-		ofs << array[i] << ' ';
-	return ofs;
-}
-
-std::ostream&	operator<<( std::ostream &ofs, char const *array ) {
-	for (size_t i = 0; array[i] != '\0'; i++)
-		ofs << array[i] << ' ';
-	return ofs;
-}
-
-std::ostream&	operator<<( std::ostream &ofs, double const *array ) {
-	for (size_t i = 0; array[i] != '\0'; i++)
-		ofs << array[i] << ' ';
-	return ofs;
+template< typename T >
+void	printCont( T const &tab ) {
+	std::cout << tab << std::endl;
 }
 
 #endif
