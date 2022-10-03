@@ -6,14 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:36:52 by plam              #+#    #+#             */
-/*   Updated: 2022/10/03 12:38:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:43:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __ARRAY_HPP__
 # define  __ARRAY_HPP__
 
-# include <iostream>
 # include <exception>
 # include <cstdlib>
 
