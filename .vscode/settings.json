@@ -33,6 +33,7 @@
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
 		"utility": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"*.tpp": "cpp"
 	}
 }
