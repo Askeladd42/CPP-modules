@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:37:09 by plam              #+#    #+#             */
-/*   Updated: 2022/10/03 12:39:39 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:51:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define __ARRAY_TPP__
 
 # include <limits>
+# include <exception>
+
 
 template< typename T >
 class Array {
@@ -28,7 +30,7 @@ class Array {
 				_array[i] = 0;
 		}
 
-		~Array<T>( void ) { delete[] _array }
+		~Array<T>( void ) { delete[] _array; }
 
 		Array<T>( Array<T> const &other ): _size(other._size), _array(new T[other._size]) {
 			for (unsigned int i = 0; i < other._size; i++)
@@ -49,11 +51,17 @@ class Array {
 
 		T		&operator[]( unsigned int idx ) {
 			if (idx < std::numeric_limits<unsigned int>::min()
-			|| idx >= this->m_size)
+			|| idx >= this->_size)
 				throw OutOfBound();
 			else
-				return this->m_array[idx];
+				return this->_array[idx];
 		}
+	class OutOfBound : public std::exception {
+		public:
+			virtual const char*	what() const throw() {
+				return "The index entered is out of bound";
+			}
+	};
 };
 
 #endif
