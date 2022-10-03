@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:37:09 by plam              #+#    #+#             */
-/*   Updated: 2022/10/03 12:37:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:38:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class Array {
 		T		&operator[]( unsigned int idx ) {
 			if (idx < std::numeric_limits<unsigned int>::min()
 			|| idx >= this->m_size)
-				throw Array<T>::OutOfBound();
+				throw OutOfBound();
 			else
 				return this->m_array[idx];
 		}

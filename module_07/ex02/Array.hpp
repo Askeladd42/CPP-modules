@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:36:52 by plam              #+#    #+#             */
-/*   Updated: 2022/10/03 12:35:45 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:38:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 class OutOfBound : public std::exception {
 	public:
 		virtual const char*	what() const throw() {
-			return "This index is out of bound";
+			return "The index entered is out of bound";
 		}
 };
 
