@@ -6,12 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:37:09 by plam              #+#    #+#             */
-/*   Updated: 2022/10/03 12:38:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:39:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __ARRAY_TPP__
 # define __ARRAY_TPP__
+
+# include <limits>
 
 template< typename T >
 class Array {
