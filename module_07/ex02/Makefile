@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/10/04 15:44:47 by plam             ###   ########.fr        #
+#    Updated: 2022/10/04 15:47:53 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME):
 					@echo "     - Moving object files to $(OBJS_F)..." 	
 					@mv $(OBJS) $(OBJS_F)
 					@echo "     - Compiling $(NAME)..." 
-					$(CXX) $(CXXFLAGS) -I. $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
+					$(CXX) $(CXXFLAGS) -iquote $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
 					@echo "- $(NAME) Compiled -"
 
 clean:
