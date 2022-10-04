@@ -6,16 +6,16 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/10/04 14:21:06 by plam             ###   ########.fr        #
+#    Updated: 2022/10/04 15:49:50 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Iter
+NAME = Array
 
 CXX = c++
 CXXFLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Iter.hpp
+HEADER = Array.tpp Array.hpp
 SRC_FILES = main.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
@@ -31,7 +31,7 @@ $(NAME):
 					@echo "     - Moving object files to $(OBJS_F)..." 	
 					@mv $(OBJS) $(OBJS_F)
 					@echo "     - Compiling $(NAME)..." 
-					$(CXX) $(CXXFLAGS) -I $(HEADER) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
+					$(CXX) $(CXXFLAGS) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
 					@echo "- $(NAME) Compiled -"
 
 clean:
