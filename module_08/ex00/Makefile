@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/10/04 16:56:07 by plam             ###   ########.fr        #
+#    Updated: 2022/10/05 15:34:43 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Easyfind
 CXX = c++
 CXXFLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Easyfind.tpp Easyfind.hpp
+HEADER = Easyfind.tpp,Easyfind.hpp
 SRC_FILES = main.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
@@ -31,7 +31,7 @@ $(NAME):
 					@echo "     - Moving object files to $(OBJS_F)..." 	
 					@mv $(OBJS) $(OBJS_F)
 					@echo "     - Compiling $(NAME)..." 
-					$(CXX) $(CXXFLAGS) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
+					$(CXX) $(CXXFLAGS) -I $(HEADER) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
 					@echo "- $(NAME) Compiled -"
 
 clean:
