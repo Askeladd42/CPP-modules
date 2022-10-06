@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 16:47:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 17:35:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main( void ) {
 		std::cout << *finderLst << std::endl;
 	else
 		std::cout << "No occurences of the searched value found in testLst" << std::endl;
-		
+
 	std::cout << "test #2 : find 42 :" << std::endl;
 	finderLst = easyfind(testLst, 42);
 	if	(finderLst != testLst.end())
@@ -58,7 +58,7 @@ int	main( void ) {
 		std::cout << *finderVect << std::endl;
 	else
 		std::cout << "No occurences of the searched value found in testVect" << std::endl;
-	
+
 	std::cout << "test #2 : find -42 :" << std::endl;
 	finderVect = easyfind(testVect, -42);
 	if	(finderVect != testVect.end())
@@ -80,8 +80,6 @@ int	main( void ) {
 	//	std::cout << *finderLst << std::endl;
 	//else
 	//	std::cout << "No occurences of the searched value found in testArray" << std::endl;
-
-//
 
 	return 0;
 }
