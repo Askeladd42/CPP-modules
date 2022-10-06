@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 16:03:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 16:47:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	main( void ) {
 
 	std::cout << "######## Test with list container ########" << std::endl << "testLst = {";
 	for (finderLst = testLst.begin(); finderLst != testLst.end(); ++finderLst) {
-		std::cout << *finderLst;
-		if (finderLst != testLst.end())
+		if (finderLst != testLst.begin())
 			std::cout << ", ";
+		std::cout << *finderLst;
 	}
 	std::cout << "};" << std::endl;
 
@@ -46,9 +46,9 @@ int	main( void ) {
 
 	std::cout << "######## Test with vector container ########" << std::endl << "testVect = {";
 	for (finderVect = testVect.begin(); finderVect != testVect.end(); ++finderVect) {
-		std::cout << *finderVect;
-		if (finderVect != testVect.end())
+		if (finderVect != testVect.begin())
 			std::cout << ", ";
+		std::cout << *finderVect;
 	}
 	std::cout << "};" << std::endl;
 
