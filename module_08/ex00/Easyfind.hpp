@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:46:57 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 12:25:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 14:31:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <iostream>
 # include <list>
-# include <array>
 # include <vector>
+//# include <array>, don't work on c++98
 
 # include "Easyfind.tpp"
 

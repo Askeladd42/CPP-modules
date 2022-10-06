@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:51 by plam              #+#    #+#             */
-/*   Updated: 2022/10/05 17:08:42 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 15:22:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <algorithm>
 
 template< typename T >
-typename T::iterator	easyfind( T const & ctn, int const & val ) {
+typename T::iterator	easyfind( T & ctn, int const & val ) {
 	return std::find(ctn.begin(), ctn.end(), val);
 };
 
