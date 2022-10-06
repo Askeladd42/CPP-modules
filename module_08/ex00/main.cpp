@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 12:53:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 12:56:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main( void ) {
 	if	(finderLst != testLst.end())
 		std::cout << *finderLst << std::endl;
 	else
-		std::cout << "No occurences of the searched value found in testLst" <<std::endl;
+		std::cout << "No occurences of the searched value found in testLst" << std::endl;
 	
 	//std::array<int, 4>				testArray = {48, -2147483648, 56231354, -0};
 	//std::array<int, 1>::iterator	finderArray;
@@ -38,7 +38,11 @@ int	main( void ) {
 	//std::cout << *finderArray << std::endl;
 //
 	//finderArray = easyfind(testArray, 0);
-	//std::cout << *finderArray << std::endl;
+	//if	(finderLst != testLst.end())
+	//	std::cout << *finderLst << std::endl;
+	//else
+	//	std::cout << "No occurences of the searched value found in testArray" << std::endl;
+
 //
 	//std::vector<int>				testVect = {48, -6413, 5432583, -0};
 	//std::vector<int>::iterator		finderVect;
@@ -49,7 +53,10 @@ int	main( void ) {
 	//std::cout << *finderVect << std::endl;
 //
 	//finderVect = easyfind(testVect, 0);
-	//std::cout << *finderVect << std::endl;
+	//if	(finderLst != testLst.end())
+	//	std::cout << *finderLst << std::endl;
+	//else
+	//	std::cout << "No occurences of the searched value found in testVect" << std::endl;
 
 	return 0;
 }
