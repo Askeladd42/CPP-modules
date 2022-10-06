@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/05 17:54:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 11:10:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	main( void ) {
 	}
 	std::cout << *finder << "};" << std::endl;
 
-	//finder = easyfind(testLst, 210);
+	finder = easyfind(testLst, 210);
 	return 0;
 }
