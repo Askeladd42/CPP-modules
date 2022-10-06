@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 11:56:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 12:06:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Convert&	Convert::operator=(Convert const &other ) {
 }
 
 void	Convert::setChar( std::string s ) {
-	std::cout << s << ", " << s.size() << std::endl;
 	if (s.size() == 1 && !isdigit(s.at(0))) {
 		this->_isChar = true;
 		this->_isEmpty = false;
