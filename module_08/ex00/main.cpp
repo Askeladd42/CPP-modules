@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 17:35:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 17:35:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,13 @@ int	main( void ) {
 
 	//std::array<int, 4>				testArray = {48, -2147483648, 56231354, -0};
 	//std::array<int, 1>::iterator	finderArray;
-//
+
 	//std::cout << "testArray = {";
 	//for (finderArray = testArray.begin(); finderArray != testArray.end(); ++finderArray) {
 	//	std::cout << *finderArray << ", ";
 	//}
 	//std::cout << *finderArray << std::endl;
-//
+
 	//finderArray = easyfind(testArray, 0);
 	//if	(finderLst != testLst.end())
 	//	std::cout << *finderLst << std::endl;
