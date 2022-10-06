@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 18:26:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 19:38:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,25 @@ void	Span::addNumber( int newNb ) {
 }
 
 unsigned int	Span::shortestSpan() {
-
+	try {
+		if (/*function for the shortest span in the verctor*/)
+			throw NoSpan;
+		else
+			return (0);
+	}
+	catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 unsigned int	Span::longestSpan() {
-	
+	try {
+		if (/*function for the shortest span in the verctor*/)
+			throw NoSpan;
+		else
+			return (0);
+	}
+	catch (std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:58:16 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 18:28:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 19:37:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,19 @@ class Span {
 		unsigned int	shortestSpan();
 		unsigned int	longestSpan();
 
+	class NoSpan : public std::exception {
+		virtual const char* what() const throw()
+		{
+			return "No spam or number spotted";
+		}
+	}NoSpan;
+
 	class AlreadyFull : public std::exception {
 		virtual const char* what() const throw()
 		{
 			return "No place available to add another number in it !";
 		}
-	};
+	}AlreadyFull;
 };
 
 #endif
