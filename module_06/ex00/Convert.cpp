@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:47:52 by plam              #+#    #+#             */
-/*   Updated: 2022/09/26 11:58:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 11:56:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,8 @@ Convert&	Convert::operator=(Convert const &other ) {
 }
 
 void	Convert::setChar( std::string s ) {
-	if (s.size() == 1 && !isdigit(s.at(0))
-	&& static_cast<char>(s.at(0)) >= std::numeric_limits<char>::min()
-	&& static_cast<char>(s.at(0)) <= std::numeric_limits<char>::max()) {
+	std::cout << s << ", " << s.size() << std::endl;
+	if (s.size() == 1 && !isdigit(s.at(0))) {
 		this->_isChar = true;
 		this->_isEmpty = false;
 		this->_char = s.at(0);
@@ -89,6 +88,11 @@ void	Convert::setDouble( std::string s ) {
 		this->_isDouble = true;
 		this->_isEmpty = false;
 	}
+	else if (this->_isChar) {
+		this->_double = s.at(0);
+		this->_isDouble = true;
+		this->_isEmpty = false;
+	}
 	else if (this->_isChar == false && this->_isInt == false
 	&& this->_isFloat == false && this->_isDouble == false)
 		this->_isEmpty = true;
@@ -107,7 +111,7 @@ void	Convert::getChar( double n ) const {
 	&& n >= std::numeric_limits<char>::min()
 	&& n <= std::numeric_limits<char>::max()) {
 		if (isprint(n))
-			std::cout << static_cast<char>(n) << std::endl;
+			std::cout << '\'' << static_cast<char>(n) << '\'' << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
 	}
@@ -128,12 +132,8 @@ void	Convert::getInt( double n ) const {
 void	Convert::getFloat( double n ) const {
 	std::cout << "float: ";
 	if (this->_isEmpty == false)
-		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(n)
-		<< 'f' << std::endl;
-	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf")
-		std::cout << this->_toConvert << 'f' << std::endl;
-	else if (this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
-		std::cout << this->_toConvert << std::endl;
+		std::cout << std::fixed << std::setprecision(1)
+		<< static_cast<float>(n) << 'f' << std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 }
@@ -141,10 +141,8 @@ void	Convert::getFloat( double n ) const {
 void	Convert::getDouble( double n ) const {
 	std::cout << "double: ";
 	if (this->_isEmpty == false)
-		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n) << std::endl;
-	else if (this->_toConvert == "nan" || this->_toConvert == "-inf" || this->_toConvert == "+inf"
-	|| this->_toConvert == "nanf" || this->_toConvert == "-inff" || this->_toConvert == "+inff")
-		std::cout << this->_toConvert << std::endl;
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(n)
+		<< std::endl;
 	else
 		std::cout << "impossible" << std::endl;
 }
