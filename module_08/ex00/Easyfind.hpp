@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:46:57 by plam              #+#    #+#             */
-/*   Updated: 2022/10/05 17:08:53 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/06 12:25:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <list>
+# include <array>
 # include <vector>
 
 # include "Easyfind.tpp"
