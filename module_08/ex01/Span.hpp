@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:58:16 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 19:37:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/07 12:15:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,6 @@ class Span {
 		Span( Span const &other );
 		Span	&operator=( Span const &other );
 
-		void			addNumber( int newNb );
-		unsigned int	shortestSpan();
-		unsigned int	longestSpan();
-
 	class NoSpan : public std::exception {
 		virtual const char* what() const throw()
 		{
@@ -49,6 +45,12 @@ class Span {
 			return "No place available to add another number in it !";
 		}
 	}AlreadyFull;
+
+		unsigned int		getSize();
+		std::vector<int>	getVect();
+		void				addNumber( int newNb );
+		unsigned int		shortestSpan();
+		unsigned int		longestSpan();
 };
 
 #endif

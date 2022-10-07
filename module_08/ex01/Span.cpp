@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/06 19:38:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/07 12:17:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ Span::Span( Span const &other ) {
 	*this = other;
 }
 
-Span&	Span::operator=( Span const &other ) {
+Span&				Span::operator=( Span const &other ) {
 	if (this != &other) {
 		this->_size = other._size;
 		this->_stock.resize(other._size);
 	}
 }
 
-void	Span::addNumber( int newNb ) {
+void				Span::addNumber( int newNb ) {
 	try {
 		if (this->_stock.size() == this->_stock.capacity())
 			throw AlreadyFull;
@@ -41,9 +41,17 @@ void	Span::addNumber( int newNb ) {
 	}
 }
 
-unsigned int	Span::shortestSpan() {
+unsigned int		Span::getSize() {
+	return this->_size;
+}
+
+std::vector<int>	Span::getVect() {
+	return this->_stock;
+}
+
+unsigned int		Span::shortestSpan() {
 	try {
-		if (/*function for the shortest span in the verctor*/)
+		if (this->_stock.size() == 0 || this->_stock.size() == 1)
 			throw NoSpan;
 		else
 			return (0);
@@ -55,10 +63,17 @@ unsigned int	Span::shortestSpan() {
 
 unsigned int	Span::longestSpan() {
 	try {
-		if (/*function for the shortest span in the verctor*/)
+		if (this->_stock.size() == 0 || this->_stock.size() == 1)
 			throw NoSpan;
-		else
-			return (0);
+		else {
+			int	mn = 0;
+			int	mx = 0;
+			for (unsigned int i = 0; i < this->_size - 1; i++) {
+				mn = std::min(this->_stock[i], this->_stock[i + 1]);
+				mx = std::max(this->_stock[i], this->_stock[i + 1]);
+			}
+			return (mx - mn);
+		}
 	}
 	catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
