@@ -6,17 +6,17 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/10/10 00:53:04 by plam             ###   ########.fr        #
+#    Updated: 2022/10/10 00:52:36 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Span
+NAME = MutantStack
 
 CXX = c++
 CXXFLAGS = -Wextra -Wall -Werror -std=c++98 -g3
 
-HEADER = Span.hpp
-SRC_FILES = main.cpp Span.cpp
+HEADER = MutantStack.tpp,MutantStack.hpp
+SRC_FILES = main.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
