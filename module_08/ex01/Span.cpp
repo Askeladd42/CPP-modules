@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/07 12:17:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 00:45:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,32 +50,24 @@ std::vector<int>	Span::getVect() {
 }
 
 unsigned int		Span::shortestSpan() {
-	try {
-		if (this->_stock.size() == 0 || this->_stock.size() == 1)
-			throw NoSpan;
-		else
-			return (0);
-	}
-	catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->_stock.size() <= 1)
+		throw NoSpan;
+	std::vector<int>	tmp = this->_stock;
+	std::sort(tmp.begin(), tmp.end());		//sorting the vector to easily find the shortest span
+	int	span = tmp.at(1) - tmp.at(0);
+	for (unsigned int i = 1; i < this->_stock.size() - 1; i++)
+		span = std::min(tmp.at(i + 1) - tmp.at(i), span);
+	return span;
 }
 
 unsigned int	Span::longestSpan() {
-	try {
-		if (this->_stock.size() == 0 || this->_stock.size() == 1)
-			throw NoSpan;
-		else {
-			int	mn = 0;
-			int	mx = 0;
-			for (unsigned int i = 0; i < this->_size - 1; i++) {
-				mn = std::min(this->_stock[i], this->_stock[i + 1]);
-				mx = std::max(this->_stock[i], this->_stock[i + 1]);
-			}
-			return (mx - mn);
-		}
-	}
-	catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
+	if (this->_stock.size() <= 1)
+		throw NoSpan;
+	else {					//sorting the stock to easily find the longest span
+		int	mn = 0;
+		int	mx = 0;
+		mn = *std::min_element(this->_stock.begin(), this->_stock.end());
+		mx = *std::max_element(this->_stock.begin(), this->_stock.end());
+		return (mx - mn);
 	}
 }
