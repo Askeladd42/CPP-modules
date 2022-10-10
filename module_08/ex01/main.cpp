@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 17:24:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 17:25:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int main()
 	i = 0;
 	srand(time(NULL) + rand() % 1000000);
 	while (i++ < spExtra.getSize()) {
-		rdm = rand() % 2;
+		int	rdm = rand() % 2;
 		if (rdm == 0)
 			spExtra.addNumber(rand());
 		else
