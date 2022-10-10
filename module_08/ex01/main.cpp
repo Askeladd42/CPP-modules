@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 17:23:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 17:24:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,14 @@ int main()
 			spExtra.addNumber(-rand());
 	}
 
-	/*Vector printing*/
+	/*Vector printing
 	std::cout << "spExtra = {";
 	for (it = spExtra.getVect().begin(); it != spExtra.getVect().end(); ++it) {
 		if (it != spExtra.getVect().begin())
 			std::cout << ", ";
 		std::cout << *it;
 	}
-	std::cout << "};" << std::endl;
+	std::cout << "};" << std::endl;*/
 	
 	std::cout << "min element of the vector = " << *std::min_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
 	std::cout << "max element of the vector = " << *std::max_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
