@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 17:01:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 17:23:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,14 @@ int main()
 	Span	sp0 = Span(10);
 	srand(time(NULL) + rand() % 1000);
 	unsigned int	i = 0;
-	while (i++ < sp0.getSize())
-		sp0.addNumber(rand());
-	
+	while (i++ < sp0.getSize()) {
+		int rdm = rand() % 2;
+		if (rdm == 0)
+			sp0.addNumber(rand());
+		else
+			sp0.addNumber(-rand());
+	}
+
 	/*Vector printing*/
 	std::cout << "sp0 = {";
 	for (it = sp0.getVect().begin(); it != sp0.getVect().end(); ++it) {
@@ -68,8 +73,14 @@ int main()
 	std::cout << "############ Extra test : vector of size 30000 ############" << std::endl;
 	Span	spExtra = Span(30000);
 	i = 0;
-	while (i++ < spExtra.getSize())
-		spExtra.addNumber(rand());
+	srand(time(NULL) + rand() % 1000000);
+	while (i++ < spExtra.getSize()) {
+		rdm = rand() % 2;
+		if (rdm == 0)
+			spExtra.addNumber(rand());
+		else
+			spExtra.addNumber(-rand());
+	}
 
 	/*Vector printing*/
 	std::cout << "spExtra = {";

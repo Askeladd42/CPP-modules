@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 15:36:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 17:11:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ unsigned int	Span::longestSpan() {
 	if (this->_stock.size() <= 1)
 		throw NoSpan;
 	else {					//just getting the max and the min element of the vect and make the diff
-		int	mn = 0;
-		int	mx = 0;
+		long int	mn = 0;
+		long int	mx = 0;
 		mn = *std::min_element(this->_stock.begin(), this->_stock.end());
 		mx = *std::max_element(this->_stock.begin(), this->_stock.end());
 		return (mx - mn);
