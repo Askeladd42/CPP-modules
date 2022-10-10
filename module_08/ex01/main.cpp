@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 16:19:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 17:01:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "############ 1st test : span of size 5 ############" << std::endl;
+	std::cout << "############ 1st test : vector of size 5 ############" << std::endl;
 	std::vector<int>::iterator	it;
 	Span sp = Span(5);
 
@@ -34,14 +34,14 @@ int main()
 	std::cout << "};" << std::endl;
 
 	try {
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "shortest span = " << sp.shortestSpan() << std::endl;
+		std::cout << "longest span = " << sp.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() <<std::endl;
 	}
 
-	std::cout << "############ 2nd test : span of size 10 ############" << std::endl;
+	std::cout << "############ 2nd test : vector of size 10 ############" << std::endl;
 	Span	sp0 = Span(10);
 	srand(time(NULL) + rand() % 1000);
 	unsigned int	i = 0;
@@ -58,31 +58,34 @@ int main()
 	std::cout << "};" << std::endl;
 
 	try {
-		std::cout << sp0.shortestSpan() << std::endl;
-		std::cout << sp0.longestSpan() << std::endl;
+		std::cout << "shortest span = " << sp0.shortestSpan() << std::endl;
+		std::cout << "longest span = " << sp0.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() <<std::endl;
 	}
 
-	std::cout << "############ Extra test : span of size 30000 ############" << std::endl;
+	std::cout << "############ Extra test : vector of size 30000 ############" << std::endl;
 	Span	spExtra = Span(30000);
 	i = 0;
 	while (i++ < spExtra.getSize())
 		spExtra.addNumber(rand());
 
 	/*Vector printing*/
-	//std::cout << "spExtra = {";
-	//for (it = spExtra.getVect().begin(); it != spExtra.getVect().end(); ++it) {
-	//	if (it != spExtra.getVect().begin())
-	//		std::cout << ", ";
-	//	std::cout << *it;
-	//}
-	//std::cout << "};" << std::endl;
+	std::cout << "spExtra = {";
+	for (it = spExtra.getVect().begin(); it != spExtra.getVect().end(); ++it) {
+		if (it != spExtra.getVect().begin())
+			std::cout << ", ";
+		std::cout << *it;
+	}
+	std::cout << "};" << std::endl;
+	
+	std::cout << "min element of the vector = " << *std::min_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
+	std::cout << "max element of the vector = " << *std::max_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
 
 	try {
-		std::cout << spExtra.shortestSpan() << std::endl;
-		std::cout << spExtra.longestSpan() << std::endl;
+		std::cout << "shortest span = " << spExtra.shortestSpan() << std::endl;
+		std::cout << "longest span = " << spExtra.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() <<std::endl;
