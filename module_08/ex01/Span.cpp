@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 00:45:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 15:12:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Span&				Span::operator=( Span const &other ) {
 		this->_size = other._size;
 		this->_stock.resize(other._size);
 	}
+	return *this;
 }
 
 void				Span::addNumber( int newNb ) {

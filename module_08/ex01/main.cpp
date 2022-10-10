@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 15:00:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 15:13:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main()
 	}
 
 	Span	spExtra = Span(100000);
-	unsigned int	i = 0;
+	i = 0;
 	while (i++ < spExtra.getSize())
 		spExtra.addNumber(rand());
 	try {
