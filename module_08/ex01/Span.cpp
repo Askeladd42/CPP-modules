@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 15:30:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 15:33:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Span&				Span::operator=( Span const &other ) {
 
 void				Span::addNumber( int newNb ) {
 	try {
-		if (this->_stock.size() == this->_stock.capacity())
+		if (this->_stock.size() == this->_size)
 			throw AlreadyFull;
 		else
 			this->_stock.push_back(newNb);

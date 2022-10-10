@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 15:13:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 15:31:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,16 @@ int main()
 		std::cerr << e.what() <<std::endl;
 	}
 
-	Span	spExtra = Span(100000);
-	i = 0;
-	while (i++ < spExtra.getSize())
-		spExtra.addNumber(rand());
-	try {
-		std::cout << spExtra.shortestSpan() << std::endl;
-		std::cout << spExtra.longestSpan() << std::endl;
-	}
-	catch(std::exception &e) {
-		std::cerr << e.what() <<std::endl;
-	}
+	//Span	spExtra = Span(100000);
+	//i = 0;
+	//while (i++ < spExtra.getSize())
+	//	spExtra.addNumber(rand());
+	//try {
+	//	std::cout << spExtra.shortestSpan() << std::endl;
+	//	std::cout << spExtra.longestSpan() << std::endl;
+	//}
+	//catch(std::exception &e) {
+	//	std::cerr << e.what() <<std::endl;
+	//}
 	return 0;
 }
