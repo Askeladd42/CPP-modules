@@ -6,15 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 15:33:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/10 15:36:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span( unsigned int N ) : _size(N) {
-	this->_stock.resize(N);
-}
+Span::Span( unsigned int N ) : _size(N), _stock() { }
 
 Span::~Span() { }
 
@@ -31,15 +29,10 @@ Span&				Span::operator=( Span const &other ) {
 }
 
 void				Span::addNumber( int newNb ) {
-	try {
-		if (this->_stock.size() == this->_size)
-			throw AlreadyFull;
-		else
-			this->_stock.push_back(newNb);
-	}
-	catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->_stock.size() == this->_size)
+		throw AlreadyFull;
+	else
+		this->_stock.push_back(newNb);
 }
 
 unsigned int		Span::getSize() {
