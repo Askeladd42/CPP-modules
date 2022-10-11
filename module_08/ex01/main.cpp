@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 17:25:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/11 10:11:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int main()
 	std::cout << "############ Extra test : vector of size 30000 ############" << std::endl;
 	Span	spExtra = Span(30000);
 	i = 0;
-	srand(time(NULL) + rand() % 1000000);
+	srand(time(NULL) + rand() % 10000);
 	while (i++ < spExtra.getSize()) {
 		int	rdm = rand() % 2;
 		if (rdm == 0)
