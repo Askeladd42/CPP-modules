@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:49:46 by plam              #+#    #+#             */
-/*   Updated: 2022/10/10 00:54:46 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/12 16:27:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <vector>
+# include <stack>
 # include <algorithm>
 
 template< typename T >
