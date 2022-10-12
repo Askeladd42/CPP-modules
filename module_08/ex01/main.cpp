@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/11 10:11:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/12 15:39:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main()
 {
 	std::cout << "############ 1st test : vector of size 5 ############" << std::endl;
-	std::vector<int>::iterator	it;
 	Span sp = Span(5);
 
 	sp.addNumber(6);
@@ -26,10 +25,10 @@ int main()
 
 	/*Vector printing*/
 	std::cout << "sp = {";
-	for (it = sp.getVect().begin(); it != sp.getVect().end(); ++it) {
-		if (it != sp.getVect().begin())
+	for (unsigned int i = 0; i < sp.getSize(); i++) {
+		std::cout << sp.getVect()[i];
+		if (i < sp.getSize() - 1)
 			std::cout << ", ";
-		std::cout << *it;
 	}
 	std::cout << "};" << std::endl;
 
@@ -55,10 +54,10 @@ int main()
 
 	/*Vector printing*/
 	std::cout << "sp0 = {";
-	for (it = sp0.getVect().begin(); it != sp0.getVect().end(); ++it) {
-		if (it != sp0.getVect().begin())
+	for (unsigned int i = 0; i < sp0.getSize(); i++) {
+		std::cout << sp0.getVect()[i];
+		if (i < sp0.getSize() - 1)
 			std::cout << ", ";
-		std::cout << *it;
 	}
 	std::cout << "};" << std::endl;
 
@@ -73,7 +72,7 @@ int main()
 	std::cout << "############ Extra test : vector of size 30000 ############" << std::endl;
 	Span	spExtra = Span(30000);
 	i = 0;
-	srand(time(NULL) + rand() % 10000);
+	srand(time(NULL) + rand() % 1000);
 	while (i++ < spExtra.getSize()) {
 		int	rdm = rand() % 2;
 		if (rdm == 0)
@@ -82,14 +81,14 @@ int main()
 			spExtra.addNumber(-rand());
 	}
 
-	/*Vector printing
+	/*Vector printing*/
 	std::cout << "spExtra = {";
-	for (it = spExtra.getVect().begin(); it != spExtra.getVect().end(); ++it) {
-		if (it != spExtra.getVect().begin())
+	for (unsigned int i = 0; i < spExtra.getSize(); i++) {
+		std::cout << spExtra.getVect()[i];
+		if (i < spExtra.getSize() - 1)
 			std::cout << ", ";
-		std::cout << *it;
 	}
-	std::cout << "};" << std::endl;*/
+	std::cout << "};" << std::endl;
 	
 	std::cout << "min element of the vector = " << *std::min_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
 	std::cout << "max element of the vector = " << *std::max_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
