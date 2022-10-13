@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:49:46 by plam              #+#    #+#             */
-/*   Updated: 2022/10/12 16:50:48 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/13 11:39:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 # include <algorithm>
 
 template< typename T >
-class MutantStack<T> : public std::stack {
+class MutantStack : public std::stack<T> {
 private:
 	/* data */
 public:
-	MutantStack<T>(/* args */);
-	~MutantStack<T>();
-	MutantStack<T>(MutantStack<T> const &other);
-	MutantStack<T>	&operator=(MutantStack<T> const &other);
+	MutantStack<T>();
+	virtual ~MutantStack<T>();
+	MutantStack<T>( MutantStack<T> const &other );
+	MutantStack<T>	&operator=( MutantStack<T> const &other );
 
 	//MutantStack	iterator;			to complete correctly
 };
