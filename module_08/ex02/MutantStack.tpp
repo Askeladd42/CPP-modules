@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:49:46 by plam              #+#    #+#             */
-/*   Updated: 2022/10/13 11:39:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/13 12:20:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,24 @@
 
 template< typename T >
 class MutantStack : public std::stack<T> {
-private:
-	/* data */
-public:
-	MutantStack<T>();
-	virtual ~MutantStack<T>();
-	MutantStack<T>( MutantStack<T> const &other );
-	MutantStack<T>	&operator=( MutantStack<T> const &other );
+	public:
+		MutantStack<T>() { }
+		virtual ~MutantStack<T>() { }
+		MutantStack<T>( MutantStack<T> const &other ) {
+			*this = other;
+		}
+	
+		MutantStack<T>	&operator=( MutantStack<T> const &other ) {
+			if (this != &other)
+				this->c = other.c;
+			return *this;
+		}
+		typedef typename std::stack<T>::iterator				iterator;
+		typedef typename std::stack<T>::const_iterator			const_iterator;
+		typedef typename std::stack<T>::reverse_iterator		reverse_iterator;
+		typedef typename std::stack<T>::const_reverse_iterator	const_reverse_iterator;
 
-	//MutantStack	iterator;			to complete correctly
+		//iterator	;			to complete correctly
 };
 
 #endif
