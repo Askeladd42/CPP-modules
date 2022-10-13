@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:49:46 by plam              #+#    #+#             */
-/*   Updated: 2022/10/13 13:45:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/13 13:49:00 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class MutantStack : public std::stack<T> {
 		typedef typename std::stack<T>::container_type::const_reverse_iterator	const_reverse_iterator;
 
 		iterator																begin() { return this->c.begin(); }
-		iterator																cend() { return this->c.end(); }
+		iterator																end() { return this->c.end(); }
 		const_iterator															cbegin() { return this->c.cbegin(); }
 		const_iterator															cend() { return this->c.cend(); }
 		reverse_iterator														rbegin() { return this->c.rbegin(); }
