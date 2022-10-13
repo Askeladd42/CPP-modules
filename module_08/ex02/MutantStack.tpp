@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 00:49:46 by plam              #+#    #+#             */
-/*   Updated: 2022/10/13 13:24:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/13 13:45:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,26 @@ class MutantStack : public std::stack<T> {
 	public:
 		MutantStack<T>() { }
 		virtual ~MutantStack<T>() { }
-		MutantStack<T>( MutantStack<T> const &other ) { *this = other }
+		MutantStack<T>( MutantStack<T> const &other ) { *this = other; }
 		MutantStack<T>	&operator=( MutantStack<T> const &other ) {
 			if (this != &other)
 				this->c = other.c;
 			return *this;
 		}
 		
-		typedef typename std::stack<T>::iterator				iterator;
-		typedef typename std::stack<T>::const_iterator			const_iterator;
-		typedef typename std::stack<T>::reverse_iterator		reverse_iterator;
-		typedef typename std::stack<T>::const_reverse_iterator	const_reverse_iterator;
+		typedef typename std::stack<T>::container_type::iterator				iterator;
+		typedef typename std::stack<T>::container_type::const_iterator			const_iterator;
+		typedef typename std::stack<T>::container_type::reverse_iterator		reverse_iterator;
+		typedef typename std::stack<T>::container_type::const_reverse_iterator	const_reverse_iterator;
 
-		//iterator	;			to complete correctly
+		iterator																begin() { return this->c.begin(); }
+		iterator																cend() { return this->c.end(); }
+		const_iterator															cbegin() { return this->c.cbegin(); }
+		const_iterator															cend() { return this->c.cend(); }
+		reverse_iterator														rbegin() { return this->c.rbegin(); }
+		reverse_iterator														rend() { return this->c.rend(); }
+		const_reverse_iterator													crbegin() { return this->c.crbegin(); }
+		const_reverse_iterator													crend() { return this->c.crend(); }
 };
 
 #endif
