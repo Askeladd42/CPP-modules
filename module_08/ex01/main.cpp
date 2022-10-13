@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/12 16:22:43 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/13 13:15:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int main()
 	}
 	std::cout << spExtra.getVect()[spExtra.getSize() - 1] << "};" << std::endl;*/
 	
-	//std::cout << "min element of the vector = " << *std::min_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
+	//std::cout << "min element of the vector = " << *std::min_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;		//WARNING ! HIGH CHANCES OF OF LEAKS/MINOR ERROS WITH VALGRIND AND BIG VECTORS
 	//std::cout << "max element of the vector = " << *std::max_element(spExtra.getVect().begin(), spExtra.getVect().end()) << std::endl;
 
 	try {
