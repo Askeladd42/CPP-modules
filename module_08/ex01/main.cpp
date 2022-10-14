@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/14 14:02:49 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/14 15:04:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,38 @@ int main()
 	for (size_t i = 0; i < sp0.getSize() - 1; i++) {
 		std::cout << sp0.getVect()[i] << ", ";
 	}
-	std::cout <<sp0.getVect()[sp0.getSize() - 1] << "};" << std::endl;
+	std::cout << sp0.getVect()[sp0.getSize() - 1] << "};" << std::endl;
 
 	try {
 		std::cout << "shortest span = " << sp0.shortestSpan() << std::endl;
 		std::cout << "longest span = " << sp0.longestSpan() << std::endl;
+	}
+	catch(std::exception &e) {
+		std::cerr << e.what() <<std::endl;
+	}
+
+	std::cout << "############ 2nd test : randomized vector of size 50 ############" << std::endl;
+	Span	sp50 = Span(50);
+	srand(time(NULL) + rand() % 1000);
+	i = 0;
+	while (i++ < sp50.getSize()) {
+		int rdm = rand() % 2;
+		if (rdm == 0)
+			sp50.addNumber(rand());
+		else
+			sp50.addNumber(-rand());
+	}
+
+	/*Vector printing*/
+	std::cout << "sp50 = {";
+	for (size_t i = 0; i < sp50.getSize() - 1; i++) {
+		std::cout << sp50.getVect()[i] << ", ";
+	}
+	std::cout << sp50.getVect()[sp50.getSize() - 1] << "};" << std::endl;
+
+	try {
+		std::cout << "shortest span = " << sp50.shortestSpan() << std::endl;
+		std::cout << "longest span = " << sp50.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() <<std::endl;
