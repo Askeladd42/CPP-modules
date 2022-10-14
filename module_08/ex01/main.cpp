@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/13 13:15:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/14 13:50:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "############ 1st test : vector of size 5 ############" << std::endl;
+	std::cout << "############ 1st test : vector of size 5 predefined ############" << std::endl;
 	Span sp = Span(5);
 
 	sp.addNumber(6);
