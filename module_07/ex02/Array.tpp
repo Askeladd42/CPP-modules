@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:37:09 by plam              #+#    #+#             */
-/*   Updated: 2022/10/04 14:05:16 by plam             ###   ########.fr       */
+/*   Updated: 2022/10/18 15:06:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARRAY_TPP
-# define ARRAY_TPP
+#ifndef __ARRAY_TPP__
+# define __ARRAY_TPP__
 
 # include <limits>
 # include <exception>
