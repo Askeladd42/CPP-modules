@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/10/14 15:04:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/02 13:34:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,15 @@ int main()
 		std::cout << "longest span = " << sp.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
-		std::cerr << e.what() <<std::endl;
+		std::cerr << e.what() << std::endl;
+	}
+
+	/* Vector overflow testing */
+	try {
+		sp.addNumber(42);
+	}
+	catch(std::exception &e) {
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "############ 2nd test : vector of size 10 ############" << std::endl;

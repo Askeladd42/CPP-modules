@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:37:35 by plam              #+#    #+#             */
-/*   Updated: 2022/10/12 00:31:31 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/02 13:24:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Span&				Span::operator=( Span const &other ) {
 	return *this;
 }
 
-void				Span::addNumber( int newNb ) {	// issue when putting numbers on the vector, need checking
+void				Span::addNumber( int newNb ) {
 	if (this->_stock.size() == this->_size)
 		throw AlreadyFull;
 	else

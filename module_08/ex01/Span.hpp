@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:58:16 by plam              #+#    #+#             */
-/*   Updated: 2022/10/07 12:15:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/02 13:27:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Span {
 	class NoSpan : public std::exception {
 		virtual const char* what() const throw()
 		{
-			return "No spam or number spotted";
+			return "No span or number spotted";
 		}
 	}NoSpan;
 
