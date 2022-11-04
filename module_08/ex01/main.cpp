@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/11/04 17:49:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/04 17:57:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,27 @@ int main()
 	std::cout << "############ 2nd test : vector of size 10 ############" << std::endl;
 	Span	sp0 = Span(10);
 	srand(time(NULL) + rand() % 1000);
-	try {
+	try {						// just to illustrate the shortestSpan with real different spans
 		int	rdm = rand();
-		sp0.fillVect(3, rdm);
+		sp0.fillVect(1, rdm);
 		rdm = rand();
-		sp0.fillVect(3, rdm);
+		sp0.fillVect(1, rdm);
 		rdm = rand();
-		sp0.fillVect(4, rdm);
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
+		rdm = rand();
+		sp0.fillVect(1, rdm);
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() << std::endl;
@@ -80,7 +94,9 @@ int main()
 	Span	sp50 = Span(50);
 	try {
 		int	rdm = rand();
-		sp50.fillVect(10, rdm);
+		sp50.fillVect(1, rdm);
+		rdm = rand();
+		sp50.fillVect(9, rdm);
 		rdm = rand();
 		sp50.fillVect(10, rdm);
 		rdm = rand();
@@ -122,7 +138,9 @@ int main()
 		rdm = rand();
 		spExtra.fillVect(10000, rdm);
 		rdm = rand();
-		spExtra.fillVect(2000, rdm);
+		spExtra.fillVect(1, rdm);
+		rdm = rand();
+		spExtra.fillVect(1999, rdm);
 	}
 	catch(std::exception &e) {
 		std::cerr << e.what() << std::endl;
