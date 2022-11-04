@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:58:16 by plam              #+#    #+#             */
-/*   Updated: 2022/11/02 13:27:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/04 17:44:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <iterator>
 # include <algorithm>
 # include <vector>
+# include <ctime>
 
 class Span {
 	private:
@@ -49,6 +50,7 @@ class Span {
 		unsigned int		getSize();
 		std::vector<int>	getVect();
 		void				addNumber( int newNb );
+		void				fillVect(unsigned int n, int nb);
 		unsigned int		shortestSpan();
 		unsigned int		longestSpan();
 };

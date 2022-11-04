@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:35:25 by plam              #+#    #+#             */
-/*   Updated: 2022/11/02 13:34:28 by plam             ###   ########.fr       */
+/*   Updated: 2022/11/04 17:49:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,16 @@ int main()
 	std::cout << "############ 2nd test : vector of size 10 ############" << std::endl;
 	Span	sp0 = Span(10);
 	srand(time(NULL) + rand() % 1000);
-	unsigned int	i = 0;
-	while (i++ < sp0.getSize()) {
-		int rdm = rand() % 2;
-		if (rdm == 0)
-			sp0.addNumber(rand());
-		else
-			sp0.addNumber(-rand());
+	try {
+		int	rdm = rand();
+		sp0.fillVect(3, rdm);
+		rdm = rand();
+		sp0.fillVect(3, rdm);
+		rdm = rand();
+		sp0.fillVect(4, rdm);
+	}
+	catch(std::exception &e) {
+		std::cerr << e.what() << std::endl;
 	}
 
 	/*Vector printing*/
@@ -75,15 +78,22 @@ int main()
 
 	std::cout << "############ 2nd test : randomized vector of size 50 ############" << std::endl;
 	Span	sp50 = Span(50);
-	srand(time(NULL) + rand() % 1000);
-	i = 0;
-	while (i++ < sp50.getSize()) {
-		int rdm = rand() % 2;
-		if (rdm == 0)
-			sp50.addNumber(rand());
-		else
-			sp50.addNumber(-rand());
+	try {
+		int	rdm = rand();
+		sp50.fillVect(10, rdm);
+		rdm = rand();
+		sp50.fillVect(10, rdm);
+		rdm = rand();
+		sp50.fillVect(10, rdm);
+		rdm = rand();
+		sp50.fillVect(10, rdm);
+		rdm = rand();
+		sp50.fillVect(10, rdm);
 	}
+	catch(std::exception &e) {
+		std::cerr << e.what() << std::endl;
+	}
+
 
 	/*Vector printing*/
 	std::cout << "sp50 = {";
@@ -97,19 +107,25 @@ int main()
 		std::cout << "longest span = " << sp50.longestSpan() << std::endl;
 	}
 	catch(std::exception &e) {
-		std::cerr << e.what() <<std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "############ Extra test : vector of size 30000 ############" << std::endl;
 	Span	spExtra = Span(30000);
-	i = 0;
-	srand(time(NULL) + rand() % 10000);
-	while (i++ < spExtra.getSize()) {
-		int	rdm = rand() % 2;
-		if (rdm == 0)
-			spExtra.addNumber(rand());
-		else
-			spExtra.addNumber(-rand());
+	try {
+		int	rdm = rand();
+		spExtra.fillVect(5000, rdm);
+		rdm = rand();
+		spExtra.fillVect(10000, rdm);
+		rdm = rand();
+		spExtra.fillVect(3000, rdm);
+		rdm = rand();
+		spExtra.fillVect(10000, rdm);
+		rdm = rand();
+		spExtra.fillVect(2000, rdm);
+	}
+	catch(std::exception &e) {
+		std::cerr << e.what() << std::endl;
 	}
 
 	/*Vector printing
