@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:30:45 by plam              #+#    #+#             */
-/*   Updated: 2023/03/02 17:26:38 by plam             ###   ########.fr       */
+/*   Updated: 2023/03/02 17:36:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class	btc_ex {
 		btc_ex(btc_ex const &other);
 		btc_ex	&operator=(btc_ex const &other);
 		
+		void	treat_values() const ;
 };
 
 #endif
