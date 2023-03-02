@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:12:48 by plam              #+#    #+#             */
-/*   Updated: 2023/03/02 15:20:42 by plam             ###   ########.fr       */
+/*   Updated: 2023/03/02 17:10:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,15 @@
 # include <iostream>
 # include <stack>
 
+class RPN {
+	private:
+		std::stack<int>	stack;
+	public:
+		RPN();
+		~RPN();
+		RPN(std::string const &str);
+		RPN(RPN const &other);
+		RPN	&operator=(RPN const &other);
+};
 
 #endif

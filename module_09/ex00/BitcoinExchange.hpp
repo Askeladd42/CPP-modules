@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:30:45 by plam              #+#    #+#             */
-/*   Updated: 2023/03/02 16:27:00 by plam             ###   ########.fr       */
+/*   Updated: 2023/03/02 17:26:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,15 @@
 # include <vector>
 
 class	btc_ex {
-	std::vector<std::string, std::string>	args;	//temporary, maybe replace the strings by the typedef/name U & V for the vector
+	private:
+		std::vector<std::string, std::string>	args;	//temporary, maybe replace the strings by the typedef/name U & V for the vector
+	public:
+		btc_ex();
+		~btc_ex();
+		btc_ex(std::string file);
+		btc_ex(btc_ex const &other);
+		btc_ex	&operator=(btc_ex const &other);
+		
 };
 
 #endif
