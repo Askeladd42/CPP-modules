@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:30:45 by plam              #+#    #+#             */
-/*   Updated: 2023/03/02 17:36:12 by plam             ###   ########.fr       */
+/*   Updated: 2023/03/16 16:16:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <stdexcept>
-# include <vector>
+# include <map>
 
 class	btc_ex {
 	private:
